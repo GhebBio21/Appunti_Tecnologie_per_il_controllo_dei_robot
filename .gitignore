@@ -1,0 +1,9 @@
+*.pdf
+
+!main.pdf
+!**/main.pdf
+
+!Slide/
+!Slide/**/*.pdf
+!**/Slide/
+!**/Slide/**/*.pdf

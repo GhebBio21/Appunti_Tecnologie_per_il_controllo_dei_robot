@@ -1,0 +1,68 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{\numberline {1}Lezione 1-2}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Introduzione, struttura del corso e ruolo dei sensori}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Sensori attivi, passivi e distinzione tra sensore e trasduttore}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Sensori assoluti e relativi. Natura dell’informazione}{5}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Campionamento}{7}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Quantizzazione e conversione A/D}{8}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Caratteristica statica ideale e non linearità}{10}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Isteresi}{12}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Dead-band e saturazione}{13}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Schema sintetico delle non idealit\`a di misura}{13}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}Rumore e sorgenti fisiche}{14}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.11}Rumore di quantizzazione, bianco, gaussiano e colorato}{15}{subsection.1.11}%
+\contentsline {subsection}{\numberline {1.12}Istogramma e spettro del rumore}{16}{subsection.1.12}%
+\contentsline {subsection}{\numberline {1.13}Calibrazione affine di base}{17}{subsection.1.13}%
+\contentsline {subsection}{\numberline {1.14}Calibrazione di IMU e lettura della noise density}{19}{subsection.1.14}%
+\contentsline {section}{\numberline {2}Lezione 3}{21}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Visione generale della lezione}{21}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Modelli polinomiali di calibrazione}{21}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Scelta dell’ordine del modello}{22}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Incertezza dei parametri stimati}{23}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Bias e rumore di misura}{24}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Stima del rumore residuo}{25}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Modello finale di calibrazione}{26}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Esempio implementativo}{27}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Procedura pratica di calibrazione}{28}{subsection.2.9}%
+\contentsline {section}{\numberline {3}Lezione 4}{30}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Visione generale della lezione}{30}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Caratteristiche dinamiche dei sensori}{30}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Dinamica del sensore dentro il loop di controllo}{31}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Identificazione sperimentale della dinamica}{32}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Accuratezza e precisione}{35}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Sensori di posizione}{37}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Potenziometri}{38}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}Encoder incrementali}{39}{subsubsection.3.6.2}%
+\contentsline {section}{\numberline {4}Lezione 5}{42}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Visione generale della lezione}{42}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Encoder incrementali: struttura, decodifica e risoluzione}{42}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Codifiche X1, X2 e X4 degli encoder incrementali}{44}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Encoder ottici incrementali e encoder assoluti}{47}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Encoder ottici lineari con interpolazione}{49}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Frange di Moir\'e e aumento della rilevabilit\`a}{52}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}LVDT: Linear Variable Differential Transformer}{54}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}RVDT: Rotary Variable Differential Transformer}{57}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Resolver}{58}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Resolver-to-Digital Converter}{60}{subsection.4.10}%
+\contentsline {section}{\numberline {5}Lezione 6}{64}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Visione generale della lezione}{64}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Resolver con e senza slip rings}{64}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Resolver brushless e accoppiamento magnetico}{66}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Synchro}{68}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Encoder magnetici}{71}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Lezione 7}{74}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Visione generale della lezione}{74}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Encoder magnetici relativi e sensori lineari magnetici}{74}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Sensori di distanza}{76}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Sensori di velocita`: classificazione e principio elettromagnetico di base}{78}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Tachogeneratore DC}{80}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Tachogeneratore AC}{82}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Stima di velocita` da encoder: metodo M}{83}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Metodo T e metodo M/T}{85}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}Stima filtrata di posizione e velocita`}{87}{subsection.6.9}%
+\contentsline {section}{\numberline {7}Lezione 8}{90}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Visione generale della lezione}{90}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Misura della velocita` propria}{90}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Origine e ruolo dei giroscopi}{91}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Inerzia giroscopica}{93}{subsection.7.4}%
