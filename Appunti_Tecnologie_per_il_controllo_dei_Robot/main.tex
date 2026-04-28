@@ -2950,6 +2950,243 @@ quando il sensore e` inclinato. Questa e` la ragione per cui gli accelerometri s
 Infine, la rassegna tecnologica chiarisce i compromessi: pendoli con force rebalance per alta precisione, quarzo per stabilita`, MEMS capacitivi per integrazione e costo, termici per robustezza ma con banda ridotta. La lezione, in sostanza, mostra che ``misurare accelerazione'' non significa avere un solo sensore standard, ma un'intera famiglia di soluzioni con fisiche e compromessi molto diversi.
 
 % =========================================================
+% LEZIONE 12
+% =========================================================
+
+\clearpage
+\section{Lezione 12}
+
+\subsection{Visione generale della lezione}
+
+Con questa lezione il corso apre un nuovo blocco tematico: si passa dai sensori agli \emph{attuatori}. Fin qui il problema principale era capire come misurare bene posizione, velocita` e accelerazione; da ora in poi il punto di vista si ribalta, perche' ci interessa capire come il sistema di controllo riesca davvero a \emph{produrre} moto, forza e coppia nel mondo fisico.
+
+La prima parte introduce il concetto di attuatore e insiste su un messaggio molto importante per il controllo: l'attuatore non e` un elemento ideale che esegue perfettamente il comando del controllore. Ha saturazioni, zone morte, isteresi, limiti di banda, ritardi, vincoli energetici e limiti termici. Tutto questo influenza direttamente prestazioni, stabilita` e accuratezza del sistema chiuso.
+
+La seconda parte entra nel caso piu` classico della robotica e dell'automazione, il \emph{motore DC brushed}. Le slide mostrano le leggi fisiche fondamentali, l'architettura minima statore-rotore-commutatore e la derivazione della coppia di una singola spira immersa in un campo magnetico. Il risultato chiave e` che la coppia nasce dall'interazione tra corrente elettrica e campo magnetico, ma senza commutazione resterebbe oscillante; e` il commutatore che rende possibile la rotazione continua.
+
+\subsection{Ingresso nel blocco sugli attuatori}
+
+\slidepair{images11/page-01.png}{images11/page-02.png}{Apertura del blocco ``Actuators'' e panoramica degli argomenti: caratteristiche generali, motori elettrici, driver e altre famiglie di attuazione.}
+
+Le prime due slide hanno soprattutto un valore di orientamento. Dopo il lungo blocco sui sensori, il corso chiarisce che l'attuatore e` l'elemento che converte energia, tipicamente elettrica, in moto meccanico utile. In robotica questo significa trasformare una decisione di controllo in una coppia su un giunto, in una forza su un asse lineare, in una pressione su un attuatore pneumatico oppure in una portata comandata in un sistema idraulico.
+
+L'outline mostra anche un aspetto metodologico importante: parlare di attuatori non significa parlare solo del motore in senso stretto. Bisogna includere l'elettronica di pilotaggio, l'interfaccia di potenza, gli organi di trasmissione, gli eventuali riduttori e, in molti casi, il dispositivo composto finale che il controllore vede davvero.
+
+\slidefig{images11/page-03.png}{Definizione di attuatore e suo ruolo come interfaccia tra controllo e mondo fisico.}
+
+La terza slide formula in modo molto netto l'idea centrale: un attuatore e` il punto di contatto tra algoritmi di controllo e realta` fisica. Questo e` il motivo per cui, in un progetto ben fatto, non si puo` separare completamente la sintesi del controllore dalla fisica dell'attuazione.
+
+Un attuatore non e` un generatore ideale di forza o di coppia. Se il controllore chiede un'azione incompatibile con i limiti del dispositivo, l'attuatore non puo` eseguirla. Da qui nasce la frase, concettualmente giustissima, che la slide mette in evidenza: il controllore puo` essere buono solo quanto glielo permette l'attuatore. In pratica, anche il miglior regolatore perde efficacia se l'organo di attuazione satura, e` lento o introduce forti non linearita`.
+
+\slidefig{images11/page-04.png}{Caratteristiche statiche e dinamiche degli attuatori: due famiglie di limiti da tenere sempre distinte.}
+
+La quarta slide divide i problemi in due categorie:
+\begin{itemize}
+\item \textbf{caratteristiche statiche}, cioe` limiti presenti anche in condizioni lentamente variabili, come saturazione, zona morta, isteresi e guadagno non lineare;
+\item \textbf{caratteristiche dinamiche}, cioe` limiti che emergono nel tempo e in frequenza, come banda, slew rate, ritardi, tempo di salita e tempo di assestamento.
+\end{itemize}
+
+Questa distinzione e` molto utile anche per leggere i problemi sperimentali. Se un asse non riesce a raggiungere il riferimento massimo, spesso il problema e` statico, per esempio una saturazione. Se invece arriva ma sempre in ritardo, oppure non segue bene profili rapidi, il problema e` dinamico.
+
+\subsection{Non linearita` statiche: saturazione, zona morta, isteresi}
+
+\slidepair{images11/page-05.png}{images11/page-06.png}{Saturazione dell'attuatore: il comando richiesto cresce, ma l'uscita reale non puo` superare i limiti fisici del dispositivo.}
+
+La saturazione e` il limite piu` intuitivo e, spesso, il piu` pericoloso per il controllo. Se indichiamo con \(u_{in}\) il comando richiesto dal controllore e con \(u_{out}\) l'azione effettivamente disponibile, possiamo scrivere in forma compatta:
+\[
+u_{out}=\operatorname{sat}(u_{in}).
+\]
+Finche' \(|u_{in}|\) resta nel range disponibile, l'attuatore segue il comando. Oltre quel range, l'uscita si blocca al valore massimo o minimo fisicamente realizzabile.
+
+Nel caso di un motore, i limiti possono essere dovuti a tensione massima, corrente massima del driver o coppia massima disponibile. La conseguenza pratica e` che il sistema smette di comportarsi linearmente. La slide lo dice in modo molto efficace: quando l'attuatore e` saturo, l'uscita resta costante anche se il controllore continua ad aumentare il comando. Dal punto di vista del plant, questo equivale a perdere autorita` di controllo.
+
+Una conseguenza classica e` il \emph{windup} dell'integratore: il regolatore continua ad accumulare errore come se il comando potesse ancora crescere, ma l'attuatore e` gia` al limite. Quando il sistema rientra in zona lineare, il controllore si trova ``carico'' e produce sovraelongazioni o transitori molto lenti da smaltire.
+
+\slidepair{images11/page-07.png}{images11/page-08.png}{Zona morta e isteresi: due non linearita` statiche che degradano precisione e ripetibilita`.}
+
+La \emph{dead zone} descrive un intervallo di ingresso in cui l'uscita resta nulla:
+\[
+u_{out}=0
+\qquad \text{per} \qquad
+|u_{in}|<u_D.
+\]
+Fisicamente puo` nascere da attrito statico, giochi meccanici, soglie del driver o piccoli backlash nella trasmissione. Per il controllo, il problema e` serio soprattutto vicino allo zero: il regolatore chiede una piccola correzione, ma l'attuatore non produce nessun effetto finche' il comando non supera la soglia.
+
+Questo spiega due fenomeni ricorrenti:
+\begin{itemize}
+\item scarsa precisione di regolazione attorno al riferimento;
+\item possibili piccoli cicli limite, dovuti al continuo entrare e uscire dalla zona morta.
+\end{itemize}
+
+L'isteresi e` diversa, ma altrettanto insidiosa: l'uscita non dipende solo dal valore attuale dell'ingresso, ma anche dalla sua storia precedente. A parita` di comando, si possono ottenere uscite diverse a seconda che il segnale stia crescendo o diminuendo. Questo riduce la ripetibilita` e rende piu` difficile costruire un modello semplice e affidabile del dispositivo.
+
+\begin{keybox}
+\textbf{Messaggio pratico.} Saturazione, zona morta e isteresi non sono dettagli secondari: sono spesso il vero motivo per cui un sistema reale si discosta molto da quello simulato con modelli lineari ideali.
+\end{keybox}
+
+\subsection{Vincoli dinamici degli attuatori}
+
+\slidepair{images11/page-09.png}{images11/page-10.png}{Slew rate e banda: anche un attuatore ``forte'' puo` essere troppo lento per seguire comandi rapidi.}
+
+Lo \emph{slew rate} e` il limite sulla rapidita` con cui l'uscita dell'attuatore puo` cambiare:
+\[
+\left|\frac{du}{dt}\right|\le \dot u_{\max}.
+\]
+Questo limite compare, per esempio, nei driver di potenza, nei circuiti di pilotaggio della corrente o nei servosistemi con vincoli di velocita` interna. Dal punto di vista meccanico, uno slew rate limitato significa che l'attuatore non puo` sviluppare istantaneamente grandi variazioni di forza o coppia; quindi la dinamica del carico risulta piu` lenta di quanto il controllore vorrebbe.
+
+La \emph{bandwidth} introduce la stessa idea, ma nel dominio della frequenza. Se \(G(s)\) e` la funzione di trasferimento dell'attuatore, la banda \(\omega_B\) viene tipicamente definita al punto di \(-3\) dB:
+\[
+|G(j\omega_B)|=\frac{|G(0)|}{\sqrt{2}}.
+\]
+Un attuatore con banda alta riesce a seguire variazioni rapide del comando; un attuatore con banda bassa appare invece ``pigro'' e attenua o ritarda le componenti veloci.
+
+Le cause fisiche possono essere sia elettriche sia meccaniche. Nei motori compaiono costanti di tempo elettriche degli avvolgimenti, inerzie, attriti e limiti del driver. Il punto importante e` che la banda dell'attuatore impone un tetto naturale alla banda del controllo in anello chiuso: non si puo` pretendere di chiudere un loop molto piu` veloce dell'organo che deve applicare l'azione correttiva.
+
+\slidefig{images11/page-11.png}{Tempo di salita, assestamento, overshoot e ritardo puro: lettura nel tempo delle prestazioni dinamiche dell'attuatore.}
+
+Per un ingresso a gradino, la risposta reale dell'attuatore viene riassunta da grandezze classiche:
+\begin{itemize}
+\item \emph{rise time}, che misura quanto rapidamente l'uscita parte e raggiunge la zona del valore desiderato;
+\item \emph{settling time}, cioe` il tempo necessario a stabilizzarsi entro una fascia accettabile;
+\item \emph{overshoot}, che quantifica l'eventuale superamento del target;
+\item \emph{time delay}, cioe` il ritardo tra comando e inizio della risposta.
+\end{itemize}
+
+Il ritardo si puo` modellare, in prima approssimazione, come un fattore esponenziale:
+\[
+G_{\text{delay}}(s)=e^{-T_d s}.
+\]
+Questo termine e` semplice da scrivere ma critico da gestire, perche' toglie margine di fase e rende piu` delicato aumentare le prestazioni del controllore.
+
+Le slide sottolineano anche un aspetto molto concreto: questi tempi non dipendono solo dall'attuatore, ma dal sistema attuatore + carico. Cambiare inerzia, attrito o rigidezza del meccanismo collegato al motore significa cambiare la risposta che il controllore osservera` davvero.
+
+\subsection{Energia, rendimento e limiti termici}
+
+\slidepair{images11/page-12.png}{images11/page-13.png}{Rendimento energetico e vincoli termici: la potenza non convertita in lavoro utile diventa calore da dissipare.}
+
+Un attuatore non e` solo un convertitore di moto, ma anche un convertitore di potenza. La grandezza piu` immediata per misurarne la qualita` energetica e` il rendimento:
+\[
+\eta=\frac{P_{\text{mecc}}}{P_{\text{in}}}.
+\]
+Il numeratore rappresenta la potenza meccanica effettivamente disponibile sul carico; il denominatore e` la potenza elettrica assorbita. La differenza tra le due non scompare: si trasforma in perdite.
+
+Le slide citano le tre famiglie di perdita piu` classiche:
+\begin{itemize}
+\item riscaldamento Joule nei conduttori;
+\item attriti meccanici;
+\item perdite magnetiche.
+\end{itemize}
+
+Per la robotica mobile questa parte e` fondamentale, perche' il rendimento non influenza solo la temperatura, ma anche autonomia e dimensionamento della batteria.
+
+La slide successiva spinge il ragionamento al livello fisico corretto: la potenza persa diventa calore interno, e quindi compare un vincolo di temperatura. Un attuatore non puo` lavorare indefinitamente alla massima potenza continua, perche' supererebbe i limiti dei materiali, dei MOSFET, degli avvolgimenti o dell'isolamento elettrico.
+
+Per questo nei datasheet si trovano quasi sempre limiti multipli:
+\begin{itemize}
+\item corrente massima;
+\item temperatura massima;
+\item eventuali curve di \emph{derating}, cioe` riduzione delle prestazioni continuative al crescere della temperatura o del tempo di utilizzo.
+\end{itemize}
+
+\begin{keybox}
+\textbf{Idea energetica.} Se il controllore chiede molta prestazione, l'attuatore non risponde solo in termini di coppia o velocita`: risponde anche con assorbimento, perdite e aumento di temperatura. Per questo la progettazione del controllo e quella della potenza non possono essere separate.
+\end{keybox}
+
+\subsection{Motore DC brushed: principio fisico e coppia elementare}
+
+\slidefig{images11/page-14.png}{Leggi fisiche di base del motore DC brushed: forza di Lorentz e legge di Faraday.}
+
+La seconda meta` della lezione entra nel motore DC brushed partendo dalle due leggi fisiche essenziali.
+
+La prima e` la forza di Lorentz su un conduttore percorso da corrente in un campo magnetico:
+\[
+\mathbf F=I\,\mathbf l\times \mathbf B.
+\]
+Questa relazione spiega come da una corrente elettrica si generi una forza meccanica laterale sul conduttore. Nel motore, la geometria e` organizzata in modo che queste forze producano una coppia attorno all'asse del rotore.
+
+La seconda e` la legge di Faraday:
+\[
+e=-\frac{d\Phi}{dt}.
+\]
+Quando un conduttore si muove in un campo magnetico, oppure quando varia il flusso concatenato, nasce una tensione indotta. Nel motore questa tensione prende il nome di \emph{back-EMF} ed e` il motivo per cui la parte elettrica del motore non puo` essere separata dalla sua velocita` di rotazione.
+
+Le due leggi dicono quindi le due meta` del problema:
+\begin{itemize}
+\item corrente nel campo magnetico \(\Rightarrow\) forza \(\Rightarrow\) coppia;
+\item moto nel campo magnetico \(\Rightarrow\) tensione indotta.
+\end{itemize}
+
+\slidepair{images11/page-15.png}{images11/page-16.png}{Architettura minima del motore DC e derivazione della coppia di una singola spira immersa nel campo magnetico.}
+
+La slide sull'architettura minima identifica i tre blocchi essenziali:
+\begin{itemize}
+\item \textbf{statore}, che genera un campo magnetico quasi costante;
+\item \textbf{rotore} o \textbf{armatura}, che contiene gli avvolgimenti attraversati da corrente;
+\item \textbf{commutatore con spazzole}, che inverte la connessione elettrica al momento giusto.
+\end{itemize}
+
+La derivazione della slide successiva considera una singola spira. Ogni lato attivo, lungo \(l\), immerso in un campo \(B\) e percorso da corrente \(i\), subisce una forza di modulo
+\[
+F=Bil.
+\]
+Le due forze sui lati opposti formano una coppia. Se \(r\) e` la distanza dall'asse del rotore e \(\theta\) l'angolo tra normale alla spira e campo, il braccio efficace vale \(r\sin\theta\), quindi:
+\[
+\tau=2rF\sin\theta.
+\]
+Sostituendo \(F=Bil\) e introducendo l'area della spira \(A=2rl\), si ottiene:
+\[
+\tau=BiA\sin\theta.
+\]
+Con \(N\) spire identiche il risultato diventa:
+\[
+\tau=NBiA\sin\theta.
+\]
+
+Questa formula e` importante non solo per il motore DC classico, ma per tutta l'elettromeccanica: la coppia nasce da un accoppiamento tra corrente, campo magnetico e geometria della macchina.
+
+\slidepair{images11/page-17.png}{images11/page-18.png}{Ruolo del commutatore e andamento della coppia con una sola spira nel caso ideale di commutazione ogni mezzo giro.}
+
+Se non esistesse il commutatore, la corrente resterebbe sempre nello stesso verso elettrico e la coppia cambierebbe segno dopo mezzo giro: il rotore tenderebbe ad accelerare in una meta` della rotazione e a frenare nell'altra. Il commutatore risolve esattamente questo problema invertendo il verso della corrente ogni \(180^\circ\) meccanici.
+
+In questo modo la coppia netta di una singola spira diventa sempre positiva:
+\[
+\tau_{\text{net}}(\theta)=\tau_{\max}|\sin\theta|.
+\]
+La slide finale lo mostra con un grafico molto chiaro: la coppia non e` costante, ma pulsante. Ci sono massimi attorno a \(90^\circ\) e \(270^\circ\), mentre in prossimita` di \(0^\circ\), \(180^\circ\) e \(360^\circ\) la coppia torna a zero.
+
+Questo e` il motivo per cui i motori reali non usano una sola spira. Si impiegano piu` avvolgimenti e una commutazione distribuita, in modo da ridurre il ripple di coppia e rendere il moto piu` regolare.
+
+\begin{keybox}
+\textbf{Idea chiave sul motore DC brushed.} Il motore non ``crea'' coppia in modo misterioso: converte corrente in forza tramite Lorentz, e la disposizione geometrica delle forze genera coppia. Il commutatore fa il passo decisivo: sincronizza elettricamente la corrente con la posizione del rotore, cosi` la coppia media resta motrice e la rotazione puo` continuare.
+\end{keybox}
+
+\subsection*{Sintesi finale della Lezione 12}
+
+La dodicesima lezione apre il blocco sugli attuatori e mette subito a fuoco il punto centrale per il controllo: l'attuatore e` l'elemento che rende fisicamente possibile il comando, ma proprio per questo introduce limiti e non idealita` che il controllore non puo` ignorare.
+
+Le non linearita` statiche piu` importanti sono saturazione, zona morta e isteresi. I principali vincoli dinamici sono invece slew rate, banda, tempi di salita/assestamento e ritardi. Dal punto di vista energetico entra in gioco il rendimento
+\[
+\eta=\frac{P_{\text{mecc}}}{P_{\text{in}}},
+\]
+mentre dal punto di vista fisico e affidabilistico il limite termico impedisce di lavorare indefinitamente alla massima potenza.
+
+La parte finale introduce il motore DC brushed a partire dalle leggi di Lorentz e Faraday:
+\[
+\mathbf F=I\,\mathbf l\times \mathbf B,
+\qquad
+e=-\frac{d\Phi}{dt}.
+\]
+Per una spira si ottiene la coppia
+\[
+\tau=NBiA\sin\theta,
+\]
+che, con commutazione ideale, diventa
+\[
+\tau_{\text{net}}(\theta)=\tau_{\max}|\sin\theta|.
+\]
+In altre parole, la lezione mostra che il tema dell'attuazione non e` ``dare corrente a un motore'', ma capire come limiti fisici, energetici ed elettromagnetici entrino direttamente nel comportamento dinamico del sistema controllato.
+
+% =========================================================
 % APPENDICE
 % =========================================================
 
@@ -3017,6 +3254,14 @@ Accelerometro massa-molla & $\xi=y-x$, \quad $m\ddot\xi+b\dot\xi+k\xi=-m\ddot x$
 Accelerometro con gravita` & $m\ddot\xi+b\dot\xi+k\xi=-m\ddot x-mg\sin\gamma$, \quad $a^{\text{dist}}=-g\sin\gamma$ \\
 Accelerometro capacitivo MEMS & $C=\dfrac{\varepsilon A}{d}$, \quad $\Delta C=C_1-C_2\propto \xi \propto a$ \\
 Accelerometro termico & $\Delta T \propto a$ \\
+Saturazione attuatore & $u_{out}=\operatorname{sat}(u_{in})$ \\
+Zona morta & $u_{out}=0$ per $|u_{in}|<u_D$ \\
+Slew rate & $\left|\dfrac{du}{dt}\right|\le \dot u_{\max}$ \\
+Banda attuatore & $|G(j\omega_B)|=\dfrac{|G(0)|}{\sqrt{2}}$ \quad (punto di $-3$ dB) \\
+Rendimento attuatore & $\eta=\dfrac{P_{\text{mecc}}}{P_{\text{in}}}$ \\
+Forza di Lorentz e Faraday & $\mathbf F=I\,\mathbf l\times \mathbf B$, \quad $e=-\dfrac{d\Phi}{dt}$ \\
+Coppia di una spira in motore DC & $F=Bil$, \quad $\tau=2rF\sin\theta=BiA\sin\theta$, \quad $A=2rl$ \\
+Motore DC con $N$ spire e commutazione ideale & $\tau=NBiA\sin\theta$, \quad $\tau_{\text{net}}(\theta)=\tau_{\max}|\sin\theta|$ \\
 Metodo M & $\omega_m=\dfrac{2\pi}{T_c}\dfrac{m}{PPR}$, \quad $N=\dfrac{60}{T_c}\dfrac{m}{PPR}$ \\
 Metodo T & $T_c=m_cT_{\text{clock}}$, \quad $\omega_m=\dfrac{2\pi}{PPR\,m_cT_{\text{clock}}}$ \\
 Metodo M/T & $T=T_c+m_2T_2$, \quad $\omega_m=\dfrac{2\pi}{PPR}\dfrac{m_1}{T_c+m_2T_2}$ \\

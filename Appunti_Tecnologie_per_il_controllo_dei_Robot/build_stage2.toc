@@ -91,8 +91,15 @@
 \contentsline {subsection}{\numberline {10.2}Velocita` da effetto Doppler}{126}{subsection.10.2}%
 \contentsline {subsection}{\numberline {10.3}Accelerometri: principio fisico}{128}{subsection.10.3}%
 \contentsline {subsection}{\numberline {10.4}Tecnologie di accelerometri}{131}{subsection.10.4}%
-\contentsline {section}{Appendice}{137}{section*.169}%
-\contentsline {subsection}{Formulario sintetico}{137}{section*.170}%
-\contentsline {subsection}{Confronto rapido dei sensori di posizione}{139}{section*.171}%
-\contentsline {subsection}{Confronto rapido di sensori e metodi per velocita`, distanza e accelerazione}{140}{section*.172}%
-\contentsline {subsection}{Riferimento al materiale originale}{142}{section*.173}%
+\contentsline {section}{\numberline {11}Lezione 12}{137}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Visione generale della lezione}{137}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Ingresso nel blocco sugli attuatori}{137}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Non linearita` statiche: saturazione, zona morta, isteresi}{140}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Vincoli dinamici degli attuatori}{141}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}Energia, rendimento e limiti termici}{143}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Motore DC brushed: principio fisico e coppia elementare}{144}{subsection.11.6}%
+\contentsline {section}{Appendice}{148}{section*.180}%
+\contentsline {subsection}{Formulario sintetico}{148}{section*.181}%
+\contentsline {subsection}{Confronto rapido dei sensori di posizione}{150}{section*.182}%
+\contentsline {subsection}{Confronto rapido di sensori e metodi per velocita`, distanza e accelerazione}{151}{section*.183}%
+\contentsline {subsection}{Riferimento al materiale originale}{154}{section*.184}%
