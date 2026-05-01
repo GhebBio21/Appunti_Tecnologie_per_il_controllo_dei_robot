@@ -3187,6 +3187,524 @@ che, con commutazione ideale, diventa
 In altre parole, la lezione mostra che il tema dell'attuazione non e` ``dare corrente a un motore'', ma capire come limiti fisici, energetici ed elettromagnetici entrino direttamente nel comportamento dinamico del sistema controllato.
 
 % =========================================================
+% LEZIONE 13
+% =========================================================
+
+\clearpage
+\section{Lezione 13}
+
+\subsection{Visione generale della lezione}
+
+La tredicesima lezione completa il modello del \emph{motore DC brushed} e prepara il passaggio ai motori passo-passo. La Lezione 12 aveva mostrato come una singola spira possa generare coppia, ma aveva anche lasciato aperto un problema evidente: con una sola spira, anche usando un commutatore ideale, la coppia resta pulsante e si annulla in alcune posizioni. La prima parte della lezione risolve proprio questo punto introducendo piu` avvolgimenti e mostrando perche' un motore reale puo` essere modellato, in prima approssimazione, con la relazione semplice
+\[
+\tau = k_t i.
+\]
+
+La seconda parte introduce la \emph{back-EMF}, cioe` la tensione indotta dalla rotazione del rotore. Questo e` il passaggio che trasforma il motore DC da semplice convertitore corrente-coppia a sistema elettromeccanico accoppiato: la corrente genera coppia, ma la rotazione genera una tensione che si oppone alla corrente. Da qui nascono il modello elettrico, il modello meccanico, la caratteristica coppia-velocita`, il punto di lavoro e la funzione di trasferimento.
+
+La parte finale aggiunge due aspetti pratici importanti: i limiti termici del motore e l'introduzione agli \emph{stepper motor}. Gli stepper vengono presentati come attuatori discreti, capaci di posizionarsi per passi successivi tramite sequenze di eccitazione delle fasi.
+
+\subsection{Ripple di coppia e ruolo di piu` avvolgimenti}
+
+\slidepair{images12/part1-01.png}{images12/part1-02.png}{Con una sola spira e un commutatore ideale la coppia resta positiva, ma non e` costante e si annulla in posizioni critiche.}
+
+La lezione riparte dal risultato finale della lezione precedente. Con una sola spira, il commutatore inverte la corrente ogni mezzo giro e rende la coppia sempre motrice:
+\[
+\tau_{\text{net}}(\theta)=\tau_{\max}|\sin\theta|.
+\]
+Questa forma e` gia` molto meglio della coppia alternata positiva-negativa che si avrebbe senza commutazione, perche' consente la rotazione continua. Pero` non e` ancora una coppia buona dal punto di vista del controllo.
+
+Il grafico mostra infatti due difetti:
+\begin{itemize}
+\item la coppia e` fortemente ondulata, quindi la velocita` tende a oscillare anche con carico costante;
+\item in corrispondenza di alcuni angoli la coppia e` nulla, quindi il motore ha posizioni in cui non riesce a ripartire bene.
+\end{itemize}
+
+Questo e` il motivo fisico per cui un motore reale non usa una sola spira. La singola spira serve per capire il principio, ma non e` una soluzione pratica se si vuole una coppia regolare.
+
+\slidepair{images12/part1-03.png}{images12/part1-04.png}{Aggiungendo avvolgimenti sfasati, il commutatore seleziona quello che produce la coppia maggiore e il ripple diminuisce.}
+
+Con due avvolgimenti sfasati di \(90^\circ\), il commutatore puo` selezionare l'avvolgimento che, in quel momento, fornisce la coppia maggiore:
+\[
+\tau(\theta)=\tau_0\max\left(|\sin\theta|,|\cos\theta|\right).
+\]
+La coppia minima non cade piu` a zero come nel caso a singolo avvolgimento. Il ripple resta presente, ma diventa piu` piccolo.
+
+Con tre avvolgimenti sfasati di \(120^\circ\), l'idea e` la stessa:
+\[
+\tau(\theta)=\tau_0\max\left(
+|\sin\theta|,
+\left|\sin\left(\theta+\frac{2\pi}{3}\right)\right|,
+\left|\sin\left(\theta+\frac{4\pi}{3}\right)\right|
+\right).
+\]
+In generale, aumentando il numero di avvolgimenti e distribuendo meglio le commutazioni, la coppia risultante diventa piu` piatta.
+
+\slidepair{images12/part1-05.png}{images12/part1-06.png}{Modello con \(N\) avvolgimenti e approssimazione del motore reale come generatore di coppia proporzionale alla corrente.}
+
+Nel caso generale con \(N\) avvolgimenti, il commutatore ha due spazzole e \(2N\) lamelle. In forma ideale, la coppia disponibile puo` essere scritta come:
+\[
+\tau(\theta)=\tau_0\max_{k=0,\ldots,N-1}
+\left|\sin\left(\theta+\frac{2\pi k}{N}\right)\right|.
+\]
+Questa formula va letta qualitativamente: il commutatore fa in modo che, tra gli avvolgimenti disponibili, resti attivo quello piu` favorevole alla produzione di coppia.
+
+La slide aggiunge anche un dettaglio costruttivo importante. Nella pratica non si aumenta indefinitamente il numero di avvolgimenti principali; spesso si usano pochi avvolgimenti, tipicamente da tre a sei, ma si distribuiscono le spire e le lamelle in modo da rendere la commutazione piu` dolce. Alcuni conduttori collegati alla stessa coppia di lamelle possono essere avvolti anche in posizioni laterali, cosi` le loro coppie si sommano e la caratteristica totale si appiattisce.
+
+Il risultato modellistico e` molto comodo:
+\[
+\tau(\theta)\simeq \tau_0=NBiA=k_t i.
+\]
+Per un campo magnetico fissato, la coppia sviluppata dal motore e` quindi proporzionale alla corrente di armatura. Tutta la complessita` geometrica del motore viene riassunta nella costante di coppia \(k_t\).
+
+\begin{keybox}
+\textbf{Idea chiave.} Piu` avvolgimenti non servono a cambiare il principio fisico della coppia, ma a renderlo usabile: trasformano una coppia pulsante in una coppia quasi continua, che puo` essere modellata come \(\tau=k_t i\).
+\end{keybox}
+
+\subsection{Back-EMF: la tensione generata dalla rotazione}
+
+\slidepair{images12/part1-07.png}{images12/part1-08.png}{Legge di Faraday e flusso magnetico concatenato a una spira rotante.}
+
+La \emph{back electromotive force}, o \emph{back-EMF}, nasce dalla legge di Faraday. Se il flusso magnetico concatenato con una spira cambia nel tempo, nella spira compare una tensione indotta:
+\[
+e=-\frac{d\Phi}{dt}.
+\]
+Per una bobina con \(N\) spire:
+\[
+e=-N\frac{d\Phi}{dt}.
+\]
+
+Il flusso magnetico e` definito come
+\[
+\Phi=\int \mathbf B\cdot d\mathbf A.
+\]
+Nel caso semplice di campo uniforme e spira piana di area \(A\), se \(\theta\) e` l'angolo tra il campo magnetico e la normale alla spira:
+\[
+\Phi=BA\cos\theta.
+\]
+
+\slidepair{images12/part1-09.png}{images12/part1-10.png}{Se la spira ruota con velocita` angolare \(\omega\), il flusso varia e genera una tensione proporzionale alla velocita`.}
+
+Se il rotore ruota con velocita` angolare \(\omega\), si puo` scrivere
+\[
+\theta(t)=\omega t.
+\]
+Il flusso diventa:
+\[
+\Phi(t)=BA\cos(\omega t).
+\]
+Applicando Faraday:
+\[
+e(t)=-N\frac{d}{dt}\left(BA\cos(\omega t)\right)
+    =NBA\omega\sin(\omega t).
+\]
+Per una singola bobina la back-EMF e` quindi sinusoidale. Nel motore DC brushed, pero`, il commutatore ``raddrizza'' internamente questa tensione alternata, in modo simile a quanto faceva con la coppia. Nel modello medio si ottiene:
+\[
+e\simeq k_e\omega.
+\]
+
+La back-EMF e` una tensione proporzionale alla velocita` e di segno opposto rispetto alla tensione che spinge la corrente. Per questo viene chiamata anche contro-elettromotrice: piu` il motore gira veloce, piu` genera una tensione che riduce la corrente disponibile a parita` di alimentazione.
+
+\subsection{Modello elettromeccanico del motore DC}
+
+\slidepair{images12/part1-11.png}{images12/part1-12.png}{Modello elettrico e modello meccanico del motore DC brushed.}
+
+Dal lato elettrico, l'avvolgimento di armatura viene modellato come una resistenza \(R\), un'induttanza \(L\) e un generatore di back-EMF in serie. Applicando Kirchhoff:
+\[
+V=Ri+L\frac{di}{dt}+e.
+\]
+Sostituendo \(e=k_e\omega\):
+\[
+V=Ri+L\frac{di}{dt}+k_e\omega.
+\]
+
+Questa equazione mostra il primo accoppiamento: la parte meccanica rientra nel circuito elettrico tramite \(\omega\). A velocita` elevata, anche con la stessa tensione \(V\), resta meno margine per far crescere la corrente.
+
+Dal lato meccanico si applica la seconda legge di Newton in rotazione. Indicando con \(J\) l'inerzia complessiva, con \(b\) l'attrito viscoso e con \(\tau_L\) la coppia resistente esterna:
+\[
+J\frac{d\omega}{dt}=\tau-b\omega-\tau_L.
+\]
+Poiche' \(\tau=k_t i\), si ottiene:
+\[
+J\frac{d\omega}{dt}=k_t i-b\omega-\tau_L.
+\]
+
+\slidepair{images12/part1-13.png}{images12/part1-14.png}{Sistema elettromeccanico completo e relazione tra costante di coppia \(k_t\) e costante di back-EMF \(k_e\).}
+
+Il modello completo e` quindi:
+\[
+\begin{cases}
+V=Ri+L\dfrac{di}{dt}+k_e\omega,\\[0.4em]
+J\dfrac{d\omega}{dt}=k_t i-b\omega-\tau_L.
+\end{cases}
+\]
+E` un sistema accoppiato: la corrente produce coppia, ma la velocita` produce back-EMF e quindi modifica la corrente.
+
+Le slide chiariscono anche la relazione tra \(k_t\) e \(k_e\). In un motore ideale, senza perdite, la potenza elettrica associata alla back-EMF e` uguale alla potenza meccanica convertita:
+\[
+P_{\text{mecc}}=\tau\omega=k_t i\,\omega,
+\qquad
+P_{\text{elect}}=e i=k_e\omega\,i.
+\]
+Uguagliando le due espressioni:
+\[
+k_t=k_e.
+\]
+Questa uguaglianza vale quando si usano unita` SI coerenti. Dal punto di vista fisico, e` una manifestazione della reciprocita` della macchina elettrica: lo stesso accoppiamento che trasforma corrente in coppia trasforma velocita` in tensione.
+
+\begin{infobox}
+Nel modello di controllo conviene ricordare sempre entrambe le direzioni dell'accoppiamento: \(k_t\) dice quanta coppia si ottiene da una certa corrente, \(k_e\) dice quanta tensione opposta nasce da una certa velocita`.
+\end{infobox}
+
+\subsection{Comportamento a regime e caratteristica coppia-velocita`}
+
+\slidepair{images12/part1-15.png}{images12/part1-16.png}{A regime, la relazione tra coppia disponibile e velocita` e` lineare.}
+
+A regime stazionario, corrente e velocita` sono costanti:
+\[
+\frac{di}{dt}=0,
+\qquad
+\frac{d\omega}{dt}=0.
+\]
+Le equazioni diventano:
+\[
+V=Ri+k_e\omega,
+\qquad
+k_t i=b\omega+\tau_L.
+\]
+
+Trascurando temporaneamente l'attrito viscoso nella costruzione della caratteristica motore, dalla prima equazione si ricava:
+\[
+i=\frac{V-k_e\omega}{R}
+  =\frac{V}{R}-\frac{k_e}{R}\omega.
+\]
+Poiche' \(\tau=k_t i\):
+\[
+\tau=k_t\frac{V}{R}-k_t\frac{k_e}{R}\omega.
+\]
+La coppia disponibile decresce linearmente con la velocita`. Questa e` una delle caratteristiche piu` importanti del motore DC: a tensione fissata, molta velocita` significa molta back-EMF, quindi meno corrente e meno coppia residua.
+
+\slidepair{images12/part1-17.png}{images12/part1-18.png}{Rappresentazione grafica della caratteristica coppia-velocita`: coppia di stallo e corrente massima a velocita` nulla.}
+
+La retta coppia-velocita` ha due intercette fondamentali. A velocita` nulla, la back-EMF e` nulla, quindi:
+\[
+i_{\text{stall}}=\frac{V}{R},
+\qquad
+\tau_{\text{stall}}=k_t\frac{V}{R}.
+\]
+Questa e` la \emph{stall torque}, cioe` la coppia massima che il motore puo` sviluppare a rotore bloccato. E` anche la condizione di corrente massima, quindi e` pericolosa termicamente: tutta la potenza elettrica assorbita diventa perdita Joule.
+
+Quando invece la coppia richiesta si annulla, idealmente si ottiene la velocita` massima a vuoto:
+\[
+\omega_0=\frac{V}{k_e}.
+\]
+In pratica la velocita` a vuoto reale e` un po' piu` bassa, perche' servono comunque corrente e coppia per vincere attriti e perdite interne.
+
+\slidepair{images12/part1-19.png}{images12/part1-20.png}{La massima potenza meccanica si ha a meta` della velocita` massima e a meta` della coppia di stallo.}
+
+La potenza meccanica utile e`:
+\[
+P_{\text{out}}=\tau\omega.
+\]
+Poiche' \(\tau\) decresce linearmente con \(\omega\), il prodotto \(\tau\omega\) e` una parabola. Nel modello ideale la potenza massima si trova a meta` della retta:
+\[
+\omega=\frac{\omega_0}{2},
+\qquad
+\tau=\frac{\tau_{\text{stall}}}{2}.
+\]
+
+Questa informazione e` molto utile per leggere i datasheet. Il punto di massima potenza non coincide con il punto di massima efficienza, e non coincide nemmeno con il punto piu` sicuro termicamente. Un motore puo` erogare molta potenza per brevi intervalli, ma l'uso continuativo dipende da corrente, raffreddamento e temperatura.
+
+La slide sull'efficienza ricorda la definizione:
+\[
+\eta=\frac{P_{\text{out}}}{P_{\text{in}}}
+    =\frac{\tau\omega}{Vi}.
+\]
+Allo stallo, l'efficienza e` nulla perche' \(\omega=0\). A vuoto, anche la potenza meccanica utile tende a zero. La zona utile sta quindi in mezzo, ma la scelta del punto operativo dipende dal carico e dal ciclo di lavoro.
+
+\slidepair{images12/part1-21.png}{images12/part1-22.png}{La caratteristica puo` essere disegnata con assi scambiati; cio` non cambia il contenuto fisico.}
+
+Alcuni grafici mettono la coppia sull'asse orizzontale e la velocita` sull'asse verticale, altri fanno il contrario. La slide segnala questa convenzione per evitare confusione. Il contenuto fisico resta lo stesso: a tensione fissata, coppia e velocita` sono legate da una retta a pendenza negativa.
+
+Una scrittura utile e`:
+\[
+\tau=\tau_{\text{stall}}\left(1-\frac{\omega}{\omega_0}\right).
+\]
+Invertendo:
+\[
+\omega=\omega_0\left(1-\frac{\tau}{\tau_{\text{stall}}}\right).
+\]
+L'attenzione va quindi posta sulle intercette e sul punto di lavoro, non sull'orientamento grafico degli assi.
+
+\slidepair{images12/part1-23.png}{images12/part1-24.png}{Punto di lavoro e traslazione della caratteristica al variare della tensione di alimentazione.}
+
+Il punto di lavoro si trova dove la coppia fornita dal motore uguaglia la coppia richiesta dal carico piu` gli attriti:
+\[
+k_t i=b\omega+\tau_L.
+\]
+Graficamente e` l'intersezione tra la caratteristica del motore e la caratteristica del carico.
+
+Cambiare la tensione di alimentazione \(V\) trasla la retta coppia-velocita`. Infatti:
+\[
+\tau=k_t\frac{V}{R}-k_t\frac{k_e}{R}\omega.
+\]
+Il termine di intercetta \(k_tV/R\) cresce con \(V\), quindi aumentando la tensione aumentano sia la coppia di stallo sia la velocita` a vuoto ideale. Questa e` la base intuitiva del controllo in tensione di un motore DC: modificando \(V\), si sposta la caratteristica e quindi cambia il punto di equilibrio con il carico.
+
+\begin{keybox}
+\textbf{Lettura della caratteristica.} La retta coppia-velocita` nasce dalla back-EMF: il motore veloce genera piu` tensione opposta, assorbe meno corrente e quindi produce meno coppia.
+\end{keybox}
+
+\subsection{Aspetti termici del motore DC}
+
+\slidepair{images12/part2-01.png}{images12/part2-02.png}{Perdite Joule, temperatura degli avvolgimenti e ruolo delle resistenze termiche.}
+
+Il limite termico e` uno dei piu` importanti nella scelta di un motore. La principale sorgente di perdita e` spesso la perdita Joule negli avvolgimenti:
+\[
+P_J=Ri^2.
+\]
+A questa si aggiungono perdite nel ferro, dovute a correnti parassite e isteresi, e perdite meccaniche per attrito.
+
+La temperatura cresce perche' la potenza dissipata diventa calore. Una rappresentazione semplice usa la resistenza termica, in analogia con una resistenza elettrica:
+\[
+\Delta T=P_J\left(R_{\text{th1}}+R_{\text{th2}}\right).
+\]
+La temperatura degli avvolgimenti a regime diventa:
+\[
+T_{\text{winding}}=T_{\text{amb}}+\Delta T.
+\]
+Un dissipatore o un miglior accoppiamento termico riducono la resistenza termica verso l'ambiente e quindi abbassano la temperatura a parita` di corrente.
+
+\slidepair{images12/part2-03.png}{images12/part2-04.png}{Effetto della temperatura su resistenza degli avvolgimenti e costante di coppia dei magneti.}
+
+La temperatura non e` solo una conseguenza del funzionamento: cambia anche i parametri del motore. La resistenza del rame cresce con la temperatura:
+\[
+R_{\text{warm}}=R\left(1+\alpha_{\text{cu}}\Delta T\right),
+\qquad
+\alpha_{\text{cu}}\simeq 0.0039\,K^{-1}.
+\]
+Quindi, a caldo, a parita` di tensione, il motore assorbe meno corrente. Allo stesso tempo aumenta la potenza dissipata per ogni ampere richiesto, perche' \(P_J=Ri^2\).
+
+Anche il campo generato dai magneti permanenti varia con la temperatura. Per magneti al neodimio, la slide usa:
+\[
+k_{t,\text{warm}}=k_t\left(1+\alpha_{\text{mag}}\Delta T\right),
+\qquad
+\alpha_{\text{mag}}\simeq -0.0011\,K^{-1}.
+\]
+Il coefficiente e` negativo: scaldando il motore, i magneti perdono prestazione e la costante di coppia diminuisce. Se si superano certe temperature, compare anche il rischio di demagnetizzazione permanente.
+
+Dal punto di vista del controllo, questo significa che un motore caldo non e` identico allo stesso motore a freddo. La stessa tensione non produce la stessa corrente, e la stessa corrente non produce esattamente la stessa coppia.
+
+\subsection{Funzione di trasferimento del motore DC}
+
+\slidepair{images12/part2-05.png}{images12/part2-06.png}{Dalle equazioni differenziali al diagramma a blocchi del motore DC.}
+
+Per ricavare la funzione di trasferimento si parte dal modello senza coppia di carico esterna:
+\[
+V(t)=Ri(t)+L\frac{di(t)}{dt}+k_e\omega(t),
+\]
+\[
+J\frac{d\omega(t)}{dt}+b\omega(t)=k_t i(t).
+\]
+Applicando la trasformata di Laplace:
+\[
+V(s)=(R+Ls)I(s)+k_e\Omega(s),
+\]
+\[
+(Js+b)\Omega(s)=k_t I(s).
+\]
+
+Il diagramma a blocchi mostra bene l'accoppiamento: il ramo diretto converte tensione in corrente e corrente in coppia, mentre la velocita` torna indietro come feedback negativo di back-EMF.
+
+\slidepair{images12/part2-07.png}{images12/part2-08.png}{Funzione di trasferimento completa tra tensione applicata e velocita` angolare.}
+
+Eliminando \(I(s)\), si ottiene:
+\[
+\frac{\Omega(s)}{V(s)}
+=
+\frac{k_t}
+{(Ls+R)(Js+b)+k_tk_e}.
+\]
+Sviluppando il denominatore:
+\[
+\frac{\Omega(s)}{V(s)}
+=
+\frac{k_t}
+{LJ s^2+(Lb+RJ)s+(Rb+k_tk_e)}.
+\]
+
+Se l'attrito viscoso viene trascurato, cioe` \(b\simeq 0\), la funzione diventa:
+\[
+\frac{\Omega(s)}{V(s)}
+=
+\frac{k_t}
+{LJ s^2+RJ s+k_tk_e}.
+\]
+Questo e` un secondo ordine, perche' sono presenti due accumuli di energia: l'induttanza elettrica \(L\) e l'inerzia meccanica \(J\).
+
+\slidepair{images12/part2-09.png}{images12/part2-10.png}{Separazione tra costante di tempo elettrica e costante di tempo meccanica; modello approssimato del motore.}
+
+Le radici del denominatore, nel caso \(b=0\), sono:
+\[
+s_{1,2}
+=
+\frac{-RJ\pm\sqrt{(RJ)^2-4LJk_tk_e}}{2LJ}.
+\]
+Se la dinamica elettrica e` molto piu` rapida di quella meccanica:
+\[
+\frac{L}{R}\ll \frac{RJ}{k_tk_e},
+\]
+allora i poli si approssimano come:
+\[
+s_{1,2}\simeq -\frac{R}{L},\quad -\frac{k_tk_e}{RJ}.
+\]
+Le costanti di tempo corrispondenti sono:
+\[
+\tau_e=\frac{L}{R},
+\qquad
+\tau_m=\frac{RJ}{k_tk_e}.
+\]
+
+Quando \(\tau_e\ll\tau_m\), la corrente raggiunge quasi subito il suo valore di equilibrio rispetto alla velocita`. Si puo` quindi porre:
+\[
+L\frac{di}{dt}\simeq 0,
+\qquad
+i(t)\simeq \frac{V(t)-k_e\omega(t)}{R}.
+\]
+Sostituendo nella dinamica meccanica:
+\[
+J\frac{d\omega}{dt}
++
+\left(b+\frac{k_tk_e}{R}\right)\omega
+=\frac{k_t}{R}V.
+\]
+La funzione di trasferimento approssimata e`:
+\[
+\frac{\Omega(s)}{V(s)}
+=
+\frac{k_t/R}
+{Js+b+k_tk_e/R}
+=
+\frac{k_t}
+{RJ s+Rb+k_tk_e}.
+\]
+La costante di tempo approssimata diventa:
+\[
+\tau_m^{\prime}
+=
+\frac{J}{b+k_tk_e/R}
+=
+\frac{RJ}{Rb+k_tk_e},
+\]
+che coincide con \(\tau_m\) se \(b=0\).
+
+\begin{keybox}
+\textbf{Modello utile per il controllo.} Se l'induttanza e` veloce rispetto alla meccanica, il motore DC puo` essere trattato come un primo ordine tra tensione e velocita`, con una retroazione interna dovuta alla back-EMF.
+\end{keybox}
+
+\slidefig{images12/part2-11.png}{Esempi di motori DC brushed e loro componenti: magneti permanenti, rotore, commutatore e spazzole.}
+
+La slide fotografica serve a collegare il modello alla costruzione fisica. Nei piccoli motori DC si ritrovano gli stessi blocchi modellati nelle equazioni:
+\begin{itemize}
+\item i magneti permanenti dello statore generano il campo \(B\);
+\item il rotore contiene le bobine percorse da corrente;
+\item il commutatore e le spazzole realizzano la commutazione meccanica;
+\item l'albero trasmette la coppia al carico.
+\end{itemize}
+Le spazzole e il commutatore sono anche una sorgente pratica di usura, rumore elettrico e limiti di vita utile. Per questo, in molte applicazioni moderne, i motori brushed vengono sostituiti da motori brushless; il principio elettromagnetico resta simile, ma la commutazione e` elettronica invece che meccanica.
+
+\subsection{Introduzione agli stepper motor}
+
+\slidetriple{images12/part2-12.png}{images12/part2-13.png}{images12/part2-14.png}{Principio di funzionamento generale degli stepper motor e costruzione fisica di statore e rotore.}
+
+Gli \emph{stepper motor} sono motori progettati per muoversi per passi discreti. Il rotore si porta in posizioni di equilibrio successive allineandosi con il campo magnetico generato dallo statore oppure cercando di minimizzare la riluttanza del circuito magnetico.
+
+Le slide distinguono tre famiglie principali:
+\begin{itemize}
+\item \textbf{Permanent Magnet} (PM), con rotore a magnete permanente;
+\item \textbf{Variable Reluctance} (VR), in cui il rotore tende alla posizione di minima riluttanza;
+\item \textbf{Hybrid} (HB), che combina magnete permanente e dentature per ottenere passi piccoli e buona coppia.
+\end{itemize}
+
+Le caratteristiche comuni sono:
+\begin{itemize}
+\item moto in passi;
+\item controllo di posizione semplice in anello aperto, almeno se non si perdono passi;
+\item coppia di mantenimento a rotore fermo;
+\item velocita` determinata dalla frequenza degli impulsi;
+\item verso di rotazione determinato dall'ordine di eccitazione delle fasi.
+\end{itemize}
+
+Dal punto di vista costruttivo, lo statore porta avvolgimenti di fase che generano un campo magnetico sequenziale. A ogni stato di eccitazione corrisponde un asse magnetico preferito; passando allo stato successivo, l'equilibrio si sposta e il rotore compie un passo.
+
+\slidepair{images12/part2-15.png}{images12/part2-16.png}{Motore passo-passo a magnete permanente: attrazione/repulsione magnetica e avanzamento tra posizioni di equilibrio.}
+
+Nel motore passo-passo a magnete permanente, lo statore ha poli salienti con avvolgimenti di fase, mentre il rotore e` un magnete cilindrico o a coppa con poli nord e sud alternati. Quando una fase viene alimentata, un polo dello statore diventa nord e quello opposto sud; il rotore subisce una coppia di attrazione/repulsione e si allinea con il campo.
+
+Quando l'eccitazione passa alla fase successiva, il campo statorico ruota di un angolo fissato dalla geometria. Il rotore segue il nuovo equilibrio. Nel caso elementare mostrato, con due fasi statoriche e due poli rotorici, ci sono quattro posizioni stabili per giro e quindi:
+\[
+\alpha_s=90^\circ.
+\]
+
+Questa modalita` di funzionamento rende lo stepper molto intuitivo per il posizionamento: se ogni impulso produce un passo, contando gli impulsi si conosce la posizione comandata. Il limite e` che la posizione reale coincide con quella comandata solo se il motore non perde passi.
+
+\slidepair{images12/part2-16.png}{images12/part2-17.png}{Regola geometrica del passo per un motore PM stepper e esempio con \(m=2\), \(N_r=6\).}
+
+Per un PM stepper, la slide introduce:
+\[
+m=\text{numero di fasi statoriche},
+\qquad
+N_r=\text{numero di poli rotorici},
+\qquad
+p_r=\frac{N_r}{2}.
+\]
+La regola geometrica proposta per l'angolo di passo e`:
+\[
+\alpha_s=\frac{360^\circ}{mN_r}.
+\]
+Nell'esempio:
+\[
+m=2,
+\qquad
+N_r=6,
+\qquad
+\alpha_s=30^\circ.
+\]
+
+Il segno della corrente decide quale polo statorico diventa nord o sud e quindi anche il verso dello spostamento verso il polo rotorico piu` vicino. Questa e` la base per ottenere rotazione controllata: non si applica una tensione continua qualunque, ma una sequenza ordinata di eccitazioni di fase.
+
+I motori stepper reali, soprattutto ibridi, usano dentature e molte piu` posizioni magnetiche, arrivando a passi tipici molto piu` piccoli, per esempio \(1.8^\circ\) nei motori da 200 passi/giro. Inoltre, con il \emph{microstepping}, le correnti nelle fasi vengono modulate in modo sinusoidale per ottenere posizioni intermedie e ridurre vibrazioni e ripple di coppia.
+
+\begin{keybox}
+\textbf{Differenza di filosofia.} Nel motore DC brushed il comando modifica una caratteristica continua coppia-velocita`; nello stepper il comando e` una sequenza di stati magnetici che sposta il punto di equilibrio del rotore passo dopo passo.
+\end{keybox}
+
+\subsection*{Sintesi finale della Lezione 13}
+
+La lezione completa il quadro del motore DC brushed. La coppia pulsante della singola spira viene resa quasi continua tramite piu` avvolgimenti e commutazione distribuita, permettendo il modello medio:
+\[
+\tau=k_t i.
+\]
+La rotazione genera pero` una tensione opposta:
+\[
+e=k_e\omega,
+\]
+che accoppia parte elettrica e parte meccanica. Il modello completo e`:
+\[
+\begin{cases}
+V=Ri+L\dfrac{di}{dt}+k_e\omega,\\[0.4em]
+J\dfrac{d\omega}{dt}=k_t i-b\omega-\tau_L.
+\end{cases}
+\]
+
+A regime, la back-EMF produce la caratteristica lineare coppia-velocita`:
+\[
+\tau=k_t\frac{V}{R}-k_t\frac{k_e}{R}\omega.
+\]
+Da qui si leggono coppia di stallo, velocita` a vuoto, punto di massima potenza e punto operativo con il carico.
+
+La parte termica ricorda che la corrente non e` gratis: \(P_J=Ri^2\) scalda gli avvolgimenti, modifica \(R\), riduce le prestazioni dei magneti e puo` imporre limiti molto piu` severi di quelli dinamici. Infine, l'introduzione agli stepper mostra una famiglia diversa di attuatori elettrici: invece di produrre moto continuo tramite una coppia media, lo stepper realizza posizioni discrete tramite l'allineamento successivo del rotore con il campo statorico.
+
+% =========================================================
 % APPENDICE
 % =========================================================
 
@@ -3262,6 +3780,13 @@ Rendimento attuatore & $\eta=\dfrac{P_{\text{mecc}}}{P_{\text{in}}}$ \\
 Forza di Lorentz e Faraday & $\mathbf F=I\,\mathbf l\times \mathbf B$, \quad $e=-\dfrac{d\Phi}{dt}$ \\
 Coppia di una spira in motore DC & $F=Bil$, \quad $\tau=2rF\sin\theta=BiA\sin\theta$, \quad $A=2rl$ \\
 Motore DC con $N$ spire e commutazione ideale & $\tau=NBiA\sin\theta$, \quad $\tau_{\text{net}}(\theta)=\tau_{\max}|\sin\theta|$ \\
+Motore DC reale e back-EMF & $\tau=k_t i$, \quad $e=k_e\omega$, \quad in SI ideale $k_t=k_e$ \\
+Modello elettromeccanico motore DC & $V=Ri+L\dot i+k_e\omega$, \quad $J\dot\omega=k_t i-b\omega-\tau_L$ \\
+Caratteristica coppia-velocita` motore DC & $\tau=k_t\dfrac{V}{R}-k_t\dfrac{k_e}{R}\omega$, \quad $\tau_{\text{stall}}=k_t\dfrac{V}{R}$, \quad $\omega_0=\dfrac{V}{k_e}$ \\
+Potenza ed efficienza motore DC & $P_{\text{out}}=\tau\omega$, \quad $\eta=\dfrac{\tau\omega}{Vi}$, \quad $P_{\max}$ a $\omega=\omega_0/2$ e $\tau=\tau_{\text{stall}}/2$ \\
+Termica motore DC & $P_J=Ri^2$, \quad $\Delta T=P_J(R_{\text{th1}}+R_{\text{th2}})$, \quad $R_{\text{warm}}=R(1+\alpha_{\text{cu}}\Delta T)$ \\
+Funzione di trasferimento motore DC & $\dfrac{\Omega(s)}{V(s)}=\dfrac{k_t}{(Ls+R)(Js+b)+k_tk_e}$, \quad se $\tau_e\ll\tau_m$: $\dfrac{\Omega(s)}{V(s)}\simeq\dfrac{k_t}{RJs+Rb+k_tk_e}$ \\
+Motore PM stepper & $p_r=\dfrac{N_r}{2}$, \quad $\alpha_s=\dfrac{360^\circ}{mN_r}$ \\
 Metodo M & $\omega_m=\dfrac{2\pi}{T_c}\dfrac{m}{PPR}$, \quad $N=\dfrac{60}{T_c}\dfrac{m}{PPR}$ \\
 Metodo T & $T_c=m_cT_{\text{clock}}$, \quad $\omega_m=\dfrac{2\pi}{PPR\,m_cT_{\text{clock}}}$ \\
 Metodo M/T & $T=T_c+m_2T_2$, \quad $\omega_m=\dfrac{2\pi}{PPR}\dfrac{m_1}{T_c+m_2T_2}$ \\

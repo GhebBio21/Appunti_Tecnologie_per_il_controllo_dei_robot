@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.18)  24 APR 2026 13:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.18)  28 APR 2026 15:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**/Users/gab/Appunti_tecnologie_controllo_robot/Appunti_Tecnologie_per_il_controllo_dei_Robot/main.tex
+(/Users/gab/Appunti_tecnologie_controllo_robot/Appunti_Tecnologie_per_il_controllo_dei_Robot/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -23,42 +23,28 @@ File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2026/02/14 v26.3 The multilingual framework for LuaLaTeX, pdfLaT
-eX and XeLaTeX
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2026/02/14 v26.3 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
 \babel@savecnt=\count283
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2078.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2080.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2082.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2083.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2084.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2086.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2111.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2078.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2080.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2082.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2083.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
 \U@D=\dimen149
 \l@unhyphenated=\language91
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/txtbabel.def)
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count284
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/it/babel-italian.t
-ex)
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/babel/locale/it/babel-italian.tex)
 Package babel Info: Importing font and identification data for italian
 (babel)             from babel-it.ini. Reported on input line 4330.
  (/usr/local/texlive/2026/texmf-dist/tex/generic/babel-italian/italian.ldf
@@ -69,8 +55,7 @@ Language: italian 2026/01/13 v.1.5.02 Italian support for the babel system
 )) (/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count288
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/lmodern.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -104,18 +89,14 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 \Gm@cnth=\count289
@@ -130,53 +111,43 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layouthoffset=\dimen156
 \Gm@layoutvoffset=\dimen157
 \Gm@dimlist=\toks20
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen158
 \Gin@req@width=\dimen159
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count292
 \float@exts=\toks21
 \float@box=\box53
 \@float@everytoks=\toks22
 \@floatcapt=\box54
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks23
 \ex@=\dimen160
-))
-(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen161
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count293
@@ -226,22 +197,18 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks27
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mathtools.sty
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/calc.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
 \calc@Acount=\count305
 \calc@Bcount=\count306
@@ -253,8 +220,7 @@ LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
 \calc@Ccount=\count307
 \calc@Cskip=\skip56
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mhsetup.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
 \g_MT_multlinerow_int=\count308
@@ -268,8 +234,7 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \l_MT_below_shortintertext_sep=\dimen177
 \xmathstrut@box=\box57
 \xmathstrut@dim=\dimen178
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen179
 \lightrulewidth=\dimen180
@@ -288,16 +253,13 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count311
 \@lastruleclass=\count312
 \@thisrulewidth=\dimen191
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1365.
@@ -307,69 +269,51 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-))
-(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
-ty
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count313
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
-)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
 \@linkdim=\dimen192
 \Hy@linkcounter=\count314
 \Hy@pagecounter=\count315
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count316
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -382,20 +326,16 @@ Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
 \c@Hy@tempcnt=\count317
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4807.
 \XeTeXLinkMargin=\dimen193
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count318
 \Field@Width=\dimen194
@@ -412,20 +352,16 @@ Package hyperref Info: PDF/A mode OFF on input line 6114.
 \c@Hfootnote=\count321
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
 \Fld@listcount=\count322
 \c@bookmark@seq@number=\count323
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-84.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
 \Hy@SectionHShift=\skip58
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty
@@ -436,8 +372,7 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@inbox=\box58
 \enit@count@id=\count324
 \enitdp@description=\count325
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box59
 \beforetitleunit=\skip60
@@ -448,10 +383,8 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidth=\dimen199
 \titlewidthlast=\dimen256
 \titlewidthfirst=\dimen257
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
-
 \f@nch@headwidth=\skip62
 \f@nch@offset@elh=\skip63
 \f@nch@offset@erh=\skip64
@@ -467,37 +400,24 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip74
 \f@nch@widthR=\skip75
 \@temptokenb=\toks30
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
-x
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks31
 \pgfutil@tempdima=\dimen258
 \pgfutil@tempdimb=\dimen259
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box60
-) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
 Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks32
 \pgfkeys@temptoks=\toks33
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
-tered.code.tex
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks34
 ))
 \pgf@x=\dimen260
@@ -520,66 +440,32 @@ tered.code.tex
 \t@pgf@tokb=\toks36
 \t@pgf@tokc=\toks37
 \pgf@sys@id@count=\count330
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
 Driver file for pgf: pgfsys-pdftex.def
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
-ef
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
-df.def
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
-code.tex
+))) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfsyssoftpath@smallbuffer@items=\count331
 \pgfsyssoftpath@bigbuffer@items=\count332
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
-code.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen270
 \pgfmath@count=\count333
 \pgfmath@box=\box61
 \pgfmath@toks=\toks38
 \pgfmath@stack@operand=\toks39
 \pgfmath@stack@operation=\toks40
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
-tex)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
-.code.tex)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
-nometric.code.tex)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
-m.code.tex)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
-rison.code.tex)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
-code.tex)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
-.code.tex)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
-code.tex)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
-erarithmetics.code.tex)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count334
-)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
-de.tex
+)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@picminx=\dimen271
 \pgf@picmaxx=\dimen272
@@ -595,125 +481,75 @@ File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@yy=\dimen282
 \pgf@zx=\dimen283
 \pgf@zy=\dimen284
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
-ruct.code.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@path@lastx=\dimen285
 \pgf@path@lasty=\dimen286
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
-.code.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@shorten@end@additional=\dimen287
 \pgf@shorten@start@additional=\dimen288
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
-de.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box62
 \pgf@hbox=\box63
 \pgf@layerbox@main=\box64
 \pgf@picture@serial@count=\count335
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
-ate.code.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgflinewidth=\dimen289
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
-ations.code.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@pt@x=\dimen290
 \pgf@pt@y=\dimen291
 \pgf@pt@temp=\dimen292
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
-e.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
-ode.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
-ssing.code.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
-de.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfarrowsep=\dimen293
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
-e.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@max=\dimen294
 \pgf@sys@shading@range@num=\count336
 \pgf@shadingcount=\count337
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
-e.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
-code.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfexternal@startupbox=\box65
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
-de.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
-ncy.code.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
-code.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
-tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
-e.tex
+))) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfnodeparttextbox=\box66
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
-tex
+) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--0-65.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@nodesepstart=\dimen295
 \pgf@nodesepend=\dimen296
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--1-18.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
-))
-(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
 \pgffor@iter=\dimen297
 \pgffor@skip=\dimen298
 \pgffor@stack=\toks41
 \pgffor@toks=\toks42
-))
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
-e.tex
+)) (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
-dlers.code.tex
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@plot@mark@count=\count338
 \pgfplotmarksize=\dimen299
@@ -734,30 +570,23 @@ File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikznumberofchildren=\count340
 \tikznumberofcurrentchild=\count341
 \tikz@fig@count=\count342
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
-e.tex
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfmatrixcurrentrow=\count343
 \pgfmatrixcurrentcolumn=\count344
 \pgf@matrix@numberofcolumns=\count345
 )
 \tikz@expandcount=\count346
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarytopaths.code.tex
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/verbatim.sty
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks43
 \verbatim@line=\toks44
 \verbatim@in@stream=\read4
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/environ/environ.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \tcb@titlebox=\box71
@@ -773,8 +602,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@temp=\box77
 \tcb@temp=\box78
 \tcb@temp=\box79
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '6.9.0'
 \c@tcbrastercolumn=\count350
 \c@tcbrasterrow=\count351
@@ -784,19 +612,14 @@ Library (tcolorbox): 'tcbraster.code.tex' version '6.9.0'
 Library (tcolorbox): 'tcbskins.code.tex' version '6.9.0'
 (/usr/local/texlive/2026/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
 Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
 Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.co
-de.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
 \l__tikzfill_img_box=\box80
-))
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
-))
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+)) (/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
 Library (tcolorbox): 'tcbbreakable.code.tex' version '6.9.0'
 (/usr/local/texlive/2026/texmf-dist/tex/latex/pdfcol/pdfcol.sty
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
@@ -805,8 +628,7 @@ Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
 \tcb@testbox=\box81
 \tcb@totalupperbox=\box82
 \tcb@totallowerbox=\box83
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
 Library (tcolorbox): 'tcbhooks.code.tex' version '6.9.0'
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
 Library (tcolorbox): 'tcbtheorems.code.tex' version '6.9.0'
@@ -816,9 +638,7 @@ Library (tcolorbox): 'tcbfitting.code.tex' version '6.9.0'
 \tcb@lowerfitdim=\dimen310
 \tcb@upperfitdim=\dimen311
 \tcb@cur@hbadness=\count354
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.te
-x
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
 Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.9.0'
 (/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
 Library (tcolorbox): 'tcblistings.code.tex' version '6.9.0'
@@ -835,17 +655,14 @@ Library (tcolorbox): 'tcblistings.code.tex' version '6.9.0'
 \lst@newlines=\count359
 \lst@lineno=\count360
 \lst@maxwidth=\dimen315
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
 \c@lstnumber=\count361
 \lst@skipnumbers=\count362
 \lst@framebox=\box85
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
 ))
 Package: listings 2025/11/14 1.11b (Carsten Heinz)
@@ -856,9 +673,7 @@ Package: listings 2025/11/14 1.11b (Carsten Heinz)
     but found:
         2025/11/14 1.11b (Carsten Heinz)
     so I'm assuming it got fixed.
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.te
-x
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
 Library (tcolorbox): 'tcblistingscore.code.tex' version '6.9.0'
 (/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '6.9.0'
@@ -872,21 +687,15 @@ Library (tcolorbox): 'tcbexternal.code.tex' version '6.9.0'
 Library (tcolorbox): 'tcbmagazine.code.tex' version '6.9.0'
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
 Library (tcolorbox): 'tcbvignette.code.tex' version '6.9.0'
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryfadings.code.tex
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
 File: tikzlibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-
-(/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings
-.code.tex
+ (/usr/local/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
 File: pgflibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
+))) (/usr/local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
 Library (tcolorbox): 'tcbposter.code.tex' version '6.9.0'
 )) (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen316
 \captionmargin=\dimen317
@@ -903,15 +712,13 @@ Package caption Info: Standard document class detected.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count366
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count367
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
 \MT@toks=\toks46
 \MT@tempbox=\box86
@@ -925,25 +732,20 @@ LaTeX Info: Redefining \textls on input line 1449.
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
 \MT@listname@count=\count369
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2026/03/01 v3.2d Definitions specific to pdftex (RS)
-
 LaTeX Info: Redefining \lsstyle on input line 944.
 LaTeX Info: Redefining \lslig on input line 944.
 \MT@outer@space=\skip76
 )
 Package microtype Info: Loading configuration file microtype.cfg.
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/parskip/parskip.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTleft=\skip77
 \LTright=\skip78
@@ -961,8 +763,7 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \c@LT@tables=\count373
 \c@LT@chunks=\count374
 \LT@p@ftn=\toks48
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen326
 \ar@mcellbox=\box92
@@ -973,622 +774,1841 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \ar@cellbox=\box93
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 32.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 12
-9.
-
-(/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 129.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count375
+) (./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Info: Redefining \it@ocap on input line 129.
+LaTeX Info: Redefining \it@ccap on input line 129.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(62.59596pt, 472.31595pt, 62.59596pt)
+* v-part:(T,H,B)=(62.59596pt, 719.85492pt, 62.59596pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=472.31595pt
+* \textheight=719.85492pt
+* \oddsidemargin=-9.67403pt
+* \evensidemargin=-9.67403pt
+* \topmargin=-46.67403pt
+* \headheight=14.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count376
+\scratchdimen=\dimen328
+\scratchbox=\box94
+\nofMPsegments=\count377
+\nofMParguments=\count378
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count379
+\MPscratchDim=\dimen329
+\MPnumerator=\count380
+\makeMPintoPDFobject=\count381
+\everyMPtoPDFconversion=\toks51
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package hyperref Info: Link coloring ON on input line 129.
+ (./main.out) (./main.out)
+\@outlinefile=\write4
+\openout4 = `main.out'.
+
+\c@lstlisting=\count382
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: longtable package is loaded.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
-(./main.aux
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@
-       ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@^^@
-          ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@^^@^^@
-             ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@^^@^^@^^@
-                ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@^^@^^@^^@^^@
-                   ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@^^@^^@^^@^^@^^@
-                      ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@^^@^^@^^@^^@^^@^^@
-                         ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@^^@^^@^^@^^@^^@^^@^^@
-                            ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                               ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                     ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                        ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                           ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                              ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                 ^^@^^@^^@^^@^^@^^@^^@^^@^^@...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-A funny symbol that I can't read has just been input.
-Continue, and I'll forget that it ever happened.
-
-./main.aux:1: Text line contains an invalid character.
-l.1 ...@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@^^@
-                                                  ^^@^^@^^@^^@^^@^^@^^@^^@^^...
-(That makes 100 errors; please try again.) 
-Here is how much of TeX's memory you used:
- 32746 strings out of 467525
- 649621 string characters out of 5418982
- 1128441 words of memory out of 5000000
- 61205 multiletter control sequences out of 15000+600000
- 631780 words of font info for 43 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 98i,1n,108p,45278b,397s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-./main.aux:1:  ==> Fatal error occurred, no output PDF file produced!
+Package caption Info: End \AtBeginDocument code.
+LaTeX Info: Redefining \microtypecontext on input line 129.
+Package microtype Info: Applying patch `item' on input line 129.
+Package microtype Info: Applying patch `toc' on input line 129.
+Package microtype Info: Applying patch `eqnum' on input line 129.
+Package microtype Info: Applying patch `footnote' on input line 129.
+Package microtype Info: Applying patch `verbatim' on input line 129.
+LaTeX Info: Redefining \microtypesetup on input line 129.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+Package microtype Info: Patching command `\showhyphens'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+)
+Package hyperref Info: Option `pageanchor' set `false' on input line 131.
+ [1
+
+{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
+Package hyperref Info: Option `pageanchor' set `true' on input line 148.
+ (./main.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 4.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 4.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [1] [2])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+ [3]
+<images/page-01.png, id=582, 722.7pt x 542.025pt>
+File: images/page-01.png Graphic file (type png)
+<use images/page-01.png>
+Package pdftex.def Info: images/page-01.png  used on input line 165.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-02.png, id=583, 722.7pt x 542.025pt>
+File: images/page-02.png Graphic file (type png)
+<use images/page-02.png>
+Package pdftex.def Info: images/page-02.png  used on input line 165.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-03.png, id=584, 722.7pt x 542.025pt>
+File: images/page-03.png Graphic file (type png)
+<use images/page-03.png>
+Package pdftex.def Info: images/page-03.png  used on input line 169.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-04.png, id=585, 722.7pt x 542.025pt>
+File: images/page-04.png Graphic file (type png)
+<use images/page-04.png>
+Package pdftex.def Info: images/page-04.png  used on input line 169.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-05.png, id=586, 722.7pt x 542.025pt>
+File: images/page-05.png Graphic file (type png)
+<use images/page-05.png>
+Package pdftex.def Info: images/page-05.png  used on input line 173.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-06.png, id=587, 722.7pt x 542.025pt>
+File: images/page-06.png Graphic file (type png)
+<use images/page-06.png>
+Package pdftex.def Info: images/page-06.png  used on input line 173.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [4
+
+ <./images/page-01.png (PNG copy)> <./images/page-02.png (PNG copy)> <./images/page-03.png (PNG copy)> <./images/page-04.png (PNG copy)>]
+<images/page-07.png, id=594, 722.7pt x 542.025pt>
+File: images/page-07.png Graphic file (type png)
+<use images/page-07.png>
+Package pdftex.def Info: images/page-07.png  used on input line 200.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-08.png, id=595, 722.7pt x 542.025pt>
+File: images/page-08.png Graphic file (type png)
+<use images/page-08.png>
+Package pdftex.def Info: images/page-08.png  used on input line 200.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [5{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc} <./images/page-05.png (PNG copy)> <./images/page-06.png (PNG copy)>]
+<images/page-09.png, id=606, 722.7pt x 542.025pt>
+File: images/page-09.png Graphic file (type png)
+<use images/page-09.png>
+Package pdftex.def Info: images/page-09.png  used on input line 204.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [6 <./images/page-07.png (PNG copy)> <./images/page-08.png (PNG copy)> <./images/page-09.png (PNG copy)>]
+<images/page-10.png, id=615, 722.7pt x 542.025pt>
+File: images/page-10.png Graphic file (type png)
+<use images/page-10.png>
+Package pdftex.def Info: images/page-10.png  used on input line 218.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-11.png, id=616, 722.7pt x 542.025pt>
+File: images/page-11.png Graphic file (type png)
+<use images/page-11.png>
+Package pdftex.def Info: images/page-11.png  used on input line 218.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-12.png, id=617, 722.7pt x 542.025pt>
+File: images/page-12.png Graphic file (type png)
+<use images/page-12.png>
+Package pdftex.def Info: images/page-12.png  used on input line 222.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [7 <./images/page-10.png (PNG copy)> <./images/page-11.png (PNG copy)>]
+<images/page-13.png, id=623, 722.7pt x 542.025pt>
+File: images/page-13.png Graphic file (type png)
+<use images/page-13.png>
+Package pdftex.def Info: images/page-13.png  used on input line 244.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [8{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc} <./images/page-12.png (PNG copy)>]
+<images/page-14.png, id=632, 722.7pt x 542.025pt>
+File: images/page-14.png Graphic file (type png)
+<use images/page-14.png>
+Package pdftex.def Info: images/page-14.png  used on input line 262.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-15.png, id=633, 722.7pt x 542.025pt>
+File: images/page-15.png Graphic file (type png)
+<use images/page-15.png>
+Package pdftex.def Info: images/page-15.png  used on input line 262.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [9 <./images/page-13.png (PNG copy)>]
+<images/page-16.png, id=639, 722.7pt x 542.025pt>
+File: images/page-16.png Graphic file (type png)
+<use images/page-16.png>
+Package pdftex.def Info: images/page-16.png  used on input line 274.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-17.png, id=640, 722.7pt x 542.025pt>
+File: images/page-17.png Graphic file (type png)
+<use images/page-17.png>
+Package pdftex.def Info: images/page-17.png  used on input line 274.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-18.png, id=641, 722.7pt x 542.025pt>
+File: images/page-18.png Graphic file (type png)
+<use images/page-18.png>
+Package pdftex.def Info: images/page-18.png  used on input line 282.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [10 <./images/page-14.png (PNG copy)> <./images/page-15.png (PNG copy)> <./images/page-16.png (PNG copy)> <./images/page-17.png (PNG copy)>]
+<images/page-19.png, id=648, 722.7pt x 542.025pt>
+File: images/page-19.png Graphic file (type png)
+<use images/page-19.png>
+Package pdftex.def Info: images/page-19.png  used on input line 300.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-20.png, id=649, 722.7pt x 542.025pt>
+File: images/page-20.png Graphic file (type png)
+<use images/page-20.png>
+Package pdftex.def Info: images/page-20.png  used on input line 300.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [11 <./images/page-18.png (PNG copy)>]
+<images/page-21.png, id=655, 722.7pt x 542.025pt>
+File: images/page-21.png Graphic file (type png)
+<use images/page-21.png>
+Package pdftex.def Info: images/page-21.png  used on input line 315.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-22.png, id=656, 722.7pt x 542.025pt>
+File: images/page-22.png Graphic file (type png)
+<use images/page-22.png>
+Package pdftex.def Info: images/page-22.png  used on input line 315.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-23.png, id=657, 722.7pt x 542.025pt>
+File: images/page-23.png Graphic file (type png)
+<use images/page-23.png>
+Package pdftex.def Info: images/page-23.png  used on input line 323.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-24.png, id=658, 722.7pt x 542.025pt>
+File: images/page-24.png Graphic file (type png)
+<use images/page-24.png>
+Package pdftex.def Info: images/page-24.png  used on input line 323.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [12 <./images/page-19.png (PNG copy)> <./images/page-20.png (PNG copy)> <./images/page-21.png (PNG copy)> <./images/page-22.png (PNG copy)>]
+<images/page-25.png, id=666, 722.7pt x 542.025pt>
+File: images/page-25.png Graphic file (type png)
+<use images/page-25.png>
+Package pdftex.def Info: images/page-25.png  used on input line 325.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-26.png, id=667, 722.7pt x 542.025pt>
+File: images/page-26.png Graphic file (type png)
+<use images/page-26.png>
+Package pdftex.def Info: images/page-26.png  used on input line 325.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-27.png, id=668, 722.7pt x 542.025pt>
+File: images/page-27.png Graphic file (type png)
+<use images/page-27.png>
+Package pdftex.def Info: images/page-27.png  used on input line 347.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-28.png, id=669, 722.7pt x 542.025pt>
+File: images/page-28.png Graphic file (type png)
+<use images/page-28.png>
+Package pdftex.def Info: images/page-28.png  used on input line 347.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [13 <./images/page-23.png (PNG copy)> <./images/page-24.png (PNG copy)> <./images/page-25.png (PNG copy)> <./images/page-26.png (PNG copy)>]
+<images/page-29.png, id=676, 722.7pt x 542.025pt>
+File: images/page-29.png Graphic file (type png)
+<use images/page-29.png>
+Package pdftex.def Info: images/page-29.png  used on input line 351.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-30.png, id=677, 722.7pt x 542.025pt>
+File: images/page-30.png Graphic file (type png)
+<use images/page-30.png>
+Package pdftex.def Info: images/page-30.png  used on input line 351.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-31.png, id=678, 722.7pt x 542.025pt>
+File: images/page-31.png Graphic file (type png)
+<use images/page-31.png>
+Package pdftex.def Info: images/page-31.png  used on input line 363.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [14 <./images/page-27.png (PNG copy)> <./images/page-28.png (PNG copy)> <./images/page-29.png (PNG copy)> <./images/page-30.png (PNG copy)>] [15 <./images/page-31.png (PNG copy)>]
+<images/page-32.png, id=691, 722.7pt x 542.025pt>
+File: images/page-32.png Graphic file (type png)
+<use images/page-32.png>
+Package pdftex.def Info: images/page-32.png  used on input line 408.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-33.png, id=692, 722.7pt x 542.025pt>
+File: images/page-33.png Graphic file (type png)
+<use images/page-33.png>
+Package pdftex.def Info: images/page-33.png  used on input line 408.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [16 <./images/page-32.png (PNG copy)> <./images/page-33.png (PNG copy)>]
+<images/page-34.png, id=700, 722.7pt x 542.025pt>
+File: images/page-34.png Graphic file (type png)
+<use images/page-34.png>
+Package pdftex.def Info: images/page-34.png  used on input line 426.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-35.png, id=701, 722.7pt x 542.025pt>
+File: images/page-35.png Graphic file (type png)
+<use images/page-35.png>
+Package pdftex.def Info: images/page-35.png  used on input line 426.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-36.png, id=702, 722.7pt x 542.025pt>
+File: images/page-36.png Graphic file (type png)
+<use images/page-36.png>
+Package pdftex.def Info: images/page-36.png  used on input line 436.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-37.png, id=703, 722.7pt x 542.025pt>
+File: images/page-37.png Graphic file (type png)
+<use images/page-37.png>
+Package pdftex.def Info: images/page-37.png  used on input line 436.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [17 <./images/page-34.png (PNG copy)> <./images/page-35.png (PNG copy)> <./images/page-36.png (PNG copy)> <./images/page-37.png (PNG copy)>]
+<images/page-38.png, id=711, 722.7pt x 542.025pt>
+File: images/page-38.png Graphic file (type png)
+<use images/page-38.png>
+Package pdftex.def Info: images/page-38.png  used on input line 462.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-39.png, id=712, 722.7pt x 542.025pt>
+File: images/page-39.png Graphic file (type png)
+<use images/page-39.png>
+Package pdftex.def Info: images/page-39.png  used on input line 462.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-40.png, id=713, 722.7pt x 542.025pt>
+File: images/page-40.png Graphic file (type png)
+<use images/page-40.png>
+Package pdftex.def Info: images/page-40.png  used on input line 473.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-41.png, id=714, 722.7pt x 542.025pt>
+File: images/page-41.png Graphic file (type png)
+<use images/page-41.png>
+Package pdftex.def Info: images/page-41.png  used on input line 473.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [18 <./images/page-38.png (PNG copy)> <./images/page-39.png (PNG copy)>]
+<images/page-42.png, id=721, 722.7pt x 542.025pt>
+File: images/page-42.png Graphic file (type png)
+<use images/page-42.png>
+Package pdftex.def Info: images/page-42.png  used on input line 481.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [19 <./images/page-40.png (PNG copy)> <./images/page-41.png (PNG copy)> <./images/page-42.png (PNG copy)>]
+<images/page-43.png, id=728, 722.7pt x 542.025pt>
+File: images/page-43.png Graphic file (type png)
+<use images/page-43.png>
+Package pdftex.def Info: images/page-43.png  used on input line 514.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images/page-44.png, id=729, 722.7pt x 542.025pt>
+File: images/page-44.png Graphic file (type png)
+<use images/page-44.png>
+Package pdftex.def Info: images/page-44.png  used on input line 514.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images/page-45.png, id=730, 722.7pt x 542.025pt>
+File: images/page-45.png Graphic file (type png)
+<use images/page-45.png>
+Package pdftex.def Info: images/page-45.png  used on input line 514.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images/page-46.png, id=731, 722.7pt x 542.025pt>
+File: images/page-46.png Graphic file (type png)
+<use images/page-46.png>
+Package pdftex.def Info: images/page-46.png  used on input line 526.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-47.png, id=732, 722.7pt x 542.025pt>
+File: images/page-47.png Graphic file (type png)
+<use images/page-47.png>
+Package pdftex.def Info: images/page-47.png  used on input line 526.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [20 <./images/page-43.png (PNG copy)> <./images/page-44.png (PNG copy)> <./images/page-45.png (PNG copy)>]
+<images/page-48.png, id=738, 722.7pt x 542.025pt>
+File: images/page-48.png Graphic file (type png)
+<use images/page-48.png>
+Package pdftex.def Info: images/page-48.png  used on input line 534.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+<images/page-49.png, id=739, 722.7pt x 542.025pt>
+File: images/page-49.png Graphic file (type png)
+<use images/page-49.png>
+Package pdftex.def Info: images/page-49.png  used on input line 538.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images/page-50.png, id=740, 722.7pt x 542.025pt>
+File: images/page-50.png Graphic file (type png)
+<use images/page-50.png>
+Package pdftex.def Info: images/page-50.png  used on input line 538.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [21 <./images/page-46.png (PNG copy)> <./images/page-47.png (PNG copy)> <./images/page-48.png (PNG copy)>] [22 <./images/page-49.png (PNG copy)> <./images/page-50.png (PNG copy)>]
+<images2/page-1.png, id=752, 722.7pt x 542.025pt>
+File: images2/page-1.png Graphic file (type png)
+<use images2/page-1.png>
+Package pdftex.def Info: images2/page-1.png  used on input line 585.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [23
+
+ <./images2/page-1.png (PNG copy)>]
+<images2/page-2.png, id=758, 722.7pt x 542.025pt>
+File: images2/page-2.png Graphic file (type png)
+<use images2/page-2.png>
+Package pdftex.def Info: images2/page-2.png  used on input line 614.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+<images2/page-3.png, id=759, 722.7pt x 542.025pt>
+File: images2/page-3.png Graphic file (type png)
+<use images2/page-3.png>
+Package pdftex.def Info: images2/page-3.png  used on input line 628.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [24 <./images2/page-2.png (PNG copy)>]
+<images2/page-4.png, id=767, 722.7pt x 542.025pt>
+File: images2/page-4.png Graphic file (type png)
+<use images2/page-4.png>
+Package pdftex.def Info: images2/page-4.png  used on input line 649.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [25 <./images2/page-3.png (PNG copy)>]
+<images2/page-5.png, id=773, 722.7pt x 542.025pt>
+File: images2/page-5.png Graphic file (type png)
+<use images2/page-5.png>
+Package pdftex.def Info: images2/page-5.png  used on input line 666.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [26 <./images2/page-4.png (PNG copy)>]
+<images2/page-6.png, id=779, 722.7pt x 542.025pt>
+File: images2/page-6.png Graphic file (type png)
+<use images2/page-6.png>
+Package pdftex.def Info: images2/page-6.png  used on input line 685.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [27 <./images2/page-5.png (PNG copy)>]
+<images2/page-7.png, id=785, 722.7pt x 542.025pt>
+File: images2/page-7.png Graphic file (type png)
+<use images2/page-7.png>
+Package pdftex.def Info: images2/page-7.png  used on input line 706.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [28 <./images2/page-6.png (PNG copy)>]
+<images2/page-8.png, id=791, 722.7pt x 542.025pt>
+File: images2/page-8.png Graphic file (type png)
+<use images2/page-8.png>
+Package pdftex.def Info: images2/page-8.png  used on input line 724.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [29 <./images2/page-7.png (PNG copy)>] [30 <./images2/page-8.png (PNG copy)>] [31]
+<images3/page-01.png, id=813, 722.7pt x 542.025pt>
+File: images3/page-01.png Graphic file (type png)
+<use images3/page-01.png>
+Package pdftex.def Info: images3/page-01.png  used on input line 776.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [32
+
+ <./images3/page-01.png (PNG copy)>]
+<images3/page-02.png, id=819, 722.7pt x 542.025pt>
+File: images3/page-02.png Graphic file (type png)
+<use images3/page-02.png>
+Package pdftex.def Info: images3/page-02.png  used on input line 795.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+<images3/page-03.png, id=820, 722.7pt x 542.025pt>
+File: images3/page-03.png Graphic file (type png)
+<use images3/page-03.png>
+Package pdftex.def Info: images3/page-03.png  used on input line 810.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images3/page-04.png, id=821, 722.7pt x 542.025pt>
+File: images3/page-04.png Graphic file (type png)
+<use images3/page-04.png>
+Package pdftex.def Info: images3/page-04.png  used on input line 810.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [33 <./images3/page-02.png (PNG copy)>]
+<images3/page-05.png, id=827, 722.7pt x 542.025pt>
+File: images3/page-05.png Graphic file (type png)
+<use images3/page-05.png>
+Package pdftex.def Info: images3/page-05.png  used on input line 814.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images3/page-06.png, id=828, 722.7pt x 542.025pt>
+File: images3/page-06.png Graphic file (type png)
+<use images3/page-06.png>
+Package pdftex.def Info: images3/page-06.png  used on input line 814.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [34 <./images3/page-03.png (PNG copy)> <./images3/page-04.png (PNG copy)> <./images3/page-05.png (PNG copy)> <./images3/page-06.png (PNG copy)>]
+<images3/page-07.png, id=836, 722.7pt x 542.025pt>
+File: images3/page-07.png Graphic file (type png)
+<use images3/page-07.png>
+Package pdftex.def Info: images3/page-07.png  used on input line 834.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+<images3/page-08.png, id=837, 722.7pt x 542.025pt>
+File: images3/page-08.png Graphic file (type png)
+<use images3/page-08.png>
+Package pdftex.def Info: images3/page-08.png  used on input line 842.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [35 <./images3/page-07.png (PNG copy)>]
+<images3/page-09.png, id=843, 722.7pt x 542.025pt>
+File: images3/page-09.png Graphic file (type png)
+<use images3/page-09.png>
+Package pdftex.def Info: images3/page-09.png  used on input line 859.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [36 <./images3/page-08.png (PNG copy)>]
+<images3/page-10.png, id=851, 722.7pt x 542.025pt>
+File: images3/page-10.png Graphic file (type png)
+<use images3/page-10.png>
+Package pdftex.def Info: images3/page-10.png  used on input line 875.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [37 <./images3/page-09.png (PNG copy)>]
+<images3/page-11.png, id=857, 722.7pt x 542.025pt>
+File: images3/page-11.png Graphic file (type png)
+<use images3/page-11.png>
+Package pdftex.def Info: images3/page-11.png  used on input line 886.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images3/page-12.png, id=858, 722.7pt x 542.025pt>
+File: images3/page-12.png Graphic file (type png)
+<use images3/page-12.png>
+Package pdftex.def Info: images3/page-12.png  used on input line 886.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [38 <./images3/page-10.png (PNG copy)> <./images3/page-11.png (PNG copy)> <./images3/page-12.png (PNG copy)>]
+<images3/page-13.png, id=865, 722.7pt x 542.025pt>
+File: images3/page-13.png Graphic file (type png)
+<use images3/page-13.png>
+Package pdftex.def Info: images3/page-13.png  used on input line 900.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+<images3/page-14.png, id=866, 722.7pt x 542.025pt>
+File: images3/page-14.png Graphic file (type png)
+<use images3/page-14.png>
+Package pdftex.def Info: images3/page-14.png  used on input line 904.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [39 <./images3/page-13.png (PNG copy)>]
+<images3/page-15.png, id=872, 722.7pt x 542.025pt>
+File: images3/page-15.png Graphic file (type png)
+<use images3/page-15.png>
+Package pdftex.def Info: images3/page-15.png  used on input line 915.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images3/page-16.png, id=873, 722.7pt x 542.025pt>
+File: images3/page-16.png Graphic file (type png)
+<use images3/page-16.png>
+Package pdftex.def Info: images3/page-16.png  used on input line 915.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [40 <./images3/page-14.png (PNG copy)> <./images3/page-15.png (PNG copy)> <./images3/page-16.png (PNG copy)>]
+<images3/page-17.png, id=880, 722.7pt x 542.025pt>
+File: images3/page-17.png Graphic file (type png)
+<use images3/page-17.png>
+Package pdftex.def Info: images3/page-17.png  used on input line 921.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images3/page-18.png, id=881, 722.7pt x 542.025pt>
+File: images3/page-18.png Graphic file (type png)
+<use images3/page-18.png>
+Package pdftex.def Info: images3/page-18.png  used on input line 921.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images3/page-19.png, id=882, 722.7pt x 542.025pt>
+File: images3/page-19.png Graphic file (type png)
+<use images3/page-19.png>
+Package pdftex.def Info: images3/page-19.png  used on input line 921.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images3/page-20.png, id=883, 722.7pt x 542.025pt>
+File: images3/page-20.png Graphic file (type png)
+<use images3/page-20.png>
+Package pdftex.def Info: images3/page-20.png  used on input line 931.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [41 <./images3/page-17.png (PNG copy)> <./images3/page-18.png (PNG copy)> <./images3/page-19.png (PNG copy)>]
+<images3/page-21.png, id=889, 722.7pt x 542.025pt>
+File: images3/page-21.png Graphic file (type png)
+<use images3/page-21.png>
+Package pdftex.def Info: images3/page-21.png  used on input line 935.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [42 <./images3/page-20.png (PNG copy)> <./images3/page-21.png (PNG copy)>] [43]
+<images4/page-01.png, id=901, 722.7pt x 542.025pt>
+File: images4/page-01.png Graphic file (type png)
+<use images4/page-01.png>
+Package pdftex.def Info: images4/page-01.png  used on input line 968.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-02.png, id=903, 722.7pt x 542.025pt>
+File: images4/page-02.png Graphic file (type png)
+<use images4/page-02.png>
+Package pdftex.def Info: images4/page-02.png  used on input line 968.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-03.png, id=904, 722.7pt x 542.025pt>
+File: images4/page-03.png Graphic file (type png)
+<use images4/page-03.png>
+Package pdftex.def Info: images4/page-03.png  used on input line 974.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [44
+
+ <./images4/page-01.png> <./images4/page-02.png>]
+<images4/page-04.png, id=912, 722.7pt x 542.025pt>
+File: images4/page-04.png Graphic file (type png)
+<use images4/page-04.png>
+Package pdftex.def Info: images4/page-04.png  used on input line 988.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [45 <./images4/page-03.png>]
+<images4/page-05.png, id=919, 722.7pt x 542.025pt>
+File: images4/page-05.png Graphic file (type png)
+<use images4/page-05.png>
+Package pdftex.def Info: images4/page-05.png  used on input line 996.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-06.png, id=920, 722.7pt x 542.025pt>
+File: images4/page-06.png Graphic file (type png)
+<use images4/page-06.png>
+Package pdftex.def Info: images4/page-06.png  used on input line 996.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-07.png, id=921, 722.7pt x 542.025pt>
+File: images4/page-07.png Graphic file (type png)
+<use images4/page-07.png>
+Package pdftex.def Info: images4/page-07.png  used on input line 996.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+ [46 <./images4/page-04.png> <./images4/page-05.png> <./images4/page-06.png> <./images4/page-07.png>]
+<images4/page-08.png, id=932, 722.7pt x 542.025pt>
+File: images4/page-08.png Graphic file (type png)
+<use images4/page-08.png>
+Package pdftex.def Info: images4/page-08.png  used on input line 1000.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-09.png, id=933, 722.7pt x 542.025pt>
+File: images4/page-09.png Graphic file (type png)
+<use images4/page-09.png>
+Package pdftex.def Info: images4/page-09.png  used on input line 1000.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-10.png, id=934, 722.7pt x 542.025pt>
+File: images4/page-10.png Graphic file (type png)
+<use images4/page-10.png>
+Package pdftex.def Info: images4/page-10.png  used on input line 1006.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-11.png, id=935, 722.7pt x 542.025pt>
+File: images4/page-11.png Graphic file (type png)
+<use images4/page-11.png>
+Package pdftex.def Info: images4/page-11.png  used on input line 1006.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-12.png, id=936, 722.7pt x 542.025pt>
+File: images4/page-12.png Graphic file (type png)
+<use images4/page-12.png>
+Package pdftex.def Info: images4/page-12.png  used on input line 1006.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+ [47 <./images4/page-08.png> <./images4/page-09.png> <./images4/page-10.png> <./images4/page-11.png> <./images4/page-12.png>]
+<images4/page-13.png, id=948, 722.7pt x 542.025pt>
+File: images4/page-13.png Graphic file (type png)
+<use images4/page-13.png>
+Package pdftex.def Info: images4/page-13.png  used on input line 1029.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+<images4/page-14.png, id=949, 722.7pt x 542.025pt>
+File: images4/page-14.png Graphic file (type png)
+<use images4/page-14.png>
+Package pdftex.def Info: images4/page-14.png  used on input line 1037.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-15.png, id=950, 722.7pt x 542.025pt>
+File: images4/page-15.png Graphic file (type png)
+<use images4/page-15.png>
+Package pdftex.def Info: images4/page-15.png  used on input line 1037.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [48 <./images4/page-13.png>]
+<images4/page-16.png, id=958, 722.7pt x 542.025pt>
+File: images4/page-16.png Graphic file (type png)
+<use images4/page-16.png>
+Package pdftex.def Info: images4/page-16.png  used on input line 1041.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-17.png, id=959, 722.7pt x 542.025pt>
+File: images4/page-17.png Graphic file (type png)
+<use images4/page-17.png>
+Package pdftex.def Info: images4/page-17.png  used on input line 1041.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [49 <./images4/page-14.png> <./images4/page-15.png> <./images4/page-16.png> <./images4/page-17.png>]
+<images4/page-18.png, id=970, 722.7pt x 542.025pt>
+File: images4/page-18.png Graphic file (type png)
+<use images4/page-18.png>
+Package pdftex.def Info: images4/page-18.png  used on input line 1056.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-19.png, id=971, 722.7pt x 542.025pt>
+File: images4/page-19.png Graphic file (type png)
+<use images4/page-19.png>
+Package pdftex.def Info: images4/page-19.png  used on input line 1056.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-20.png, id=972, 722.7pt x 542.025pt>
+File: images4/page-20.png Graphic file (type png)
+<use images4/page-20.png>
+Package pdftex.def Info: images4/page-20.png  used on input line 1056.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-21.png, id=973, 722.7pt x 542.025pt>
+File: images4/page-21.png Graphic file (type png)
+<use images4/page-21.png>
+Package pdftex.def Info: images4/page-21.png  used on input line 1064.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-22.png, id=974, 722.7pt x 542.025pt>
+File: images4/page-22.png Graphic file (type png)
+<use images4/page-22.png>
+Package pdftex.def Info: images4/page-22.png  used on input line 1064.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-23.png, id=975, 722.7pt x 542.025pt>
+File: images4/page-23.png Graphic file (type png)
+<use images4/page-23.png>
+Package pdftex.def Info: images4/page-23.png  used on input line 1070.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-24.png, id=976, 722.7pt x 542.025pt>
+File: images4/page-24.png Graphic file (type png)
+<use images4/page-24.png>
+Package pdftex.def Info: images4/page-24.png  used on input line 1070.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [50 <./images4/page-18.png> <./images4/page-19.png> <./images4/page-20.png> <./images4/page-21.png> <./images4/page-22.png>]
+<images4/page-25.png, id=988, 722.7pt x 542.025pt>
+File: images4/page-25.png Graphic file (type png)
+<use images4/page-25.png>
+Package pdftex.def Info: images4/page-25.png  used on input line 1074.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-26.png, id=989, 722.7pt x 542.025pt>
+File: images4/page-26.png Graphic file (type png)
+<use images4/page-26.png>
+Package pdftex.def Info: images4/page-26.png  used on input line 1074.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-27.png, id=990, 722.7pt x 542.025pt>
+File: images4/page-27.png Graphic file (type png)
+<use images4/page-27.png>
+Package pdftex.def Info: images4/page-27.png  used on input line 1080.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-28.png, id=991, 722.7pt x 542.025pt>
+File: images4/page-28.png Graphic file (type png)
+<use images4/page-28.png>
+Package pdftex.def Info: images4/page-28.png  used on input line 1080.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 1080.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 1080.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 1080.
+ [51 <./images4/page-23.png> <./images4/page-24.png> <./images4/page-25.png> <./images4/page-26.png>]
+<images4/page-29.png, id=1002, 722.7pt x 542.025pt>
+File: images4/page-29.png Graphic file (type png)
+<use images4/page-29.png>
+Package pdftex.def Info: images4/page-29.png  used on input line 1082.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-30.png, id=1003, 722.7pt x 542.025pt>
+File: images4/page-30.png Graphic file (type png)
+<use images4/page-30.png>
+Package pdftex.def Info: images4/page-30.png  used on input line 1082.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-31.png, id=1004, 722.7pt x 542.025pt>
+File: images4/page-31.png Graphic file (type png)
+<use images4/page-31.png>
+Package pdftex.def Info: images4/page-31.png  used on input line 1097.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-32.png, id=1005, 722.7pt x 542.025pt>
+File: images4/page-32.png Graphic file (type png)
+<use images4/page-32.png>
+Package pdftex.def Info: images4/page-32.png  used on input line 1097.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [52 <./images4/page-27.png> <./images4/page-28.png> <./images4/page-29.png> <./images4/page-30.png>]
+<images4/page-33.png, id=1017, 722.7pt x 542.025pt>
+File: images4/page-33.png Graphic file (type png)
+<use images4/page-33.png>
+Package pdftex.def Info: images4/page-33.png  used on input line 1117.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-34.png, id=1018, 722.7pt x 542.025pt>
+File: images4/page-34.png Graphic file (type png)
+<use images4/page-34.png>
+Package pdftex.def Info: images4/page-34.png  used on input line 1117.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [53 <./images4/page-31.png> <./images4/page-32.png>]
+<images4/page-35.png, id=1026, 722.7pt x 542.025pt>
+File: images4/page-35.png Graphic file (type png)
+<use images4/page-35.png>
+Package pdftex.def Info: images4/page-35.png  used on input line 1133.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [54 <./images4/page-33.png> <./images4/page-34.png>]
+<images4/page-36.png, id=1036, 722.7pt x 542.025pt>
+File: images4/page-36.png Graphic file (type png)
+<use images4/page-36.png>
+Package pdftex.def Info: images4/page-36.png  used on input line 1145.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-37.png, id=1037, 722.7pt x 542.025pt>
+File: images4/page-37.png Graphic file (type png)
+<use images4/page-37.png>
+Package pdftex.def Info: images4/page-37.png  used on input line 1145.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [55 <./images4/page-35.png>]
+<images4/page-38.png, id=1044, 722.7pt x 542.025pt>
+File: images4/page-38.png Graphic file (type png)
+<use images4/page-38.png>
+Package pdftex.def Info: images4/page-38.png  used on input line 1149.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-39.png, id=1045, 722.7pt x 542.025pt>
+File: images4/page-39.png Graphic file (type png)
+<use images4/page-39.png>
+Package pdftex.def Info: images4/page-39.png  used on input line 1149.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-40.png, id=1046, 722.7pt x 542.025pt>
+File: images4/page-40.png Graphic file (type png)
+<use images4/page-40.png>
+Package pdftex.def Info: images4/page-40.png  used on input line 1166.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [56 <./images4/page-36.png> <./images4/page-37.png> <./images4/page-38.png> <./images4/page-39.png>]
+<images4/page-41.png, id=1057, 722.7pt x 542.025pt>
+File: images4/page-41.png Graphic file (type png)
+<use images4/page-41.png>
+Package pdftex.def Info: images4/page-41.png  used on input line 1182.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-42.png, id=1058, 722.7pt x 542.025pt>
+File: images4/page-42.png Graphic file (type png)
+<use images4/page-42.png>
+Package pdftex.def Info: images4/page-42.png  used on input line 1182.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-43.png, id=1059, 722.7pt x 542.025pt>
+File: images4/page-43.png Graphic file (type png)
+<use images4/page-43.png>
+Package pdftex.def Info: images4/page-43.png  used on input line 1182.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+ [57 <./images4/page-40.png> <./images4/page-41.png> <./images4/page-42.png> <./images4/page-43.png>]
+<images4/page-44.png, id=1070, 722.7pt x 542.025pt>
+File: images4/page-44.png Graphic file (type png)
+<use images4/page-44.png>
+Package pdftex.def Info: images4/page-44.png  used on input line 1192.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-45.png, id=1071, 722.7pt x 542.025pt>
+File: images4/page-45.png Graphic file (type png)
+<use images4/page-45.png>
+Package pdftex.def Info: images4/page-45.png  used on input line 1192.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-46.png, id=1072, 722.7pt x 542.025pt>
+File: images4/page-46.png Graphic file (type png)
+<use images4/page-46.png>
+Package pdftex.def Info: images4/page-46.png  used on input line 1200.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-47.png, id=1073, 722.7pt x 542.025pt>
+File: images4/page-47.png Graphic file (type png)
+<use images4/page-47.png>
+Package pdftex.def Info: images4/page-47.png  used on input line 1200.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [58 <./images4/page-44.png> <./images4/page-45.png>]
+<images4/page-48.png, id=1081, 722.7pt x 542.025pt>
+File: images4/page-48.png Graphic file (type png)
+<use images4/page-48.png>
+Package pdftex.def Info: images4/page-48.png  used on input line 1206.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-49.png, id=1082, 722.7pt x 542.025pt>
+File: images4/page-49.png Graphic file (type png)
+<use images4/page-49.png>
+Package pdftex.def Info: images4/page-49.png  used on input line 1206.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-50.png, id=1083, 722.7pt x 542.025pt>
+File: images4/page-50.png Graphic file (type png)
+<use images4/page-50.png>
+Package pdftex.def Info: images4/page-50.png  used on input line 1206.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+ [59 <./images4/page-46.png> <./images4/page-47.png> <./images4/page-48.png> <./images4/page-49.png> <./images4/page-50.png>]
+<images4/page-51.png, id=1095, 722.7pt x 542.025pt>
+File: images4/page-51.png Graphic file (type png)
+<use images4/page-51.png>
+Package pdftex.def Info: images4/page-51.png  used on input line 1229.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+<images4/page-52.png, id=1096, 722.7pt x 542.025pt>
+File: images4/page-52.png Graphic file (type png)
+<use images4/page-52.png>
+Package pdftex.def Info: images4/page-52.png  used on input line 1235.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-53.png, id=1097, 722.7pt x 542.025pt>
+File: images4/page-53.png Graphic file (type png)
+<use images4/page-53.png>
+Package pdftex.def Info: images4/page-53.png  used on input line 1235.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-54.png, id=1098, 722.7pt x 542.025pt>
+File: images4/page-54.png Graphic file (type png)
+<use images4/page-54.png>
+Package pdftex.def Info: images4/page-54.png  used on input line 1235.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+ [60 <./images4/page-51.png> <./images4/page-52.png> <./images4/page-53.png> <./images4/page-54.png>]
+<images4/page-55.png, id=1110, 722.7pt x 542.025pt>
+File: images4/page-55.png Graphic file (type png)
+<use images4/page-55.png>
+Package pdftex.def Info: images4/page-55.png  used on input line 1261.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-56.png, id=1111, 722.7pt x 542.025pt>
+File: images4/page-56.png Graphic file (type png)
+<use images4/page-56.png>
+Package pdftex.def Info: images4/page-56.png  used on input line 1261.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [61 <./images4/page-55.png> <./images4/page-56.png>]
+<images4/page-57.png, id=1119, 722.7pt x 542.025pt>
+File: images4/page-57.png Graphic file (type png)
+<use images4/page-57.png>
+Package pdftex.def Info: images4/page-57.png  used on input line 1293.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-58.png, id=1120, 722.7pt x 542.025pt>
+File: images4/page-58.png Graphic file (type png)
+<use images4/page-58.png>
+Package pdftex.def Info: images4/page-58.png  used on input line 1293.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [62 <./images4/page-57.png> <./images4/page-58.png>]
+<images4/page-59.png, id=1128, 722.7pt x 542.025pt>
+File: images4/page-59.png Graphic file (type png)
+<use images4/page-59.png>
+Package pdftex.def Info: images4/page-59.png  used on input line 1331.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images4/page-60.png, id=1129, 722.7pt x 542.025pt>
+File: images4/page-60.png Graphic file (type png)
+<use images4/page-60.png>
+Package pdftex.def Info: images4/page-60.png  used on input line 1331.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [63 <./images4/page-59.png> <./images4/page-60.png>]
+<images4/page-61.png, id=1137, 722.7pt x 542.025pt>
+File: images4/page-61.png Graphic file (type png)
+<use images4/page-61.png>
+Package pdftex.def Info: images4/page-61.png  used on input line 1353.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-62.png, id=1138, 722.7pt x 542.025pt>
+File: images4/page-62.png Graphic file (type png)
+<use images4/page-62.png>
+Package pdftex.def Info: images4/page-62.png  used on input line 1353.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images4/page-63.png, id=1139, 722.7pt x 542.025pt>
+File: images4/page-63.png Graphic file (type png)
+<use images4/page-63.png>
+Package pdftex.def Info: images4/page-63.png  used on input line 1353.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+ [64 <./images4/page-61.png> <./images4/page-62.png> <./images4/page-63.png>] [65]
+<images5/page-01.png, id=1158, 722.7pt x 542.025pt>
+File: images5/page-01.png Graphic file (type png)
+<use images5/page-01.png>
+Package pdftex.def Info: images5/page-01.png  used on input line 1406.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images5/page-02.png, id=1159, 722.7pt x 542.025pt>
+File: images5/page-02.png Graphic file (type png)
+<use images5/page-02.png>
+Package pdftex.def Info: images5/page-02.png  used on input line 1406.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images5/page-03.png, id=1160, 722.7pt x 542.025pt>
+File: images5/page-03.png Graphic file (type png)
+<use images5/page-03.png>
+Package pdftex.def Info: images5/page-03.png  used on input line 1416.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [66
+
+ <./images5/page-01.png> <./images5/page-02.png>]
+<images5/page-04.png, id=1169, 722.7pt x 542.025pt>
+File: images5/page-04.png Graphic file (type png)
+<use images5/page-04.png>
+Package pdftex.def Info: images5/page-04.png  used on input line 1424.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images5/page-06.png, id=1170, 722.7pt x 542.025pt>
+File: images5/page-06.png Graphic file (type png)
+<use images5/page-06.png>
+Package pdftex.def Info: images5/page-06.png  used on input line 1424.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [67 <./images5/page-03.png>]
+<images5/page-07.png, id=1177, 722.7pt x 542.025pt>
+File: images5/page-07.png Graphic file (type png)
+<use images5/page-07.png>
+Package pdftex.def Info: images5/page-07.png  used on input line 1440.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [68 <./images5/page-04.png> <./images5/page-06.png>]
+<images5/page-08.png, id=1185, 722.7pt x 542.025pt>
+File: images5/page-08.png Graphic file (type png)
+<use images5/page-08.png>
+Package pdftex.def Info: images5/page-08.png  used on input line 1462.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images5/page-09.png, id=1186, 722.7pt x 542.025pt>
+File: images5/page-09.png Graphic file (type png)
+<use images5/page-09.png>
+Package pdftex.def Info: images5/page-09.png  used on input line 1462.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [69 <./images5/page-07.png>]
+<images5/page-10.png, id=1193, 722.7pt x 542.025pt>
+File: images5/page-10.png Graphic file (type png)
+<use images5/page-10.png>
+Package pdftex.def Info: images5/page-10.png  used on input line 1474.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images5/page-11.png, id=1194, 722.7pt x 542.025pt>
+File: images5/page-11.png Graphic file (type png)
+<use images5/page-11.png>
+Package pdftex.def Info: images5/page-11.png  used on input line 1474.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [70 <./images5/page-08.png> <./images5/page-09.png> <./images5/page-10.png> <./images5/page-11.png>]
+<images5/page-12.png, id=1205, 722.7pt x 542.025pt>
+File: images5/page-12.png Graphic file (type png)
+<use images5/page-12.png>
+Package pdftex.def Info: images5/page-12.png  used on input line 1494.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [71 <./images5/page-12.png>]
+<images5/page-13.png, id=1212, 722.7pt x 542.025pt>
+File: images5/page-13.png Graphic file (type png)
+<use images5/page-13.png>
+Package pdftex.def Info: images5/page-13.png  used on input line 1508.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images5/page-14.png, id=1213, 722.7pt x 542.025pt>
+File: images5/page-14.png Graphic file (type png)
+<use images5/page-14.png>
+Package pdftex.def Info: images5/page-14.png  used on input line 1508.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images5/page-15.png, id=1214, 722.7pt x 542.025pt>
+File: images5/page-15.png Graphic file (type png)
+<use images5/page-15.png>
+Package pdftex.def Info: images5/page-15.png  used on input line 1516.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [72 <./images5/page-13.png> <./images5/page-14.png>]
+<images5/page-16.png, id=1223, 722.7pt x 542.025pt>
+File: images5/page-16.png Graphic file (type png)
+<use images5/page-16.png>
+Package pdftex.def Info: images5/page-16.png  used on input line 1522.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images5/page-17.png, id=1224, 722.7pt x 542.025pt>
+File: images5/page-17.png Graphic file (type png)
+<use images5/page-17.png>
+Package pdftex.def Info: images5/page-17.png  used on input line 1522.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [73 <./images5/page-15.png>] [74 <./images5/page-16.png> <./images5/page-17.png>] [75]
+<images6/page-01.png, id=1243, 722.7pt x 542.025pt>
+File: images6/page-01.png Graphic file (type png)
+<use images6/page-01.png>
+Package pdftex.def Info: images6/page-01.png  used on input line 1566.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-02.png, id=1244, 722.7pt x 542.025pt>
+File: images6/page-02.png Graphic file (type png)
+<use images6/page-02.png>
+Package pdftex.def Info: images6/page-02.png  used on input line 1566.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-03.png, id=1245, 722.7pt x 542.025pt>
+File: images6/page-03.png Graphic file (type png)
+<use images6/page-03.png>
+Package pdftex.def Info: images6/page-03.png  used on input line 1578.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images6/page-04.png, id=1246, 722.7pt x 542.025pt>
+File: images6/page-04.png Graphic file (type png)
+<use images6/page-04.png>
+Package pdftex.def Info: images6/page-04.png  used on input line 1578.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images6/page-05.png, id=1247, 722.7pt x 542.025pt>
+File: images6/page-05.png Graphic file (type png)
+<use images6/page-05.png>
+Package pdftex.def Info: images6/page-05.png  used on input line 1578.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+ [76
+
+ <./images6/page-01.png> <./images6/page-02.png>]
+<images6/page-06.png, id=1255, 722.7pt x 542.025pt>
+File: images6/page-06.png Graphic file (type png)
+<use images6/page-06.png>
+Package pdftex.def Info: images6/page-06.png  used on input line 1604.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-07.png, id=1256, 722.7pt x 542.025pt>
+File: images6/page-07.png Graphic file (type png)
+<use images6/page-07.png>
+Package pdftex.def Info: images6/page-07.png  used on input line 1604.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [77 <./images6/page-03.png> <./images6/page-04.png> <./images6/page-05.png>]
+<images6/page-08.png, id=1265, 722.7pt x 542.025pt>
+File: images6/page-08.png Graphic file (type png)
+<use images6/page-08.png>
+Package pdftex.def Info: images6/page-08.png  used on input line 1610.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-09.png, id=1266, 722.7pt x 542.025pt>
+File: images6/page-09.png Graphic file (type png)
+<use images6/page-09.png>
+Package pdftex.def Info: images6/page-09.png  used on input line 1610.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [78 <./images6/page-06.png> <./images6/page-07.png> <./images6/page-08.png> <./images6/page-09.png>]
+<images6/page-10.png, id=1278, 722.7pt x 542.025pt>
+File: images6/page-10.png Graphic file (type png)
+<use images6/page-10.png>
+Package pdftex.def Info: images6/page-10.png  used on input line 1628.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-11.png, id=1279, 722.7pt x 542.025pt>
+File: images6/page-11.png Graphic file (type png)
+<use images6/page-11.png>
+Package pdftex.def Info: images6/page-11.png  used on input line 1628.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-12.png, id=1280, 722.7pt x 542.025pt>
+File: images6/page-12.png Graphic file (type png)
+<use images6/page-12.png>
+Package pdftex.def Info: images6/page-12.png  used on input line 1644.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-13.png, id=1281, 722.7pt x 542.025pt>
+File: images6/page-13.png Graphic file (type png)
+<use images6/page-13.png>
+Package pdftex.def Info: images6/page-13.png  used on input line 1644.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [79 <./images6/page-10.png> <./images6/page-11.png>]
+<images6/page-14.png, id=1289, 722.7pt x 542.025pt>
+File: images6/page-14.png Graphic file (type png)
+<use images6/page-14.png>
+Package pdftex.def Info: images6/page-14.png  used on input line 1654.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [80 <./images6/page-12.png> <./images6/page-13.png>]
+<images6/page-15.png, id=1297, 722.7pt x 542.025pt>
+File: images6/page-15.png Graphic file (type png)
+<use images6/page-15.png>
+Package pdftex.def Info: images6/page-15.png  used on input line 1658.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images6/page-16.png, id=1298, 722.7pt x 542.025pt>
+File: images6/page-16.png Graphic file (type png)
+<use images6/page-16.png>
+Package pdftex.def Info: images6/page-16.png  used on input line 1658.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images6/page-17.png, id=1299, 722.7pt x 542.025pt>
+File: images6/page-17.png Graphic file (type png)
+<use images6/page-17.png>
+Package pdftex.def Info: images6/page-17.png  used on input line 1658.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+ [81 <./images6/page-14.png> <./images6/page-15.png> <./images6/page-16.png> <./images6/page-17.png>]
+<images6/page-18.png, id=1310, 722.7pt x 542.025pt>
+File: images6/page-18.png Graphic file (type png)
+<use images6/page-18.png>
+Package pdftex.def Info: images6/page-18.png  used on input line 1683.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-19.png, id=1311, 722.7pt x 542.025pt>
+File: images6/page-19.png Graphic file (type png)
+<use images6/page-19.png>
+Package pdftex.def Info: images6/page-19.png  used on input line 1683.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-20.png, id=1312, 722.7pt x 542.025pt>
+File: images6/page-20.png Graphic file (type png)
+<use images6/page-20.png>
+Package pdftex.def Info: images6/page-20.png  used on input line 1697.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images6/page-21.png, id=1313, 722.7pt x 542.025pt>
+File: images6/page-21.png Graphic file (type png)
+<use images6/page-21.png>
+Package pdftex.def Info: images6/page-21.png  used on input line 1697.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images6/page-22.png, id=1314, 722.7pt x 542.025pt>
+File: images6/page-22.png Graphic file (type png)
+<use images6/page-22.png>
+Package pdftex.def Info: images6/page-22.png  used on input line 1697.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+ [82 <./images6/page-18.png> <./images6/page-19.png> <./images6/page-20.png> <./images6/page-21.png> <./images6/page-22.png>]
+<images6/page-23.png, id=1326, 722.7pt x 542.025pt>
+File: images6/page-23.png Graphic file (type png)
+<use images6/page-23.png>
+Package pdftex.def Info: images6/page-23.png  used on input line 1715.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+<images6/page-24.png, id=1327, 722.7pt x 542.025pt>
+File: images6/page-24.png Graphic file (type png)
+<use images6/page-24.png>
+Package pdftex.def Info: images6/page-24.png  used on input line 1723.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-25.png, id=1328, 722.7pt x 542.025pt>
+File: images6/page-25.png Graphic file (type png)
+<use images6/page-25.png>
+Package pdftex.def Info: images6/page-25.png  used on input line 1723.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [83 <./images6/page-23.png>]
+<images6/page-26.png, id=1335, 722.7pt x 542.025pt>
+File: images6/page-26.png Graphic file (type png)
+<use images6/page-26.png>
+Package pdftex.def Info: images6/page-26.png  used on input line 1735.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [84 <./images6/page-24.png> <./images6/page-25.png>]
+<images6/page-27.png, id=1344, 722.7pt x 542.025pt>
+File: images6/page-27.png Graphic file (type png)
+<use images6/page-27.png>
+Package pdftex.def Info: images6/page-27.png  used on input line 1739.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-28.png, id=1345, 722.7pt x 542.025pt>
+File: images6/page-28.png Graphic file (type png)
+<use images6/page-28.png>
+Package pdftex.def Info: images6/page-28.png  used on input line 1739.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [85 <./images6/page-26.png> <./images6/page-27.png> <./images6/page-28.png>]
+<images6/page-29.png, id=1355, 722.7pt x 542.025pt>
+File: images6/page-29.png Graphic file (type png)
+<use images6/page-29.png>
+Package pdftex.def Info: images6/page-29.png  used on input line 1756.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-30.png, id=1356, 722.7pt x 542.025pt>
+File: images6/page-30.png Graphic file (type png)
+<use images6/page-30.png>
+Package pdftex.def Info: images6/page-30.png  used on input line 1756.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-31.png, id=1357, 722.7pt x 542.025pt>
+File: images6/page-31.png Graphic file (type png)
+<use images6/page-31.png>
+Package pdftex.def Info: images6/page-31.png  used on input line 1768.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-32.png, id=1358, 722.7pt x 542.025pt>
+File: images6/page-32.png Graphic file (type png)
+<use images6/page-32.png>
+Package pdftex.def Info: images6/page-32.png  used on input line 1768.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [86 <./images6/page-29.png> <./images6/page-30.png>]
+<images6/page-33.png, id=1366, 722.7pt x 542.025pt>
+File: images6/page-33.png Graphic file (type png)
+<use images6/page-33.png>
+Package pdftex.def Info: images6/page-33.png  used on input line 1791.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-34.png, id=1367, 722.7pt x 542.025pt>
+File: images6/page-34.png Graphic file (type png)
+<use images6/page-34.png>
+Package pdftex.def Info: images6/page-34.png  used on input line 1791.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [87 <./images6/page-31.png> <./images6/page-32.png> <./images6/page-33.png> <./images6/page-34.png>]
+<images6/page-35.png, id=1378, 722.7pt x 542.025pt>
+File: images6/page-35.png Graphic file (type png)
+<use images6/page-35.png>
+Package pdftex.def Info: images6/page-35.png  used on input line 1797.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+<images6/page-36.png, id=1379, 722.7pt x 542.025pt>
+File: images6/page-36.png Graphic file (type png)
+<use images6/page-36.png>
+Package pdftex.def Info: images6/page-36.png  used on input line 1816.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-37.png, id=1380, 722.7pt x 542.025pt>
+File: images6/page-37.png Graphic file (type png)
+<use images6/page-37.png>
+Package pdftex.def Info: images6/page-37.png  used on input line 1816.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [88 <./images6/page-35.png>]
+<images6/page-38.png, id=1387, 722.7pt x 542.025pt>
+File: images6/page-38.png Graphic file (type png)
+<use images6/page-38.png>
+Package pdftex.def Info: images6/page-38.png  used on input line 1828.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-39.png, id=1388, 722.7pt x 542.025pt>
+File: images6/page-39.png Graphic file (type png)
+<use images6/page-39.png>
+Package pdftex.def Info: images6/page-39.png  used on input line 1828.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [89 <./images6/page-36.png> <./images6/page-37.png> <./images6/page-38.png> <./images6/page-39.png>]
+<images6/page-40.png, id=1399, 722.7pt x 542.025pt>
+File: images6/page-40.png Graphic file (type png)
+<use images6/page-40.png>
+Package pdftex.def Info: images6/page-40.png  used on input line 1858.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images6/page-41.png, id=1400, 722.7pt x 542.025pt>
+File: images6/page-41.png Graphic file (type png)
+<use images6/page-41.png>
+Package pdftex.def Info: images6/page-41.png  used on input line 1858.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [90 <./images6/page-40.png> <./images6/page-41.png>] [91]
+<images7/page-01.png, id=1413, 722.7pt x 542.025pt>
+File: images7/page-01.png Graphic file (type png)
+<use images7/page-01.png>
+Package pdftex.def Info: images7/page-01.png  used on input line 1893.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [92
+
+ <./images7/page-01.png>]
+<images7/page-02.png, id=1420, 722.7pt x 542.025pt>
+File: images7/page-02.png Graphic file (type png)
+<use images7/page-02.png>
+Package pdftex.def Info: images7/page-02.png  used on input line 1903.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images7/page-03.png, id=1421, 722.7pt x 542.025pt>
+File: images7/page-03.png Graphic file (type png)
+<use images7/page-03.png>
+Package pdftex.def Info: images7/page-03.png  used on input line 1903.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images7/page-04.png, id=1422, 722.7pt x 542.025pt>
+File: images7/page-04.png Graphic file (type png)
+<use images7/page-04.png>
+Package pdftex.def Info: images7/page-04.png  used on input line 1911.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [93 <./images7/page-02.png> <./images7/page-03.png>]
+<images7/page-05.png, id=1430, 722.7pt x 542.025pt>
+File: images7/page-05.png Graphic file (type png)
+<use images7/page-05.png>
+Package pdftex.def Info: images7/page-05.png  used on input line 1919.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images7/page-06.png, id=1431, 722.7pt x 542.025pt>
+File: images7/page-06.png Graphic file (type png)
+<use images7/page-06.png>
+Package pdftex.def Info: images7/page-06.png  used on input line 1919.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [94 <./images7/page-04.png>]
+<images7/page-07.png, id=1439, 722.7pt x 542.025pt>
+File: images7/page-07.png Graphic file (type png)
+<use images7/page-07.png>
+Package pdftex.def Info: images7/page-07.png  used on input line 1937.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images7/page-08.png, id=1440, 722.7pt x 542.025pt>
+File: images7/page-08.png Graphic file (type png)
+<use images7/page-08.png>
+Package pdftex.def Info: images7/page-08.png  used on input line 1937.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images7/page-09.png, id=1441, 722.7pt x 542.025pt>
+File: images7/page-09.png Graphic file (type png)
+<use images7/page-09.png>
+Package pdftex.def Info: images7/page-09.png  used on input line 1937.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+ [95 <./images7/page-05.png> <./images7/page-06.png> <./images7/page-07.png> <./images7/page-08.png> <./images7/page-09.png>]
+<images7/page-10.png, id=1454, 722.7pt x 542.025pt>
+File: images7/page-10.png Graphic file (type png)
+<use images7/page-10.png>
+Package pdftex.def Info: images7/page-10.png  used on input line 1960.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images7/page-11.png, id=1455, 722.7pt x 542.025pt>
+File: images7/page-11.png Graphic file (type png)
+<use images7/page-11.png>
+Package pdftex.def Info: images7/page-11.png  used on input line 1960.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images7/page-12.png, id=1456, 722.7pt x 542.025pt>
+File: images7/page-12.png Graphic file (type png)
+<use images7/page-12.png>
+Package pdftex.def Info: images7/page-12.png  used on input line 1960.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+ [96 <./images7/page-10.png> <./images7/page-11.png> <./images7/page-12.png>]
+<images7/page-13.png, id=1466, 722.7pt x 542.025pt>
+File: images7/page-13.png Graphic file (type png)
+<use images7/page-13.png>
+Package pdftex.def Info: images7/page-13.png  used on input line 1991.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images7/page-14.png, id=1467, 722.7pt x 542.025pt>
+File: images7/page-14.png Graphic file (type png)
+<use images7/page-14.png>
+Package pdftex.def Info: images7/page-14.png  used on input line 1991.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images7/page-15.png, id=1468, 722.7pt x 542.025pt>
+File: images7/page-15.png Graphic file (type png)
+<use images7/page-15.png>
+Package pdftex.def Info: images7/page-15.png  used on input line 1997.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [97 <./images7/page-13.png> <./images7/page-14.png>]
+<images7/page-16.png, id=1476, 722.7pt x 542.025pt>
+File: images7/page-16.png Graphic file (type png)
+<use images7/page-16.png>
+Package pdftex.def Info: images7/page-16.png  used on input line 2005.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images7/page-17.png, id=1477, 722.7pt x 542.025pt>
+File: images7/page-17.png Graphic file (type png)
+<use images7/page-17.png>
+Package pdftex.def Info: images7/page-17.png  used on input line 2005.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images7/page-18.png, id=1478, 722.7pt x 542.025pt>
+File: images7/page-18.png Graphic file (type png)
+<use images7/page-18.png>
+Package pdftex.def Info: images7/page-18.png  used on input line 2005.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+ [98 <./images7/page-15.png> <./images7/page-16.png> <./images7/page-17.png> <./images7/page-18.png>]
+<images7/page-19.png, id=1489, 722.7pt x 542.025pt>
+File: images7/page-19.png Graphic file (type png)
+<use images7/page-19.png>
+Package pdftex.def Info: images7/page-19.png  used on input line 2013.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images7/page-20.png, id=1490, 722.7pt x 542.025pt>
+File: images7/page-20.png Graphic file (type png)
+<use images7/page-20.png>
+Package pdftex.def Info: images7/page-20.png  used on input line 2013.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images7/page-21.png, id=1491, 722.7pt x 542.025pt>
+File: images7/page-21.png Graphic file (type png)
+<use images7/page-21.png>
+Package pdftex.def Info: images7/page-21.png  used on input line 2013.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images7/page-22.png, id=1492, 722.7pt x 542.025pt>
+File: images7/page-22.png Graphic file (type png)
+<use images7/page-22.png>
+Package pdftex.def Info: images7/page-22.png  used on input line 2023.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images7/page-23.png, id=1493, 722.7pt x 542.025pt>
+File: images7/page-23.png Graphic file (type png)
+<use images7/page-23.png>
+Package pdftex.def Info: images7/page-23.png  used on input line 2023.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [99 <./images7/page-19.png> <./images7/page-20.png> <./images7/page-21.png> <./images7/page-22.png> <./images7/page-23.png>]
+<images7/page-24.png, id=1505, 722.7pt x 542.025pt>
+File: images7/page-24.png Graphic file (type png)
+<use images7/page-24.png>
+Package pdftex.def Info: images7/page-24.png  used on input line 2049.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images7/page-25.png, id=1506, 722.7pt x 542.025pt>
+File: images7/page-25.png Graphic file (type png)
+<use images7/page-25.png>
+Package pdftex.def Info: images7/page-25.png  used on input line 2049.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images7/page-26.png, id=1507, 722.7pt x 542.025pt>
+File: images7/page-26.png Graphic file (type png)
+<use images7/page-26.png>
+Package pdftex.def Info: images7/page-26.png  used on input line 2066.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images7/page-27.png, id=1508, 722.7pt x 542.025pt>
+File: images7/page-27.png Graphic file (type png)
+<use images7/page-27.png>
+Package pdftex.def Info: images7/page-27.png  used on input line 2066.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [100 <./images7/page-24.png> <./images7/page-25.png>]
+<images7/page-28.png, id=1516, 722.7pt x 542.025pt>
+File: images7/page-28.png Graphic file (type png)
+<use images7/page-28.png>
+Package pdftex.def Info: images7/page-28.png  used on input line 2091.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images7/page-29.png, id=1517, 722.7pt x 542.025pt>
+File: images7/page-29.png Graphic file (type png)
+<use images7/page-29.png>
+Package pdftex.def Info: images7/page-29.png  used on input line 2091.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [101 <./images7/page-26.png> <./images7/page-27.png> <./images7/page-28.png> <./images7/page-29.png>] [102]
+<images8/page-01.png, id=1533, 722.7pt x 542.025pt>
+File: images8/page-01.png Graphic file (type png)
+<use images8/page-01.png>
+Package pdftex.def Info: images8/page-01.png  used on input line 2143.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [103
+
+ <./images8/page-01.png>]
+<images8/page-02.png, id=1540, 722.7pt x 542.025pt>
+File: images8/page-02.png Graphic file (type png)
+<use images8/page-02.png>
+Package pdftex.def Info: images8/page-02.png  used on input line 2178.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images8/page-03.png, id=1541, 722.7pt x 542.025pt>
+File: images8/page-03.png Graphic file (type png)
+<use images8/page-03.png>
+Package pdftex.def Info: images8/page-03.png  used on input line 2178.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [104 <./images8/page-02.png> <./images8/page-03.png>]
+<images8/page-04.png, id=1549, 722.7pt x 542.025pt>
+File: images8/page-04.png Graphic file (type png)
+<use images8/page-04.png>
+Package pdftex.def Info: images8/page-04.png  used on input line 2216.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images8/page-05.png, id=1550, 722.7pt x 542.025pt>
+File: images8/page-05.png Graphic file (type png)
+<use images8/page-05.png>
+Package pdftex.def Info: images8/page-05.png  used on input line 2216.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [105 <./images8/page-04.png> <./images8/page-05.png>]
+<images8/page-06.png, id=1558, 722.7pt x 542.025pt>
+File: images8/page-06.png Graphic file (type png)
+<use images8/page-06.png>
+Package pdftex.def Info: images8/page-06.png  used on input line 2256.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images8/page-07.png, id=1559, 722.7pt x 542.025pt>
+File: images8/page-07.png Graphic file (type png)
+<use images8/page-07.png>
+Package pdftex.def Info: images8/page-07.png  used on input line 2256.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images8/page-08.png, id=1560, 722.7pt x 542.025pt>
+File: images8/page-08.png Graphic file (type png)
+<use images8/page-08.png>
+Package pdftex.def Info: images8/page-08.png  used on input line 2262.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [106 <./images8/page-06.png> <./images8/page-07.png>]
+<images8/page-09.png, id=1568, 722.7pt x 542.025pt>
+File: images8/page-09.png Graphic file (type png)
+<use images8/page-09.png>
+Package pdftex.def Info: images8/page-09.png  used on input line 2270.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images8/page-10.png, id=1569, 722.7pt x 542.025pt>
+File: images8/page-10.png Graphic file (type png)
+<use images8/page-10.png>
+Package pdftex.def Info: images8/page-10.png  used on input line 2270.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images8/page-11.png, id=1570, 722.7pt x 542.025pt>
+File: images8/page-11.png Graphic file (type png)
+<use images8/page-11.png>
+Package pdftex.def Info: images8/page-11.png  used on input line 2270.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+ [107 <./images8/page-08.png> <./images8/page-09.png> <./images8/page-10.png> <./images8/page-11.png>]
+<images8/page-12.png, id=1581, 722.7pt x 542.025pt>
+File: images8/page-12.png Graphic file (type png)
+<use images8/page-12.png>
+Package pdftex.def Info: images8/page-12.png  used on input line 2297.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [108 <./images8/page-12.png>]
+<images8/page-13.png, id=1589, 722.7pt x 542.025pt>
+File: images8/page-13.png Graphic file (type png)
+<use images8/page-13.png>
+Package pdftex.def Info: images8/page-13.png  used on input line 2309.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+<images8/page-14.png, id=1590, 722.7pt x 542.025pt>
+File: images8/page-14.png Graphic file (type png)
+<use images8/page-14.png>
+Package pdftex.def Info: images8/page-14.png  used on input line 2332.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images8/page-15.png, id=1591, 722.7pt x 542.025pt>
+File: images8/page-15.png Graphic file (type png)
+<use images8/page-15.png>
+Package pdftex.def Info: images8/page-15.png  used on input line 2332.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [109 <./images8/page-13.png>]
+<images8/page-16.png, id=1598, 722.7pt x 542.025pt>
+File: images8/page-16.png Graphic file (type png)
+<use images8/page-16.png>
+Package pdftex.def Info: images8/page-16.png  used on input line 2338.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [110 <./images8/page-14.png> <./images8/page-15.png> <./images8/page-16.png>]
+<images8/page-17.png, id=1608, 722.7pt x 542.025pt>
+File: images8/page-17.png Graphic file (type png)
+<use images8/page-17.png>
+Package pdftex.def Info: images8/page-17.png  used on input line 2352.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images8/page-18.png, id=1609, 722.7pt x 542.025pt>
+File: images8/page-18.png Graphic file (type png)
+<use images8/page-18.png>
+Package pdftex.def Info: images8/page-18.png  used on input line 2352.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images8/page-19.png, id=1610, 722.7pt x 542.025pt>
+File: images8/page-19.png Graphic file (type png)
+<use images8/page-19.png>
+Package pdftex.def Info: images8/page-19.png  used on input line 2352.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images8/page-20.png, id=1611, 722.7pt x 542.025pt>
+File: images8/page-20.png Graphic file (type png)
+<use images8/page-20.png>
+Package pdftex.def Info: images8/page-20.png  used on input line 2388.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images8/page-21.png, id=1612, 722.7pt x 542.025pt>
+File: images8/page-21.png Graphic file (type png)
+<use images8/page-21.png>
+Package pdftex.def Info: images8/page-21.png  used on input line 2388.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [111 <./images8/page-17.png> <./images8/page-18.png> <./images8/page-19.png>]
+<images8/page-22.png, id=1621, 722.7pt x 542.025pt>
+File: images8/page-22.png Graphic file (type png)
+<use images8/page-22.png>
+Package pdftex.def Info: images8/page-22.png  used on input line 2398.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images8/page-23.png, id=1622, 722.7pt x 542.025pt>
+File: images8/page-23.png Graphic file (type png)
+<use images8/page-23.png>
+Package pdftex.def Info: images8/page-23.png  used on input line 2398.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [112 <./images8/page-20.png> <./images8/page-21.png> <./images8/page-22.png> <./images8/page-23.png>] [113]
+<images9/part1-01.png, id=1637, 722.7pt x 542.025pt>
+File: images9/part1-01.png Graphic file (type png)
+<use images9/part1-01.png>
+Package pdftex.def Info: images9/part1-01.png  used on input line 2435.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images9/part1-02.png, id=1638, 722.7pt x 542.025pt>
+File: images9/part1-02.png Graphic file (type png)
+<use images9/part1-02.png>
+Package pdftex.def Info: images9/part1-02.png  used on input line 2435.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [114
+
+ <./images9/part1-01.png> <./images9/part1-02.png>]
+<images9/part1-03.png, id=1648, 722.7pt x 542.025pt>
+File: images9/part1-03.png Graphic file (type png)
+<use images9/part1-03.png>
+Package pdftex.def Info: images9/part1-03.png  used on input line 2467.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images9/part1-04.png, id=1649, 722.7pt x 542.025pt>
+File: images9/part1-04.png Graphic file (type png)
+<use images9/part1-04.png>
+Package pdftex.def Info: images9/part1-04.png  used on input line 2467.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images9/part1-05.png, id=1650, 722.7pt x 542.025pt>
+File: images9/part1-05.png Graphic file (type png)
+<use images9/part1-05.png>
+Package pdftex.def Info: images9/part1-05.png  used on input line 2475.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images9/part1-06.png, id=1651, 722.7pt x 542.025pt>
+File: images9/part1-06.png Graphic file (type png)
+<use images9/part1-06.png>
+Package pdftex.def Info: images9/part1-06.png  used on input line 2475.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [115 <./images9/part1-03.png> <./images9/part1-04.png> <./images9/part1-05.png> <./images9/part1-06.png>]
+<images9/part1-07.png, id=1662, 722.7pt x 542.025pt>
+File: images9/part1-07.png Graphic file (type png)
+<use images9/part1-07.png>
+Package pdftex.def Info: images9/part1-07.png  used on input line 2494.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images9/part1-08.png, id=1663, 722.7pt x 542.025pt>
+File: images9/part1-08.png Graphic file (type png)
+<use images9/part1-08.png>
+Package pdftex.def Info: images9/part1-08.png  used on input line 2494.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images9/part1-09.png, id=1664, 722.7pt x 542.025pt>
+File: images9/part1-09.png Graphic file (type png)
+<use images9/part1-09.png>
+Package pdftex.def Info: images9/part1-09.png  used on input line 2523.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images9/part1-10.png, id=1665, 722.7pt x 542.025pt>
+File: images9/part1-10.png Graphic file (type png)
+<use images9/part1-10.png>
+Package pdftex.def Info: images9/part1-10.png  used on input line 2523.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [116 <./images9/part1-07.png> <./images9/part1-08.png>]
+<images9/part1-11.png, id=1673, 722.7pt x 542.025pt>
+File: images9/part1-11.png Graphic file (type png)
+<use images9/part1-11.png>
+Package pdftex.def Info: images9/part1-11.png  used on input line 2561.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images9/part1-12.png, id=1674, 722.7pt x 542.025pt>
+File: images9/part1-12.png Graphic file (type png)
+<use images9/part1-12.png>
+Package pdftex.def Info: images9/part1-12.png  used on input line 2561.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [117 <./images9/part1-09.png> <./images9/part1-10.png>]
+<images9/part1-13.png, id=1682, 722.7pt x 542.025pt>
+File: images9/part1-13.png Graphic file (type png)
+<use images9/part1-13.png>
+Package pdftex.def Info: images9/part1-13.png  used on input line 2567.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [118 <./images9/part1-11.png> <./images9/part1-12.png> <./images9/part1-13.png>]
+<images9/part2-01.png, id=1692, 722.7pt x 542.025pt>
+File: images9/part2-01.png Graphic file (type png)
+<use images9/part2-01.png>
+Package pdftex.def Info: images9/part2-01.png  used on input line 2573.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+<images9/part2-02.png, id=1693, 722.7pt x 542.025pt>
+File: images9/part2-02.png Graphic file (type png)
+<use images9/part2-02.png>
+Package pdftex.def Info: images9/part2-02.png  used on input line 2589.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images9/part2-03.png, id=1694, 722.7pt x 542.025pt>
+File: images9/part2-03.png Graphic file (type png)
+<use images9/part2-03.png>
+Package pdftex.def Info: images9/part2-03.png  used on input line 2589.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+<images9/part2-04.png, id=1695, 722.7pt x 542.025pt>
+File: images9/part2-04.png Graphic file (type png)
+<use images9/part2-04.png>
+Package pdftex.def Info: images9/part2-04.png  used on input line 2589.
+(pdftex.def)             Requested size: 151.14456pt x 113.35718pt.
+ [119 <./images9/part2-01.png>]
+<images9/part2-05.png, id=1702, 722.7pt x 542.025pt>
+File: images9/part2-05.png Graphic file (type png)
+<use images9/part2-05.png>
+Package pdftex.def Info: images9/part2-05.png  used on input line 2593.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+
+ignored: Infinite glue shrinkage found in box being split [120 <./images9/part2-02.png> <./images9/part2-03.png> <./images9/part2-04.png> <./images9/part2-05.png>]
+<images9/part2-06.png, id=1715, 722.7pt x 542.025pt>
+File: images9/part2-06.png Graphic file (type png)
+<use images9/part2-06.png>
+Package pdftex.def Info: images9/part2-06.png  used on input line 2625.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images9/part2-07.png, id=1716, 722.7pt x 542.025pt>
+File: images9/part2-07.png Graphic file (type png)
+<use images9/part2-07.png>
+Package pdftex.def Info: images9/part2-07.png  used on input line 2625.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [121 <./images9/part2-06.png> <./images9/part2-07.png>]
+<images9/part2-08.png, id=1724, 722.7pt x 542.025pt>
+File: images9/part2-08.png Graphic file (type png)
+<use images9/part2-08.png>
+Package pdftex.def Info: images9/part2-08.png  used on input line 2649.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images9/part2-09.png, id=1725, 722.7pt x 542.025pt>
+File: images9/part2-09.png Graphic file (type png)
+<use images9/part2-09.png>
+Package pdftex.def Info: images9/part2-09.png  used on input line 2649.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images9/part2-10.png, id=1726, 722.7pt x 542.025pt>
+File: images9/part2-10.png Graphic file (type png)
+<use images9/part2-10.png>
+Package pdftex.def Info: images9/part2-10.png  used on input line 2663.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images9/part2-11.png, id=1727, 722.7pt x 542.025pt>
+File: images9/part2-11.png Graphic file (type png)
+<use images9/part2-11.png>
+Package pdftex.def Info: images9/part2-11.png  used on input line 2663.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [122 <./images9/part2-08.png> <./images9/part2-09.png>]
+<images9/part2-12.png, id=1735, 722.7pt x 542.025pt>
+File: images9/part2-12.png Graphic file (type png)
+<use images9/part2-12.png>
+Package pdftex.def Info: images9/part2-12.png  used on input line 2686.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [123 <./images9/part2-10.png> <./images9/part2-11.png>] [124 <./images9/part2-12.png>] [125]
+<images10/page-01.png, id=1753, 722.7pt x 542.025pt>
+File: images10/page-01.png Graphic file (type png)
+<use images10/page-01.png>
+Package pdftex.def Info: images10/page-01.png  used on input line 2731.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images10/page-02.png, id=1754, 722.7pt x 542.025pt>
+File: images10/page-02.png Graphic file (type png)
+<use images10/page-02.png>
+Package pdftex.def Info: images10/page-02.png  used on input line 2731.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [126
+
+ <./images10/page-01.png> <./images10/page-02.png>]
+<images10/page-03.png, id=1761, 722.7pt x 542.025pt>
+File: images10/page-03.png Graphic file (type png)
+<use images10/page-03.png>
+Package pdftex.def Info: images10/page-03.png  used on input line 2760.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+<images10/page-04.png, id=1762, 722.7pt x 542.025pt>
+File: images10/page-04.png Graphic file (type png)
+<use images10/page-04.png>
+Package pdftex.def Info: images10/page-04.png  used on input line 2776.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images10/page-05.png, id=1763, 722.7pt x 542.025pt>
+File: images10/page-05.png Graphic file (type png)
+<use images10/page-05.png>
+Package pdftex.def Info: images10/page-05.png  used on input line 2776.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [127 <./images10/page-03.png>]
+<images10/page-06.png, id=1769, 722.7pt x 542.025pt>
+File: images10/page-06.png Graphic file (type png)
+<use images10/page-06.png>
+Package pdftex.def Info: images10/page-06.png  used on input line 2780.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [128 <./images10/page-04.png> <./images10/page-05.png> <./images10/page-06.png>]
+<images10/page-07.png, id=1776, 722.7pt x 542.025pt>
+File: images10/page-07.png Graphic file (type png)
+<use images10/page-07.png>
+Package pdftex.def Info: images10/page-07.png  used on input line 2799.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images10/page-08.png, id=1777, 722.7pt x 542.025pt>
+File: images10/page-08.png Graphic file (type png)
+<use images10/page-08.png>
+Package pdftex.def Info: images10/page-08.png  used on input line 2799.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images10/page-09.png, id=1778, 722.7pt x 542.025pt>
+File: images10/page-09.png Graphic file (type png)
+<use images10/page-09.png>
+Package pdftex.def Info: images10/page-09.png  used on input line 2829.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [129 <./images10/page-07.png> <./images10/page-08.png>]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2851.
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+<images10/page-10.png, id=1784, 722.7pt x 542.025pt>
+File: images10/page-10.png Graphic file (type png)
+<use images10/page-10.png>
+Package pdftex.def Info: images10/page-10.png  used on input line 2864.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [130{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./images10/page-09.png>]
+<images10/page-11.png, id=1791, 722.7pt x 542.025pt>
+File: images10/page-11.png Graphic file (type png)
+<use images10/page-11.png>
+Package pdftex.def Info: images10/page-11.png  used on input line 2868.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images10/page-12.png, id=1792, 722.7pt x 542.025pt>
+File: images10/page-12.png Graphic file (type png)
+<use images10/page-12.png>
+Package pdftex.def Info: images10/page-12.png  used on input line 2868.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [131 <./images10/page-10.png> <./images10/page-11.png> <./images10/page-12.png>]
+<images10/page-13.png, id=1799, 722.7pt x 542.025pt>
+File: images10/page-13.png Graphic file (type png)
+<use images10/page-13.png>
+Package pdftex.def Info: images10/page-13.png  used on input line 2880.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+<images10/page-14.png, id=1800, 722.7pt x 542.025pt>
+File: images10/page-14.png Graphic file (type png)
+<use images10/page-14.png>
+Package pdftex.def Info: images10/page-14.png  used on input line 2884.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images10/page-15.png, id=1801, 722.7pt x 542.025pt>
+File: images10/page-15.png Graphic file (type png)
+<use images10/page-15.png>
+Package pdftex.def Info: images10/page-15.png  used on input line 2884.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [132 <./images10/page-13.png> <./images10/page-14.png> <./images10/page-15.png>]
+<images10/page-16.png, id=1809, 722.7pt x 542.025pt>
+File: images10/page-16.png Graphic file (type png)
+<use images10/page-16.png>
+Package pdftex.def Info: images10/page-16.png  used on input line 2902.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+<images10/page-17.png, id=1810, 722.7pt x 542.025pt>
+File: images10/page-17.png Graphic file (type png)
+<use images10/page-17.png>
+Package pdftex.def Info: images10/page-17.png  used on input line 2906.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images10/page-18.png, id=1811, 722.7pt x 542.025pt>
+File: images10/page-18.png Graphic file (type png)
+<use images10/page-18.png>
+Package pdftex.def Info: images10/page-18.png  used on input line 2906.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [133 <./images10/page-16.png>]
+<images10/page-19.png, id=1817, 722.7pt x 542.025pt>
+File: images10/page-19.png Graphic file (type png)
+<use images10/page-19.png>
+Package pdftex.def Info: images10/page-19.png  used on input line 2912.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images10/page-20.png, id=1818, 722.7pt x 542.025pt>
+File: images10/page-20.png Graphic file (type png)
+<use images10/page-20.png>
+Package pdftex.def Info: images10/page-20.png  used on input line 2912.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images10/page-21.png, id=1819, 722.7pt x 542.025pt>
+File: images10/page-21.png Graphic file (type png)
+<use images10/page-21.png>
+Package pdftex.def Info: images10/page-21.png  used on input line 2922.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [134 <./images10/page-17.png> <./images10/page-18.png> <./images10/page-19.png> <./images10/page-20.png>] [135 <./images10/page-21.png>] [136]
+<images11/page-01.png, id=1836, 722.7pt x 542.025pt>
+File: images11/page-01.png Graphic file (type png)
+<use images11/page-01.png>
+Package pdftex.def Info: images11/page-01.png  used on input line 2969.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images11/page-02.png, id=1837, 722.7pt x 542.025pt>
+File: images11/page-02.png Graphic file (type png)
+<use images11/page-02.png>
+Package pdftex.def Info: images11/page-02.png  used on input line 2969.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images11/page-03.png, id=1838, 722.7pt x 542.025pt>
+File: images11/page-03.png Graphic file (type png)
+<use images11/page-03.png>
+Package pdftex.def Info: images11/page-03.png  used on input line 2975.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [137
+
+ <./images11/page-01.png> <./images11/page-02.png>]
+<images11/page-04.png, id=1844, 722.7pt x 542.025pt>
+File: images11/page-04.png Graphic file (type png)
+<use images11/page-04.png>
+Package pdftex.def Info: images11/page-04.png  used on input line 2981.
+(pdftex.def)             Requested size: 406.192pt x 304.64845pt.
+ [138 <./images11/page-03.png>]
+<images11/page-05.png, id=1851, 722.7pt x 542.025pt>
+File: images11/page-05.png Graphic file (type png)
+<use images11/page-05.png>
+Package pdftex.def Info: images11/page-05.png  used on input line 2993.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images11/page-06.png, id=1852, 722.7pt x 542.025pt>
+File: images11/page-06.png Graphic file (type png)
+<use images11/page-06.png>
+Package pdftex.def Info: images11/page-06.png  used on input line 2993.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+ [139 <./images11/page-04.png>]
+<images11/page-07.png, id=1858, 722.7pt x 542.025pt>
+File: images11/page-07.png Graphic file (type png)
+<use images11/page-07.png>
+Package pdftex.def Info: images11/page-07.png  used on input line 3005.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt.
+<images11/page-08.png, id=1859, 722.7pt x 542.025pt>
+File: images11/page-08.png Graphic file (type png)
+<use images11/page-08.png>
+Package pdftex.def Info: images11/page-08.png  used on input line 3005.
+(pdftex.def)             Requested size: 226.70963pt x 170.0275pt

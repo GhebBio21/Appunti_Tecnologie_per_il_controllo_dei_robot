@@ -98,8 +98,17 @@
 \contentsline {subsection}{\numberline {11.4}Vincoli dinamici degli attuatori}{139}{subsection.11.4}%
 \contentsline {subsection}{\numberline {11.5}Energia, rendimento e limiti termici}{141}{subsection.11.5}%
 \contentsline {subsection}{\numberline {11.6}Motore DC brushed: principio fisico e coppia elementare}{142}{subsection.11.6}%
-\contentsline {section}{Appendice}{146}{section*.180}%
-\contentsline {subsection}{Formulario sintetico}{146}{section*.181}%
-\contentsline {subsection}{Confronto rapido dei sensori di posizione}{148}{section*.182}%
-\contentsline {subsection}{Confronto rapido di sensori e metodi per velocita`, distanza e accelerazione}{149}{section*.183}%
-\contentsline {subsection}{Riferimento al materiale originale}{152}{section*.184}%
+\contentsline {section}{\numberline {12}Lezione 13}{146}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Visione generale della lezione}{146}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Ripple di coppia e ruolo di piu` avvolgimenti}{146}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Back-EMF: la tensione generata dalla rotazione}{148}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Modello elettromeccanico del motore DC}{149}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}Comportamento a regime e caratteristica coppia-velocita`}{151}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6}Aspetti termici del motore DC}{154}{subsection.12.6}%
+\contentsline {subsection}{\numberline {12.7}Funzione di trasferimento del motore DC}{155}{subsection.12.7}%
+\contentsline {subsection}{\numberline {12.8}Introduzione agli stepper motor}{158}{subsection.12.8}%
+\contentsline {section}{Appendice}{162}{section*.201}%
+\contentsline {subsection}{Formulario sintetico}{162}{section*.202}%
+\contentsline {subsection}{Confronto rapido dei sensori di posizione}{164}{section*.203}%
+\contentsline {subsection}{Confronto rapido di sensori e metodi per velocita`, distanza e accelerazione}{166}{section*.204}%
+\contentsline {subsection}{Riferimento al materiale originale}{168}{section*.205}%
