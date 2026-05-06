@@ -4206,6 +4206,446 @@ J\dot\omega_m=T_e-T_L-B\omega_m.
 Il punto concettuale piu` importante e` che il BLDC elimina il commutatore meccanico, ma non elimina il problema della commutazione: lo sposta nell'elettronica. Per produrre coppia in modo efficiente, il driver deve conoscere la posizione elettrica del rotore e alimentare le fasi coerentemente con le back-EMF. Nel BLDC trapezoidale questa idea diventa una commutazione a sei passi, spesso basata su tre sensori Hall.
 
 % =========================================================
+% LEZIONE 15
+% =========================================================
+
+\clearpage
+\section{Lezione 15}
+
+\subsection{Visione generale della lezione}
+
+La quindicesima lezione chiude il discorso sul BLDC trapezoidale e introduce il controllo sinusoidale dei motori brushless. L'idea di fondo e` che la commutazione a sei passi e` semplice, ma non ideale: nella macchina reale le correnti non cambiano istantaneamente, perche' gli avvolgimenti hanno induttanza e il driver ha limiti di tensione e corrente. Di conseguenza la coppia non resta perfettamente piatta, ma contiene un ripple legato agli istanti di commutazione.
+
+Per ridurre il ripple si passa a correnti sinusoidali e a un controllo piu` raffinato. Il problema, pero`, e` che le grandezze trifase \(a,b,c\) sono sinusoidali e quindi variabili nel tempo anche a coppia costante. Le trasformate di Clarke e Park servono proprio a cambiare punto di vista: prima si porta il sistema trifase in un piano stazionario \(\alpha\beta\), poi si ruota quel piano insieme al campo rotorico, ottenendo gli assi \(d,q\). In questo sistema di riferimento, a velocita` costante, le correnti che producono coppia possono diventare quasi costanti.
+
+La seconda parte della lezione torna sui driver. Prima si chiarisce il ruolo generale dell'elettronica di potenza per motori DC, stepper e brushless; poi si analizza il caso piu` semplice del motore DC brushed pilotato con ponte H e PWM. Il messaggio pratico e` che il controllo non applica quasi mai una tensione analogica continua perfetta: nella realta` commuta rapidamente interruttori di potenza e usa il motore stesso come filtro dinamico.
+
+\subsection{Limite pratico della commutazione trapezoidale}
+
+\slidefig{images14/page-01.png}{Nel BLDC trapezoidale reale le correnti di fase non commutano istantaneamente e la coppia mantiene un ripple alla frequenza di commutazione.}
+
+Nel controllo trapezoidale ideale si immagina di alimentare due fasi alla volta con correnti rettangolari, lasciando la terza fase inattiva. Se le back-EMF sono trapezoidali e le correnti sono perfettamente sincronizzate sui tratti piatti, il prodotto \(e_ai_a+e_bi_b+e_ci_c\) resta quasi costante e quindi anche la coppia risulta quasi piatta.
+
+La slide sottolinea pero` il limite fisico di questa immagine. La corrente in una fase non puo` saltare da un valore all'altro in tempo nullo. L'avvolgimento ha una dinamica del tipo:
+\[
+v=Ri+L\frac{di}{dt}+e_{\text{bemf}},
+\]
+quindi il passaggio da una fase attiva alla successiva richiede un transitorio. Durante quel transitorio la corrente non coincide con il valore ideale e il prodotto tra corrente e back-EMF non rimane perfettamente costante.
+
+Il risultato e` un ripple di coppia concentrato attorno agli istanti di commutazione. Questo ripple puo` produrre vibrazioni meccaniche, rumore acustico, peggioramento della qualita` di moto e maggiori sollecitazioni sul riduttore o sulla struttura robotica. La commutazione trapezoidale resta utile perche' e` robusta e richiede poca informazione di posizione, ma non e` la scelta migliore quando servono bassa rumorosita`, coppia molto regolare o controllo fine a bassa velocita`.
+
+\begin{keybox}
+\textbf{Idea chiave.} La commutazione a sei passi e` una soluzione discreta a un problema continuo. Funziona bene quando si accetta un certo ripple; se invece si vuole una coppia piu` liscia, conviene rendere lisce anche le correnti di fase.
+\end{keybox}
+
+\subsection{Controllo sinusoidale del BLDC}
+
+\slidefig{images14/page-02.png}{Nel controllo sinusoidale le tre correnti di fase vengono mantenute sinusoidali e sfasate di \(120^\circ\), cosi` da generare un campo statorico rotante piu` regolare.}
+
+Nel controllo sinusoidale si cerca di alimentare le tre fasi con correnti sinusoidali bilanciate:
+\[
+i_a+i_b+i_c=0,
+\]
+sfasate di \(120^\circ\) elettrici. Invece di cambiare bruscamente la coppia di fasi attive ogni \(60^\circ\), il campo magnetico statorico ruota in modo continuo. Se il campo statorico e` mantenuto nella giusta relazione angolare con il campo del rotore, la coppia puo` restare molto piu` regolare.
+
+Il prezzo da pagare e` che il controllo diventa piu` complesso. Non basta piu` sapere in quale dei sei settori si trova il rotore: serve conoscere l'angolo elettrico \(\theta_e\) con risoluzione sufficiente, perche' le correnti sinusoidali devono essere sincronizzate con la posizione del campo magnetico rotorico.
+
+Il problema matematico e` evidente: in \(abc\) le correnti sono tempo-varianti. Anche quando il motore gira a velocita` costante e produce coppia costante, \(i_a\), \(i_b\) e \(i_c\) continuano a oscillare. Questo rende scomodo progettare regolatori di corrente direttamente sulle fasi. Le trasformate di Clarke e Park risolvono il problema cambiando sistema di riferimento.
+
+\subsection{Trasformata di Clarke: da \texorpdfstring{\(abc\)}{abc} ad \texorpdfstring{\(\alpha\beta\)}{alpha-beta}}
+
+\slidepair{images14/page-03.png}{images14/page-04.png}{Trasformata di Clarke: un sistema trifase bilanciato viene rappresentato come un vettore nel piano stazionario \(\alpha\beta\).}
+
+La trasformata di Clarke prende tre grandezze di fase bilanciate e le mappa in due componenti ortogonali stazionarie. Per una generica grandezza \(x\), che puo` essere corrente, tensione o flusso concatenato, una forma comune e`:
+\[
+\begin{bmatrix}
+x_\alpha\\[0.2em]
+x_\beta
+\end{bmatrix}
+=
+\frac{2}{3}
+\begin{bmatrix}
+1 & -\frac{1}{2} & -\frac{1}{2}\\[0.3em]
+0 & \frac{\sqrt 3}{2} & -\frac{\sqrt 3}{2}
+\end{bmatrix}
+\begin{bmatrix}
+x_a\\[0.2em]
+x_b\\[0.2em]
+x_c
+\end{bmatrix}.
+\]
+
+Poiche' in un sistema trifase a stella senza neutro vale:
+\[
+x_a+x_b+x_c=0,
+\]
+l'informazione indipendente e` gia` bidimensionale. La trasformata di Clarke non butta via informazione utile: semplicemente descrive il sistema con due assi ortogonali fissi nello statore.
+
+Nel caso delle correnti:
+\[
+\begin{bmatrix}
+i_\alpha\\[0.2em]
+i_\beta
+\end{bmatrix}
+=
+\frac{2}{3}
+\begin{bmatrix}
+1 & -\frac{1}{2} & -\frac{1}{2}\\[0.3em]
+0 & \frac{\sqrt 3}{2} & -\frac{\sqrt 3}{2}
+\end{bmatrix}
+\begin{bmatrix}
+i_a\\[0.2em]
+i_b\\[0.2em]
+i_c
+\end{bmatrix}.
+\]
+Il vettore \((i_\alpha,i_\beta)\) rappresenta la corrente statorica risultante nel piano. A regime sinusoidale, questo vettore ruota nel piano \(\alpha\beta\) con velocita` elettrica \(\omega_e\).
+
+\subsection{Trasformata di Park: da \texorpdfstring{\(\alpha\beta\)}{alpha-beta} a \texorpdfstring{\(dq\)}{dq}}
+
+\slidepair{images14/page-05.png}{images14/page-06.png}{Trasformata di Park e riscrittura delle equazioni di tensione nel riferimento \(dq\) solidale con il campo rotorico.}
+
+La trasformata di Park ruota il piano \(\alpha\beta\) dell'angolo elettrico \(\theta_e\). La forma usata nelle slide e`:
+\[
+\begin{bmatrix}
+x_d\\[0.2em]
+x_q
+\end{bmatrix}
+=
+\begin{bmatrix}
+\cos\theta_e & \sin\theta_e\\[0.2em]
+-\sin\theta_e & \cos\theta_e
+\end{bmatrix}
+\begin{bmatrix}
+x_\alpha\\[0.2em]
+x_\beta
+\end{bmatrix}.
+\]
+
+Il riferimento \(dq\) ruota in sincronia con il campo magnetico del rotore. Per questo, cio` che nel sistema \(\alpha\beta\) appare come un vettore rotante, nel sistema \(dq\) puo` apparire fermo. Se il motore gira a velocita` costante e il controllo e` ben sincronizzato, le correnti \(i_d\) e \(i_q\) possono essere valori continui quasi costanti.
+
+Le equazioni di tensione nel riferimento \(dq\), per una macchina a magneti permanenti, diventano:
+\[
+v_d
+=R_s i_d
++L_d\frac{di_d}{dt}
+-\omega_e L_q i_q,
+\]
+\[
+v_q
+=R_s i_q
++L_q\frac{di_q}{dt}
++\omega_e L_d i_d
++\omega_e\lambda_m.
+\]
+Qui:
+\begin{align*}
+L_d,L_q&=\text{induttanze sugli assi }d\text{ e }q,\\
+\omega_e&=\dot\theta_e,\\
+\lambda_m&=\text{flusso concatenato dei magneti permanenti}.
+\end{align*}
+Per macchine con magneti superficiali, spesso:
+\[
+L_d\simeq L_q.
+\]
+
+Le equazioni mostrano due aspetti importanti. Primo, il flusso dei magneti permanenti non compare piu` come funzione periodica esplicita di \(\theta_e\): nel riferimento rotorico diventa un termine costante. Secondo, gli assi \(d\) e \(q\) non sono completamente indipendenti: i termini \(-\omega_e L_q i_q\) e \(+\omega_e L_d i_d\) sono accoppiamenti dinamici dovuti alla rotazione del sistema di riferimento.
+
+\slidepair{images14/page-07.png}{images14/page-08.png}{Interpretazione delle equazioni nel riferimento \(dq\): il termine di flusso magnetico diventa costante e gli assi possono essere letti come avvolgimenti virtuali.}
+
+La trasformazione \(dq\) e` utile perche' rende il BLDC sinusoidale molto simile, dal punto di vista del controllo, a un motore DC con eccitazione separata. L'asse \(d\) e` associato alla componente di flusso, mentre l'asse \(q\) e` associato alla componente di coppia. Invece di controllare tre correnti sinusoidali, il regolatore puo` lavorare su due correnti quasi continue:
+\[
+i_d \quad \text{e} \quad i_q.
+\]
+
+Si puo` pensare agli assi \(d\) e \(q\) come a due avvolgimenti virtuali, solidali al rotore. Naturalmente questi avvolgimenti non esistono fisicamente: sono il risultato delle trasformate matematiche applicate a correnti e tensioni reali delle tre fasi. Questa interpretazione, pero`, e` molto potente: permette di separare il problema di generazione del flusso dal problema di generazione della coppia.
+
+La variabile \(i_d\) modifica la componente di flusso lungo l'asse diretto. Nei motori a magneti superficiali, in condizioni nominali, non serve aggiungere flusso tramite \(i_d\), perche' il flusso principale e` gia` fornito dai magneti permanenti. La variabile \(i_q\), invece, e` la corrente che produce direttamente coppia utile.
+
+\subsection{Coppia elettromagnetica nel riferimento \texorpdfstring{\(dq\)}{dq}}
+
+\slidepair{images14/page-09.png}{images14/page-10.png}{Coppia elettromagnetica nel riferimento \(dq\) e idea di Field Oriented Control: controllare \(i_d\) e \(i_q\) invece delle correnti di fase.}
+
+Nel riferimento \(dq\), la coppia elettromagnetica di una macchina sincrona a magneti permanenti puo` essere scritta come:
+\[
+T_e
+=
+\frac{3}{2}p
+\left(
+\lambda_m i_q
++(L_d-L_q)i_di_q
+\right),
+\]
+dove \(p\) e` il numero di coppie polari. La prima parte, \(\lambda_m i_q\), e` la coppia prodotta dall'interazione tra flusso dei magneti e corrente di quadratura. La seconda parte, \((L_d-L_q)i_di_q\), e` una componente di riluttanza, presente quando le induttanze sui due assi sono diverse.
+
+Per una macchina con magneti superficiali:
+\[
+L_d\simeq L_q,
+\]
+quindi la componente di riluttanza diventa trascurabile e la coppia si semplifica in:
+\[
+T_e=\frac{3}{2}p\lambda_m i_q.
+\]
+Questa e` la formula piu` importante della parte sul controllo sinusoidale: se \(p\) e \(\lambda_m\) sono fissati, la coppia e` proporzionale a \(i_q\).
+
+Nel caso piu` semplice, per ottenere massima coppia per ampere si impone:
+\[
+i_d^\star=0,
+\qquad
+i_q^\star=\frac{2}{3}\frac{T_e^\star}{p\lambda_m}.
+\]
+La corrente disponibile viene cosi` usata per produrre coppia, non per rinforzare o indebolire il flusso. Strategie piu` avanzate possono usare \(i_d\neq 0\), per esempio nel \emph{field weakening} ad alta velocita`, ma non e` il caso base trattato qui.
+
+\begin{keybox}
+\textbf{Idea del FOC.} Il Field Oriented Control trasforma il motore trifase in due canali virtuali: \(i_d\) controlla il flusso, \(i_q\) controlla la coppia. Nel caso piu` semplice si pone \(i_d^\star=0\) e si usa \(i_q^\star\) come comando di coppia.
+\end{keybox}
+
+\subsection{Catena del Field Oriented Control}
+
+\slidepair{images14/page-11.png}{images14/page-12.png}{Le correnti sinusoidali in \(abc\) diventano grandezze rotanti in \(\alpha\beta\) e grandezze costanti nel riferimento \(dq\); poi le tensioni desiderate vengono riportate indietro verso le fasi.}
+
+La catena del Field Oriented Control puo` essere letta in due direzioni. In misura, si parte dalle correnti reali di fase. Spesso bastano due sensori di corrente, perche':
+\[
+i_c=-(i_a+i_b).
+\]
+Poi si applica Clarke:
+\[
+(i_a,i_b,i_c)\longrightarrow(i_\alpha,i_\beta),
+\]
+e quindi Park:
+\[
+(i_\alpha,i_\beta,\theta_e)\longrightarrow(i_d,i_q).
+\]
+A questo punto i regolatori di corrente confrontano \(i_d,i_q\) con i riferimenti \(i_d^\star,i_q^\star\) e calcolano le tensioni desiderate \(v_d^\star,v_q^\star\).
+
+In attuazione si fa il percorso inverso. Prima si applica l'inversa della Park:
+\[
+\begin{bmatrix}
+x_\alpha\\[0.2em]
+x_\beta
+\end{bmatrix}
+=
+\begin{bmatrix}
+\cos\theta_e & -\sin\theta_e\\[0.2em]
+\sin\theta_e & \cos\theta_e
+\end{bmatrix}
+\begin{bmatrix}
+x_d\\[0.2em]
+x_q
+\end{bmatrix},
+\]
+poi l'inversa della Clarke:
+\[
+\begin{bmatrix}
+x_a\\[0.2em]
+x_b\\[0.2em]
+x_c
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0\\[0.2em]
+-\frac{1}{2} & \frac{\sqrt 3}{2}\\[0.2em]
+-\frac{1}{2} & -\frac{\sqrt 3}{2}
+\end{bmatrix}
+\begin{bmatrix}
+x_\alpha\\[0.2em]
+x_\beta
+\end{bmatrix}.
+\]
+In questo modo le tensioni \(v_d^\star,v_q^\star\), comode per il controllo, vengono convertite nelle tensioni di fase \(v_a^\star,v_b^\star,v_c^\star\), cioe` nei comandi che l'inverter deve realizzare.
+
+\slidefig{images14/page-13.png}{Schema a blocchi di un controllo FOC: regolatori PI in \(dq\), trasformate inverse, modulazione vettoriale e ponte MOSFET.}
+
+Lo schema a blocchi della slide mette insieme tutti i passaggi:
+\begin{itemize}
+\item il riferimento di coppia genera \(i_q^\star\);
+\item il riferimento di flusso, nel caso base, impone \(i_d^\star=0\);
+\item due regolatori di corrente producono \(v_q^\star\) e \(v_d^\star\);
+\item le trasformate inverse producono i riferimenti di tensione nello statore;
+\item la modulazione di potenza genera i segnali per i MOSFET dell'inverter.
+\end{itemize}
+
+La tecnica indicata nella slide per generare le tensioni trifase e` la \emph{Space Vector Modulation}, spesso abbreviata SVM o SVPWM. L'idea non e` applicare tensioni analogiche continue, ma scegliere per quanto tempo mantenere ciascuna configurazione di commutazione dell'inverter, cosi` da ottenere in media il vettore di tensione desiderato nel piano \(\alpha\beta\).
+
+L'angolo elettrico \(\theta_e\) e` indispensabile: senza di esso non si puo` applicare correttamente la trasformata di Park, e quindi non si puo` sapere quale parte della corrente e` \(d\) e quale e` \(q\).
+
+\subsection{Misura dell'angolo elettrico e famiglie costruttive}
+
+\slidepair{images14/page-14.png}{images14/page-15.png}{Misura dell'angolo elettrico e esempi costruttivi di motori brushless: industriali, con encoder integrato, cavi, alberi cavi, outrunner e inrunner.}
+
+La misura della posizione rotorica dipende dal tipo di controllo. Per la commutazione trapezoidale bastano sensori Hall discreti: identificano il settore elettrico e permettono di scegliere la coppia di fasi attive. La risoluzione e` grossolana, ma sufficiente per la six-step commutation.
+
+Per il controllo sinusoidale serve invece un'informazione piu` continua dell'angolo elettrico. Per questo si usano spesso encoder, resolver o encoder magnetici contactless integrati nel motore. L'encoder misura la posizione meccanica \(\theta_m\); il controllo la converte in posizione elettrica tramite:
+\[
+\theta_e=p\theta_m.
+\]
+
+Esistono anche controlli sensorless, che stimano la posizione del rotore dalle tensioni e correnti misurate, in particolare dalla back-EMF. Il limite principale e` che la back-EMF e` proporzionale alla velocita`: a rotore fermo, o a velocita` molto bassa, il segnale disponibile e` debole. Per questo molti azionamenti sensorless richiedono procedure di avviamento dedicate e non sono ideali quando serve coppia controllata a velocita` nulla.
+
+Le immagini costruttive ricordano poi che i brushless non hanno una sola forma. I motori industriali possono integrare sensori e freni; alcuni hanno albero cavo per far passare cavi o alberi coassiali; gli \emph{outrunner} hanno il rotore esterno, utile per alta coppia a basso regime; gli \emph{inrunner} hanno il rotore interno e sono piu` comuni in applicazioni ad alta velocita`.
+
+\subsection{Driver per motori elettrici}
+
+\slidefig{images14/page-16.png}{Driver per motori elettrici: in tutti i casi il compito e` generare tensioni controllate per ottenere correnti, coppia e velocita` desiderate.}
+
+La lezione passa poi dai motori al loro pilotaggio. Un driver non e` solo un alimentatore: e` l'interfaccia di potenza tra il controllore e l'attuatore. Il controllore calcola un comando, ma il motore richiede correnti anche elevate, tensioni commutate e protezioni contro sovracorrente, sovratemperatura e condizioni anomale.
+
+L'obiettivo comune e` generare una tensione controllata in modo da regolare la corrente del motore. La corrente e` centrale perche', nei motori elettromagnetici, e` direttamente legata alla coppia:
+\[
+\tau=k_t i
+\]
+nel DC brushed, oppure:
+\[
+T_e=\frac{3}{2}p\lambda_m i_q
+\]
+nel caso sinusoidale a magneti superficiali.
+
+La complessita` del driver dipende dalla famiglia di motore:
+\begin{itemize}
+\item nel DC brushed basta controllare polarita` e valore medio della tensione ai morsetti;
+\item nello stepper occorre generare sequenze di corrente nelle fasi, spesso con controllo di corrente;
+\item nel brushless serve un inverter trifase sincronizzato con la posizione rotorica.
+\end{itemize}
+
+\subsection{Pilotaggio del motore DC brushed}
+
+\slidepair{images14/page-17.png}{images14/page-18.png}{Pilotaggio del motore DC brushed: la tensione ai terminali controlla corrente, coppia e velocita`, mentre la back-EMF cresce con la velocita`.}
+
+Il caso piu` semplice e` il motore DC brushed. Il modello gia` introdotto nelle lezioni precedenti e`:
+\[
+v_m=Ri+L\frac{di}{dt}+k_e\omega,
+\qquad
+\tau=k_t i.
+\]
+Se la dinamica elettrica e` abbastanza rapida, a regime si puo` leggere approssimativamente:
+\[
+i\simeq\frac{v_m-k_e\omega}{R},
+\qquad
+\tau\simeq k_t\frac{v_m-k_e\omega}{R}.
+\]
+La tensione applicata determina quindi la corrente, ma la corrente effettiva dipende anche dalla velocita` tramite la back-EMF.
+
+Il driver deve permettere almeno tre cose:
+\begin{itemize}
+\item scegliere il valore medio della tensione \(v_m\);
+\item scegliere il segno della tensione, quindi il verso della corrente e della coppia;
+\item gestire stati di frenatura o ruota libera quando non si vuole semplicemente alimentare il motore.
+\end{itemize}
+
+Questo porta naturalmente al ponte H.
+
+\subsection{Ponte H: segno della tensione, frenatura e ruota libera}
+
+\slidefig{images14/page-19.png}{Ponte H per motore DC: quattro interruttori permettono tensione positiva, tensione negativa, frenatura e coasting.}
+
+Il ponte H e` il circuito classico per applicare a un motore DC una tensione di segno controllabile. E` composto da quattro interruttori di potenza, di solito MOSFET, disposti attorno al motore. Accendendo una diagonale si applica una polarita`; accendendo l'altra diagonale si applica la polarita` opposta.
+
+Nella tabella della slide:
+\[
+S_1=1,\ S_4=1
+\quad \Rightarrow \quad
+\text{moto in un verso},
+\]
+\[
+S_2=1,\ S_3=1
+\quad \Rightarrow \quad
+\text{moto nel verso opposto}.
+\]
+Se tutti gli interruttori sono spenti, il motore e` in \emph{coasting}: viene lasciato quasi libero, salvo percorsi di ricircolo e fenomeni parassiti. Se invece si cortocircuitano opportunamente i terminali del motore verso massa o verso alimentazione, il motore frena: la rotazione genera una corrente che produce una coppia opposta al moto.
+
+Il punto importante e` che il ponte H non serve solo a invertire il verso. Serve anche a commutare rapidamente tra stati diversi per ottenere una tensione media desiderata. Questa e` la base del PWM.
+
+\subsection{PWM: tensione media tramite commutazione rapida}
+
+\slidepair{images14/page-20.png}{images14/page-21.png}{Pulse Width Modulation: il duty cycle determina la tensione media applicata al motore; frequenze tipiche sono nell'ordine di \(10\text{--}40\,\text{kHz}\).}
+
+Nella maggior parte delle applicazioni l'alimentazione disponibile e` fissa:
+\[
+V_{dc}=\text{costante}.
+\]
+Il motore, pero`, richiede una tensione efficace variabile. Invece di usare un regolatore lineare dissipativo, il driver commuta rapidamente tra uno stato ON e uno stato OFF.
+
+Se il periodo di switching e` \(T_s\) e il tempo acceso e` \(T_{on}\), il \emph{duty cycle} e`:
+\[
+D=\frac{T_{on}}{T_s}.
+\]
+La tensione media ai morsetti del motore e`, in prima approssimazione:
+\[
+v_m\simeq D V_{dc}.
+\]
+Quindi, se si vuole ottenere una tensione media desiderata \(v_m^\star\), si imposta:
+\[
+D\simeq\frac{v_m^\star}{V_{dc}},
+\qquad
+T_{on}=T_s\frac{v_m^\star}{V_{dc}}.
+\]
+
+La frequenza di switching e`:
+\[
+f_s=\frac{1}{T_s}.
+\]
+Le slide indicano valori tipici intorno a \(10\text{--}40\,\text{kHz}\). Frequenze troppo basse producono ripple di corrente, vibrazioni e rumore acustico; frequenze troppo alte aumentano le perdite di commutazione nei MOSFET e le richieste sull'elettronica.
+
+\slidepair{images14/page-22.png}{images14/page-23.png}{Il motore filtra il PWM: la frequenza di switching deve essere abbastanza maggiore delle dinamiche elettriche e meccaniche rilevanti.}
+
+Il motore non segue istantaneamente il segnale PWM. L'induttanza degli avvolgimenti filtra la corrente, mentre inerzia e attrito filtrano la velocita`. Per questo il motore vede soprattutto il valore medio della tensione, a patto che la frequenza di switching sia sufficientemente alta rispetto alle costanti di tempo del sistema.
+
+La slide finale fa un esempio con due costanti di tempo:
+\[
+\tau_e=\frac{L}{R}\simeq 3\,\mu\text{s},
+\qquad
+\tau_m=\frac{RJ}{k_tk_e}\simeq 8.2\,\text{ms}.
+\]
+La dinamica piu` lenta e` quella meccanica. Andando circa una decade oltre la dinamica piu` lenta si ottiene un ripple piccolo; nella slide questo porta alla stima:
+\[
+f_{\text{PWM}}>1.2\,\text{kHz}.
+\]
+In pratica si scelgono spesso frequenze piu` alte, come il range \(10\text{--}40\,\text{kHz}\), per ridurre rumore e ripple, restando pero` compatibili con perdite e limiti del driver.
+
+\begin{infobox}
+\textbf{Nota sulle unita`.} Nell'esempio compaiono grandezze molto piccole, come microhenry, millisecondi, millinewton metro e g\,cm\(^2\). Prima di usare le formule conviene sempre portare tutto in SI: henry, ohm, kg\,m\(^2\), N\,m, rad/s.
+\end{infobox}
+
+\subsection*{Sintesi finale della Lezione 15}
+
+La lezione mette in continuita` tre livelli di controllo. Il primo e` la commutazione trapezoidale: semplice, basata su settori, ma affetta da ripple perche' le correnti reali non cambiano istantaneamente. Il secondo e` il controllo sinusoidale: le correnti di fase sono lisce, ma per controllarle bene servono le trasformate di Clarke e Park. Il terzo e` il Field Oriented Control, che porta il problema nel riferimento \(dq\) e rende quasi indipendenti flusso e coppia.
+
+Le formule centrali sono:
+\[
+\begin{bmatrix}x_\alpha\\x_\beta\end{bmatrix}
+=
+\frac{2}{3}
+\begin{bmatrix}
+1 & -\frac{1}{2} & -\frac{1}{2}\\
+0 & \frac{\sqrt 3}{2} & -\frac{\sqrt 3}{2}
+\end{bmatrix}
+\begin{bmatrix}x_a\\x_b\\x_c\end{bmatrix},
+\]
+\[
+\begin{bmatrix}x_d\\x_q\end{bmatrix}
+=
+\begin{bmatrix}
+\cos\theta_e & \sin\theta_e\\
+-\sin\theta_e & \cos\theta_e
+\end{bmatrix}
+\begin{bmatrix}x_\alpha\\x_\beta\end{bmatrix},
+\]
+e, per una macchina a magneti superficiali:
+\[
+T_e=\frac{3}{2}p\lambda_m i_q,
+\qquad
+i_d^\star=0.
+\]
+
+La parte sui driver mostra poi come queste tensioni vengano realizzate fisicamente. Il ponte H controlla segno e stato del motore DC brushed; il PWM controlla il valore medio:
+\[
+D=\frac{T_{on}}{T_s},
+\qquad
+v_m\simeq D V_{dc}.
+\]
+Il motore filtra il segnale commutato, ma la scelta di \(f_{\text{PWM}}\) resta un compromesso tra ripple, rumore, perdite di switching e banda del controllo.
+
+% =========================================================
 % APPENDICE
 % =========================================================
 
@@ -4296,6 +4736,13 @@ Vincolo trifase a stella BLDC & $i_a+i_b+i_c=0$, \quad $\dot i_a+\dot i_b+\dot i
 Modello elettrico BLDC & $\mathbf v_{abc}=R_s\mathbf i_{abc}+\dfrac{d\boldsymbol\lambda_{abc}}{dt}$, \quad $\boldsymbol\lambda_{abc}=\mathbf L_{abc}\mathbf i_{abc}+\boldsymbol\lambda_m(\theta_e)$ \\
 Modello di fase BLDC ridotto & $v_k=R_s i_k+L_{eq}\dot i_k+e_k$, \quad $L_{eq}=L_s-M$, \quad $k\in\{a,b,c\}$ \\
 Coppia e dinamica BLDC & $T_e=\dfrac{e_ai_a+e_bi_b+e_ci_c}{\omega_m}$, \quad $J\dot\omega_m=T_e-T_L-B\omega_m$, \quad $\theta_e=p\theta_m$ \\
+Trasformata di Clarke & $\begin{bmatrix}x_\alpha\\x_\beta\end{bmatrix}=\dfrac{2}{3}\begin{bmatrix}1&-\frac12&-\frac12\\0&\frac{\sqrt3}{2}&-\frac{\sqrt3}{2}\end{bmatrix}\begin{bmatrix}x_a\\x_b\\x_c\end{bmatrix}$ \\
+Trasformata di Park & $\begin{bmatrix}x_d\\x_q\end{bmatrix}=\begin{bmatrix}\cos\theta_e&\sin\theta_e\\-\sin\theta_e&\cos\theta_e\end{bmatrix}\begin{bmatrix}x_\alpha\\x_\beta\end{bmatrix}$ \\
+Inversa Park/Clarke & $\begin{bmatrix}x_\alpha\\x_\beta\end{bmatrix}=\begin{bmatrix}\cos\theta_e&-\sin\theta_e\\\sin\theta_e&\cos\theta_e\end{bmatrix}\begin{bmatrix}x_d\\x_q\end{bmatrix}$, \quad $\begin{bmatrix}x_a\\x_b\\x_c\end{bmatrix}=\begin{bmatrix}1&0\\-\frac12&\frac{\sqrt3}{2}\\-\frac12&-\frac{\sqrt3}{2}\end{bmatrix}\begin{bmatrix}x_\alpha\\x_\beta\end{bmatrix}$ \\
+Modello brushless in $dq$ & $v_d=R_s i_d+L_d\dot i_d-\omega_eL_qi_q$, \quad $v_q=R_s i_q+L_q\dot i_q+\omega_eL_di_d+\omega_e\lambda_m$ \\
+Coppia e FOC brushless & $T_e=\dfrac{3}{2}p\left(\lambda_m i_q+(L_d-L_q)i_di_q\right)$, \quad se $L_d\simeq L_q$: $T_e=\dfrac{3}{2}p\lambda_m i_q$, \quad $i_d^\star=0$ \\
+PWM per driver DC & $D=\dfrac{T_{on}}{T_s}$, \quad $f_s=\dfrac{1}{T_s}$, \quad $v_m\simeq D V_{dc}$, \quad $T_{on}=T_s\dfrac{v_m^\star}{V_{dc}}$ \\
+Costanti di tempo motore DC & $\tau_e=\dfrac{L}{R}$, \quad $\tau_m=\dfrac{RJ}{k_tk_e}$, \quad scegliere $f_{\text{PWM}}$ abbastanza maggiore della dinamica piu` lenta \\
 Metodo M & $\omega_m=\dfrac{2\pi}{T_c}\dfrac{m}{PPR}$, \quad $N=\dfrac{60}{T_c}\dfrac{m}{PPR}$ \\
 Metodo T & $T_c=m_cT_{\text{clock}}$, \quad $\omega_m=\dfrac{2\pi}{PPR\,m_cT_{\text{clock}}}$ \\
 Metodo M/T & $T=T_c+m_2T_2$, \quad $\omega_m=\dfrac{2\pi}{PPR}\dfrac{m_1}{T_c+m_2T_2}$ \\
