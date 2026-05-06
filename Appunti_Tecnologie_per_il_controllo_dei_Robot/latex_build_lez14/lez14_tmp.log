@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.18)  6 MAY 2026 14:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.18)  6 MAY 2026 14:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -982,8 +982,8 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count375
 )
-(./main.aux)
-\openout1 = `main.aux'.
+(latex_build_lez14/lez14_tmp.aux)
+\openout1 = `lez14_tmp.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
 LaTeX Font Info:    ... okay on input line 129.
@@ -1064,9 +1064,9 @@ e
 ))
 Package hyperref Info: Link coloring ON on input line 129.
 
-(./main.out) (./main.out)
+(latex_build_lez14/lez14_tmp.out) (latex_build_lez14/lez14_tmp.out)
 \@outlinefile=\write4
-\openout4 = `main.out'.
+\openout4 = `lez14_tmp.out'.
 
 \c@lstlisting=\count382
 Package caption Info: Begin \AtBeginDocument code.
@@ -1104,7 +1104,8 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 131.
 {/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
 Package hyperref Info: Option `pageanchor' set `true' on input line 148.
- (./main.toc
+
+(latex_build_lez14/lez14_tmp.toc
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
 .
 
@@ -1153,7 +1154,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1]
 [2])
 \tf@toc=\write5
-\openout5 = `main.toc'.
+\openout5 = `lez14_tmp.toc'.
 
  [3]
 <images/page-01.png, id=703, 722.7pt x 542.025pt>
@@ -3437,18 +3438,18 @@ ignored: Infinite glue shrinkage found in box being split [184]
 ignored: Infinite glue shrink
 age found in box being split [185]
 ignored: Infinite glue shrinkage found in box being sp
-lit [186] [187] (./main.aux)
+lit [186] [187] (latex_build_lez14/lez14_tmp.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
+Package rerunfilecheck Info: File `lez14_tmp.out' has not changed.
 (rerunfilecheck)             Checksum: 45C1B91133F0C695D723A1089AE26575;30047.
  ) 
 Here is how much of TeX's memory you used:
- 37892 strings out of 467525
- 759945 string characters out of 5418982
- 1225947 words of memory out of 5000000
+ 37894 strings out of 467525
+ 760283 string characters out of 5418982
+ 1225967 words of memory out of 5000000
  65353 multiletter control sequences out of 15000+600000
  732119 words of font info for 272 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3470,7 +3471,8 @@ lmri10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 l/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2
 026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texli
 ve/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (188 pages, 153542043 bytes).
+Output written on latex_build_lez14/lez14_tmp.pdf (188 pages, 153542043 bytes).
+
 PDF statistics:
  2626 PDF objects out of 2984 (max. 8388607)
  1677 compressed objects within 17 object streams

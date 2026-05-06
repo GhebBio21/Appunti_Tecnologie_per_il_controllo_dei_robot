@@ -3705,6 +3705,507 @@ Da qui si leggono coppia di stallo, velocita` a vuoto, punto di massima potenza 
 La parte termica ricorda che la corrente non e` gratis: \(P_J=Ri^2\) scalda gli avvolgimenti, modifica \(R\), riduce le prestazioni dei magneti e puo` imporre limiti molto piu` severi di quelli dinamici. Infine, l'introduzione agli stepper mostra una famiglia diversa di attuatori elettrici: invece di produrre moto continuo tramite una coppia media, lo stepper realizza posizioni discrete tramite l'allineamento successivo del rotore con il campo statorico.
 
 % =========================================================
+% LEZIONE 14
+% =========================================================
+
+\clearpage
+\section{Lezione 14}
+
+\subsection{Visione generale della lezione}
+
+La quattordicesima lezione completa il blocco sugli \emph{stepper motor} e apre quello sui \emph{brushless DC motor}. Il filo conduttore e` la commutazione: negli stepper la sequenza di eccitazione sposta a scatti la posizione di equilibrio del rotore; nei BLDC la commutazione elettronica sostituisce il commutatore meccanico del motore DC brushed e deve essere sincronizzata con la posizione del rotore.
+
+La prima parte riprende gli stepper da dove si era fermata la Lezione 13. Dopo il motore a magnete permanente vengono introdotti i motori a riluttanza variabile e ibridi. La differenza fisica e` importante: nel PM stepper la coppia nasce soprattutto dall'interazione tra magnete permanente e campo statorico, nel VR stepper nasce dalla tendenza del circuito magnetico a ridurre la riluttanza, mentre nello hybrid stepper le due idee vengono combinate per ottenere passi piccoli e buona coppia di mantenimento.
+
+La seconda parte entra nei motori BLDC. Dal punto di vista costruttivo il rotore contiene magneti permanenti e lo statore contiene tre fasi. Dal punto di vista del controllo, pero`, il punto cruciale e` che non esistono spazzole: le fasi devono essere alimentate da un inverter, scegliendo tensioni e correnti in funzione della posizione elettrica del rotore. La lezione costruisce quindi il modello trifase, introduce le back-EMF di fase, ricava la coppia elettromagnetica da un bilancio di potenza e chiude con la commutazione trapezoidale a sei settori tramite sensori Hall.
+
+\subsection{Stepper a riluttanza variabile}
+
+\slidetriple{images13/part1-01.png}{images13/part1-02.png}{images13/part1-03.png}{Motore passo-passo a riluttanza variabile: statore dentato, rotore ferromagnetico e sequenza di eccitazione delle fasi.}
+
+Il motore passo-passo a riluttanza variabile, indicato spesso come \emph{VR stepper}, non ha magneti permanenti nel rotore. Il rotore e` realizzato in materiale ferromagnetico dolce e presenta denti salienti. Lo statore, anch'esso dentato, contiene avvolgimenti concentrati sulle fasi.
+
+Il principio di funzionamento e` diverso da quello del PM stepper. Il rotore non possiede una polarita` magnetica propria; quindi non viene attratto perche' ha un nord o un sud gia` fissato. Quando una fase statorica viene alimentata, il campo magnetico prodotto dagli avvolgimenti cerca il percorso a riluttanza minima. Il rotore si muove allora nella posizione in cui i suoi denti si allineano con i denti statorici eccitati, perche' in quella configurazione il flusso attraversa piu` ferro e meno traferro.
+
+La riluttanza magnetica gioca qui un ruolo analogo alla resistenza elettrica: un circuito magnetico con molto traferro ha riluttanza alta, uno con molto materiale ferromagnetico allineato ha riluttanza bassa. La coppia nasce quindi dalla tendenza del sistema a massimizzare l'induttanza vista dalla fase eccitata, o equivalentemente a minimizzare la riluttanza del percorso magnetico.
+
+Quando si alimenta la fase successiva, la posizione di minima riluttanza si sposta. Il rotore segue questo nuovo minimo e compie un passo. In questo modo la rotazione non nasce da una tensione continua applicata al motore, ma da una sequenza discreta di stati magnetici. La direzione dipende dall'ordine della sequenza: per esempio, una sequenza \(A,B,C,A,\ldots\) puo` produrre rotazione in un verso, mentre \(A,C,B,A,\ldots\) produce il verso opposto.
+
+\begin{keybox}
+\textbf{Idea chiave del VR stepper.} Il rotore non deve essere magnetizzato: basta che sia ferromagnetico. La posizione stabile e` quella in cui il circuito magnetico ha minima riluttanza, quindi il controllo consiste nello spostare questo minimo da una fase alla successiva.
+\end{keybox}
+
+\subsection{Regole geometriche per il passo del VR stepper}
+
+\slidepair{images13/part1-04.png}{images13/part1-05.png}{Regola del numero di denti per lo stepper a riluttanza variabile ed esempio con \(N_s=8\), \(N_r=6\).}
+
+Le slide successive trasformano il principio fisico in una regola geometrica. Indichiamo con:
+\[
+N_s=\text{numero di denti statorici},
+\qquad
+N_r=\text{numero di denti rotorici}.
+\]
+Per ottenere moto passo-passo, \(N_s\) e \(N_r\) devono essere diversi. Se fossero uguali e perfettamente allineabili tutti insieme, l'eccitazione delle fasi non produrrebbe lo spostamento progressivo desiderato dei minimi di riluttanza.
+
+L'angolo di passo fondamentale viene dato dalla relazione:
+\[
+\alpha_s
+=360^\circ
+\left|
+\frac{N_s-N_r}{N_sN_r}
+\right|.
+\]
+La formula dice una cosa molto intuitiva: se statore e rotore hanno molti denti e il loro numero e` vicino, lo sfasamento geometrico tra un allineamento e il successivo e` piccolo, quindi il passo diventa piccolo. In progettazione si scelgono dunque \(N_s\) e \(N_r\) abbastanza grandi e vicini tra loro, ma compatibili con il raggruppamento delle fasi e con la costruzione meccanica.
+
+Nell'esempio delle slide:
+\[
+N_s=8,
+\qquad
+N_r=6.
+\]
+Allora:
+\[
+\alpha_s
+=360^\circ\frac{|8-6|}{8\cdot 6}
+=360^\circ\frac{2}{48}
+=15^\circ.
+\]
+La figura mostra anche la sequenza delle fasi. In quel caso, per una rotazione antioraria si usa la sequenza \(A,D,C,B,A,\ldots\), mentre per la rotazione oraria si usa \(A,B,C,D,A,\ldots\). Ancora una volta, la posizione comandata non e` imposta direttamente da un sensore di posizione, ma dall'ipotesi che il rotore riesca a seguire la sequenza magnetica.
+
+\subsection{Stepper ibrido: costruzione e motivo della sua diffusione}
+
+\slidetriple{images13/part1-06.png}{images13/part1-07.png}{images13/part1-08.png}{Motore passo-passo ibrido: magnete permanente assiale, coppie di denti rotorici sfalsate e statore dentato.}
+
+Il motore passo-passo ibrido combina le due famiglie precedenti. Da una parte ha un magnete permanente nel rotore, quindi conserva una componente di coppia legata all'attrazione/repulsione magnetica. Dall'altra usa dentature di rotore e statore, quindi sfrutta anche la tendenza alla minima riluttanza.
+
+La struttura tipica e` composta da:
+\begin{itemize}
+\item un magnete permanente magnetizzato assialmente all'interno del rotore;
+\item due coppe rotoriche dentate, una associata al polo nord e una al polo sud;
+\item due serie di denti rotorici sfalsate di mezzo passo di dente;
+\item uno statore dentato con avvolgimenti di fase.
+\end{itemize}
+
+Se il rotore ha \(N_r\) denti, il passo dentale rotorico e`:
+\[
+\alpha_R=\frac{360^\circ}{N_r}.
+\]
+Le fasi dello statore sono meccanicamente sfalsate di un quarto di questo passo. Questa e` la piccola finezza geometrica che rende possibile ottenere passi molto piccoli senza aumentare in modo esagerato il numero di fasi elettriche.
+
+Il termine \emph{hybrid} non e` quindi solo commerciale: il motore produce coppia sia per effetto del magnete permanente sia per effetto di riluttanza. Il risultato pratico e` molto utile:
+\begin{itemize}
+\item angoli di passo piccoli, tipicamente \(1.8^\circ\) o \(0.9^\circ\);
+\item coppia di mantenimento elevata;
+\item buon compromesso tra precisione, costo e semplicita` di pilotaggio.
+\end{itemize}
+
+Per questo gli hybrid stepper sono molto comuni in macchine CNC leggere, stampanti 3D, piccoli assi automatici e sistemi dove e` accettabile lavorare in anello aperto pur mantenendo una buona risoluzione di posizione comandata.
+
+\subsection{Principio di funzionamento dello stepper ibrido}
+
+\slidepair{images13/part1-09.png}{images13/part1-10.png}{Funzionamento dello stepper ibrido: l'equilibrio si sposta di un quarto di passo dentale a ogni commutazione di fase.}
+
+Quando una fase statorica viene eccitata, i denti del rotore e dello statore possono attrarsi o respingersi a seconda della polarita` della fase e del polo rotorico coinvolto. Il rotore si muove verso una posizione di equilibrio in cui:
+\begin{itemize}
+\item i denti statorici eccitati sono allineati con i denti rotorici compatibili;
+\item la riluttanza tra poli eccitati e rotore e` minima;
+\item il flusso magnetico attraversa il percorso piu` favorevole.
+\end{itemize}
+
+La slide riassume questo spostamento dicendo che l'equilibrio cambia di \(\pm \alpha_R/4\), dove \(\alpha_R\) e` il passo dentale del rotore. Il segno dipende dalla polarita` della fase alimentata e dalla direzione della sequenza.
+
+L'esempio con due fasi e tre denti rotorici serve a visualizzare il meccanismo. La sequenza e` del tipo:
+\[
+A^+,\quad B^+,\quad A^-,\quad B^-,
+\]
+e poi si ripete. Ogni commutazione sposta il rotore verso il successivo allineamento favorevole. Se \(\alpha_R=120^\circ\), il passo di commutazione e`:
+\[
+\frac{\alpha_R}{4}=\frac{120^\circ}{4}=30^\circ.
+\]
+
+\slidepair{images13/part1-11.png}{images13/part1-12.png}{Regola del passo per lo stepper ibrido e ruolo della dentatura nella riduzione dell'angolo di passo.}
+
+Per uno stepper ibrido con \(m\) fasi e \(N_r\) denti rotorici, la dimensione del passo intero e`:
+\[
+\alpha_s=\frac{360^\circ}{2mN_r}.
+\]
+Il fattore \(2\) compare perche' il rotore ibrido ha due sezioni dentate, sfalsate di mezzo passo. Nell'esempio classico:
+\[
+m=2,
+\qquad
+N_r=50,
+\]
+da cui:
+\[
+\alpha_s=\frac{360^\circ}{2\cdot 2\cdot 50}=1.8^\circ.
+\]
+Questo corrisponde a:
+\[
+\frac{360^\circ}{1.8^\circ}=200
+\]
+passi per giro.
+
+Il messaggio progettuale e` importante: ridurre il passo non richiede necessariamente piu` fasi elettriche. Si puo` lavorare sulla forma meccanica dei denti di statore e rotore. In altre parole, l'hybrid stepper usa la geometria come moltiplicatore di risoluzione.
+
+\slidetriple{images13/part1-13.png}{images13/part1-14.png}{images13/part1-15.png}{Sequenza di funzionamento dello stepper ibrido: stato iniziale e primi spostamenti del rotore.}
+
+Le immagini successive mostrano una sequenza reale di funzionamento. I denti bianchi anteriori sono associati a un polo, quelli blu posteriori al polo opposto. Alimentando la fase \(B\), per esempio, un lato dello statore diventa sud e l'altro nord; i denti rotorici compatibili vengono attratti verso i poli opposti.
+
+Quando si passa alla fase \(A\), il campo statorico cambia orientamento. I denti che prima erano allineati non sono piu` nella posizione di minima energia, e il rotore avanza di un altro quarto di passo dentale. Il processo continua invertendo opportunamente la polarita` delle fasi:
+\[
+B,\quad A,\quad -B,\quad -A,\quad B,\ldots
+\]
+oppure con una notazione equivalente legata ai terminali delle fasi.
+
+\slidepair{images13/part1-16.png}{images13/part1-17.png}{Dopo quattro commutazioni il rotore ha avanzato di un passo dentale; ogni singolo stato produce un quarto di passo.}
+
+Il punto da fissare e` che quattro stati elettrici consecutivi portano il rotore ad avanzare di un passo dentale completo. Ogni commutazione produce quindi un quarto del passo dei denti. Ripetendo la sequenza si ottiene rotazione continua; invertendo l'ordine degli stati si ottiene il verso opposto.
+
+Questa descrizione aiuta anche a capire perche' lo stepper non e` un motore ``digitale ideale''. La sequenza comanda posizioni di equilibrio, ma il rotore ha inerzia, smorzamento, attrito e un carico applicato. Tra una posizione e la successiva c'e` una dinamica meccanica vera, con oscillazioni possibili e con il rischio di non raggiungere l'allineamento prima della commutazione successiva.
+
+\subsection{Problemi pratici degli stepper: perdita di passo e coppia disponibile}
+
+\slidepair{images13/part1-18.png}{images13/part1-19.png}{Gli stepper sono comodi in anello aperto, ma il rotore puo` perdere sincronismo se carico, inerzia o velocita` sono eccessivi.}
+
+Gli stepper sono interessanti perche' possono essere pilotati in anello aperto. Il controllore manda impulsi e assume che ogni impulso produca un passo meccanico. Questa proprieta` semplifica molto il sistema: non serve necessariamente un encoder per conoscere la posizione comandata.
+
+La stessa proprieta`, pero`, e` anche il limite principale. Il controllore conosce il numero di passi richiesti, ma non misura automaticamente se il rotore li ha davvero eseguiti. Se il carico e` troppo alto, se l'inerzia e` elevata, se l'attrito e` sfavorevole o se la frequenza di passo cresce troppo rapidamente, il rotore puo` non seguire la sequenza. Si parla allora di \emph{loss of synchronism} o perdita di passo.
+
+Dal punto di vista statico, lo stepper produce una coppia di richiamo solo se il rotore e` spostato dalla posizione di equilibrio istantanea. Una modellazione locale molto usata e`:
+\[
+T=T_{\max}\sin\delta,
+\]
+dove \(\delta\) e` il \emph{load angle}, cioe` lo scostamento rispetto all'equilibrio comandato. Se il carico richiede una coppia troppo alta, \(\delta\) cresce oltre la zona sostenibile e il rotore salta verso un equilibrio vicino.
+
+Le slide distinguono due grandezze:
+\begin{itemize}
+\item \textbf{holding torque}, la massima coppia statica che il motore alimentato puo` sopportare senza abbandonare il passo comandato;
+\item \textbf{detent torque}, la coppia residua a motore non alimentato, dovuta soprattutto ai magneti permanenti e alla geometria. E` significativa nei PM e negli hybrid, molto piccola nei VR.
+\end{itemize}
+
+\subsection{Pull-in, pull-out e limiti dinamici di coppia}
+
+\slidepair{images13/part1-20.png}{images13/part1-21.png}{Pull-in torque e riduzione della coppia media al crescere della frequenza di passo.}
+
+La \emph{pull-in torque} e` la massima coppia di carico con cui il motore puo` partire da fermo, sincronizzarsi immediatamente con una frequenza di impulsi applicata e fermarsi di nuovo senza perdere passi. E` quindi un limite di avviamento diretto: il rotore deve accelerare abbastanza rapidamente da raggiungere ogni nuovo equilibrio prima che arrivi il comando successivo.
+
+La slide collega questo limite anche alla dinamica elettrica della fase. La corrente in una bobina non cresce istantaneamente, perche' l'avvolgimento ha induttanza e perche' compare back-EMF. In forma qualitativa:
+\[
+v=Ri+L\frac{di}{dt}+e_{\text{bemf}}.
+\]
+A bassa frequenza di passo, la corrente ha tempo di salire quasi fino al valore massimo, quindi il flusso e la coppia sono elevati. A frequenza alta, invece, la fase viene commutata prima che la corrente abbia raggiunto il valore desiderato: il flusso medio diminuisce e la coppia disponibile cala.
+
+\slidepair{images13/part1-22.png}{images13/part1-23.png}{Pull-out torque e curva coppia-frequenza: zona start/stop, slew range e massima frequenza di marcia.}
+
+La \emph{pull-out torque} e` diversa: e` la massima coppia che il motore puo` sostenere mentre sta gia` ruotando in sincronismo a una certa frequenza di passo. In genere, alla stessa frequenza:
+\[
+T_{\text{pull-out}}>T_{\text{pull-in}}.
+\]
+Il motivo e` che un rotore gia` in moto ha energia cinetica e sta gia` seguendo la sequenza; non deve partire istantaneamente da fermo. Puo` quindi tollerare una coppia maggiore rispetto al caso di avvio diretto.
+
+Il grafico di coppia-frequenza separa due regioni operative. La regione \emph{start/stop}, sotto la curva di pull-in, e` quella in cui il motore puo` partire e fermarsi direttamente senza rampe. La regione tra pull-in e pull-out viene spesso chiamata \emph{slew range}: il motore puo` lavorarci, ma deve entrarci tramite una rampa di accelerazione. Se si supera la curva di pull-out, il motore perde sincronismo.
+
+Questo e` un punto molto pratico: uno stepper non va comandato solo scegliendo una frequenza finale, ma anche progettando il profilo di accelerazione. Un salto brusco a una frequenza alta puo` fallire anche se, a regime, quella stessa frequenza sarebbe sostenibile.
+
+\begin{keybox}
+\textbf{Regola pratica.} Negli stepper la coppia non e` costante con la velocita`. Crescendo la frequenza di passo, la corrente ha meno tempo per stabilizzarsi, la back-EMF aumenta e la coppia media diminuisce. Per questo servono rampe e margine rispetto alle curve di pull-in e pull-out.
+\end{keybox}
+
+\subsection{Full-step, half-step, microstepping e confronto tra famiglie}
+
+\slidepair{images13/part1-24.png}{images13/part1-25.png}{Modalita` di passo e confronto qualitativo tra stepper PM, VR e Hybrid.}
+
+La slide finale sugli stepper introduce tre modi di pilotaggio.
+
+Nel \emph{full-step} il rotore avanza del passo base:
+\[
+\alpha_{\text{full}}=\alpha_s.
+\]
+Nel \emph{half-step} si eccitano opportunamente due fasi insieme, creando un equilibrio intermedio tra due posizioni di full-step:
+\[
+\alpha_{\text{half}}=\frac{\alpha_s}{2}.
+\]
+Nel \emph{microstepping}, invece, le correnti di fase vengono modulate in modo approssimativamente sinusoidale. L'obiettivo e` far muovere il campo risultante in incrementi piu` piccoli:
+\[
+\alpha_{\mu\text{step}}\approx \frac{\alpha_s}{N_\mu},
+\]
+dove \(N_\mu\) e` il numero di microstep per passo intero.
+
+Il microstepping non aumenta magicamente la precisione assoluta del motore: riduce vibrazioni, risonanze e ripple di coppia, e permette un moto piu` fluido. La precisione reale dipende comunque da attriti, carico, linearita` delle correnti, dentatura, driver e posizione effettiva del rotore.
+
+Il confronto conclusivo tra PM, VR e Hybrid puo` essere letto cosi`:
+\begin{itemize}
+\item il PM ha buona coppia di mantenimento, ma passi piu` grandi;
+\item il VR e` semplice e puo` raggiungere buone velocita`, ma ha coppia piu` bassa e detent torque quasi nullo;
+\item l'Hybrid offre i passi piu` piccoli, la coppia migliore e il microstepping piu` efficace.
+\end{itemize}
+
+Per applicazioni di posizionamento generiche, l'hybrid e` spesso la scelta piu` equilibrata. Il VR resta interessante quando contano semplicita`, robustezza e velocita`, mentre il PM e` adatto a soluzioni economiche e meno spinte.
+
+\subsection{Motore BLDC: motivazione e componenti principali}
+
+\slidetriple{images13/part2-01.png}{images13/part2-02.png}{images13/part2-03.png}{Introduzione ai motori brushless DC, statore trifase, rotore a magneti permanenti e commutazione elettronica.}
+
+La seconda parte della lezione apre i \emph{brushless DC motor}. Il nome e` gia` una descrizione del salto rispetto al motore DC brushed: le spazzole e il commutatore meccanico scompaiono. Questo porta vantaggi molto concreti:
+\begin{itemize}
+\item maggiore efficienza;
+\item alta densita` di coppia;
+\item minore manutenzione;
+\item migliore capacita` di lavorare ad alte velocita`;
+\item minore usura meccanica.
+\end{itemize}
+
+Per questo i BLDC sono molto diffusi in droni, veicoli elettrici, robotica, automazione industriale, pompe e compressori. In pratica, un BLDC trifase viene alimentato da un inverter che applica tensioni alle tre fasi in funzione della posizione del rotore.
+
+La struttura base contiene uno statore con tre avvolgimenti, indicati come \(a,b,c\), e un rotore con magneti permanenti. Le slide assumono una connessione a stella. In questo caso, per la legge di Kirchhoff sul nodo di stella:
+\[
+i_a+i_b+i_c=0.
+\]
+Questa relazione riduce da tre a due il numero di correnti indipendenti. E` una semplificazione importante nel controllo, perche' la terza corrente e` determinata dalle altre due.
+
+Il principio fisico resta vicino a quello gia` visto nei motori elettrici: le correnti statoriche generano un campo magnetico rotante, i magneti permanenti del rotore tendono ad allinearsi con quel campo e da questo allineamento nasce coppia. La differenza decisiva e` che la commutazione non e` piu` meccanica. Deve essere realizzata elettronicamente dal driver.
+
+Le slide notano anche che, in molti contesti, si parla sia di BLDC sia di PMSM, \emph{Permanent Magnet Synchronous Motor}. La distinzione dettagliata e` fuori dallo scopo della lezione; qui interessa soprattutto il modello di macchina trifase a magneti permanenti e il problema della commutazione.
+
+\subsection{Equazioni elettriche trifase e flussi concatenati}
+
+\slidepair{images13/part2-04.png}{images13/part2-05.png}{Equazioni di fase del BLDC e modello dei flussi concatenati.}
+
+Per ogni fase si scrive un'equazione di tensione:
+\[
+v_a=R_s i_a+\frac{d\lambda_a}{dt},
+\qquad
+v_b=R_s i_b+\frac{d\lambda_b}{dt},
+\qquad
+v_c=R_s i_c+\frac{d\lambda_c}{dt}.
+\]
+In forma vettoriale:
+\[
+\mathbf v_{abc}
+=R_s\mathbf i_{abc}
++\frac{d\boldsymbol\lambda_{abc}}{dt}.
+\]
+
+Il termine \(\boldsymbol\lambda_{abc}\) contiene i flussi concatenati delle tre fasi. Le slide lo scompongono in tre contributi:
+\begin{itemize}
+\item autoinduttanza della fase;
+\item mutue induttanze tra fasi;
+\item flusso prodotto dai magneti permanenti del rotore.
+\end{itemize}
+
+Un modello compatto e`:
+\[
+\boldsymbol\lambda_{abc}
+=\mathbf L_{abc}\mathbf i_{abc}
++\boldsymbol\lambda_m(\theta_e),
+\]
+dove \(\theta_e\) e` la posizione elettrica del rotore. La posizione elettrica non coincide sempre con la posizione meccanica: se il rotore ha \(p\) coppie polari,
+\[
+\theta_e=p\theta_m.
+\]
+Questo significa che, per un giro meccanico del rotore, le grandezze elettriche possono compiere piu` periodi.
+
+Per una macchina simmetrica con magneti superficiali, la matrice di induttanza puo` essere approssimata come:
+\[
+\mathbf L_{abc}=
+\begin{bmatrix}
+L & M & M\\
+M & L & M\\
+M & M & L
+\end{bmatrix}.
+\]
+La parte davvero delicata e` il flusso dei magneti \(\boldsymbol\lambda_m(\theta_e)\), perche' dipende dalla posizione del rotore. Da qui nasce la necessita` di conoscere, o stimare, la posizione rotorica per controllare correttamente il motore.
+
+\subsection{Back-EMF di fase e modello ridotto}
+
+\slidetriple{images13/part2-06.png}{images13/part2-07.png}{images13/part2-08.png}{Dalle equazioni complete alla forma ridotta con induttanza equivalente e back-EMF di fase.}
+
+Derivando il flusso concatenato si ottengono termini dovuti alla variazione delle correnti e termini dovuti alla variazione del flusso dei magneti. Questi ultimi sono le back-EMF di fase:
+\[
+e_a=\frac{d\lambda_{m,a}}{dt},
+\qquad
+e_b=\frac{d\lambda_{m,b}}{dt},
+\qquad
+e_c=\frac{d\lambda_{m,c}}{dt}.
+\]
+Sono l'analogo trifase della back-EMF del motore DC brushed: quando il rotore si muove, i magneti permanenti inducono tensioni nelle fasi statoriche.
+
+Usando il vincolo della connessione a stella:
+\[
+i_a+i_b+i_c=0
+\qquad \Rightarrow \qquad
+\dot i_a+\dot i_b+\dot i_c=0,
+\]
+i termini di mutua induttanza possono essere riordinati. Per la fase \(a\), per esempio, dalla simmetria con mutua \(M\) si ottiene:
+\[
+M\dot i_b+M\dot i_c=-M\dot i_a.
+\]
+Quindi:
+\[
+v_a=R_s i_a+(L_s-M)\dot i_a+e_a.
+\]
+Definendo l'induttanza equivalente:
+\[
+L_{eq}=L_s-M,
+\]
+il modello ridotto di fase diventa:
+\[
+\begin{cases}
+v_a=R_s i_a+L_{eq}\dot i_a+e_a,\\
+v_b=R_s i_b+L_{eq}\dot i_b+e_b,\\
+v_c=R_s i_c+L_{eq}\dot i_c+e_c.
+\end{cases}
+\]
+
+Questa forma e` molto utile per il controllo: ogni fase assomiglia a un circuito \(R\)-\(L\) con una sorgente di back-EMF in serie. Pero` le tre fasi restano collegate dal vincolo \(i_a+i_b+i_c=0\) e dalla dipendenza delle back-EMF dalla posizione del rotore.
+
+\subsection{Coppia elettromagnetica e dinamica meccanica del BLDC}
+
+\slidepair{images13/part2-09.png}{images13/part2-10.png}{Generazione della coppia BLDC tramite bilancio di potenza e dinamica meccanica del rotore.}
+
+La coppia viene ricavata con un ragionamento energetico. La potenza elettromagnetica associata alle back-EMF e`:
+\[
+p_e=e_a i_a+e_b i_b+e_c i_c.
+\]
+Trascurando le perdite, questa potenza coincide con la potenza meccanica convertita:
+\[
+p_e=p_m=T_e\omega_m.
+\]
+Quindi:
+\[
+T_e=
+\frac{e_a i_a+e_b i_b+e_c i_c}{\omega_m}.
+\]
+
+Questa formula e` molto istruttiva: la coppia non dipende solo dal modulo delle correnti, ma da come le correnti vengono allineate con le back-EMF. Se una fase viene alimentata quando la sua back-EMF e` favorevole, contribuisce positivamente alla coppia; se viene alimentata nel momento sbagliato, puo` produrre ripple, perdita di efficienza o addirittura frenatura.
+
+La dinamica meccanica del rotore e`:
+\[
+J\frac{d\omega_m}{dt}
+=T_e-T_L-B\omega_m,
+\]
+dove \(J\) e` l'inerzia totale, \(T_L\) la coppia di carico e \(B\) il coefficiente di attrito viscoso. La posizione meccanica evolve come:
+\[
+\frac{d\theta_m}{dt}=\omega_m.
+\]
+La posizione elettrica, come gia` visto, e`:
+\[
+\theta_e=p\theta_m.
+\]
+
+\slidefig{images13/part2-11.png}{Sintesi del modello BLDC: equazioni elettriche, dinamica meccanica e dipendenza dei flussi dalla posizione rotorica.}
+
+Il riepilogo delle slide mette insieme le equazioni principali:
+\[
+\mathbf v_{abc}
+=R_s\mathbf i_{abc}
++\frac{d\boldsymbol\lambda_{abc}}{dt},
+\]
+\[
+J\frac{d\omega_m}{dt}=T_e-T_L-B\omega_m,
+\qquad
+\omega_m=\frac{d\theta_m}{dt},
+\qquad
+\theta_e=p\theta_m,
+\]
+con:
+\[
+\boldsymbol\lambda_{abc}
+=\mathbf L_{abc}\mathbf i_{abc}
++\boldsymbol\lambda_m(\theta_e).
+\]
+
+La frase piu` importante e` che \(\boldsymbol\lambda_{abc}\) non e` costante: dipende dalla posizione rotorica. Di conseguenza, il controllo in anello chiuso di un BLDC deve conoscere la posizione del rotore. Questa informazione puo` arrivare da sensori Hall, encoder, resolver, oppure da metodi sensorless che stimano la posizione a partire da correnti e tensioni.
+
+\begin{keybox}
+\textbf{Differenza rispetto al brushed DC.} Nel motore brushed la commutazione viene fatta meccanicamente dal collettore. Nel BLDC la stessa funzione deve essere svolta dall'elettronica di potenza, che deve sapere dove si trova il rotore per alimentare le fasi giuste nel momento giusto.
+\end{keybox}
+
+\subsection{Controllo BLDC e commutazione trapezoidale}
+
+\slidepair{images13/part2-12.png}{images13/part2-13.png}{Controllo BLDC e idea della back-EMF trapezoidale: attivare le fasi quando la back-EMF e` sul plateau.}
+
+Controllare un BLDC significa scegliere le tensioni di fase in modo da ottenere le correnti necessarie e quindi la coppia desiderata alla velocita` desiderata. In forma concettuale, l'inverter deve imporre \(\mathbf v_{abc}\) per ottenere \(\mathbf i_{abc}\), sapendo pero` che le back-EMF e i flussi dipendono da \(\theta_e\).
+
+Questo puo` diventare complesso. Per questo alcune macchine sono progettate in modo che la forma della back-EMF renda il controllo piu` semplice. Le slide distinguono:
+\begin{itemize}
+\item BLDC con back-EMF trapezoidale;
+\item macchine con back-EMF sinusoidale, spesso trattate con controllo sinusoidale o vettoriale.
+\end{itemize}
+
+Nel caso trapezoidale, le tre back-EMF hanno forme quasi trapezoidali sfasate di \(120^\circ\) elettrici. L'idea e` alimentare le fasi quando le rispettive back-EMF sono sui tratti piatti, cioe` quando il contributo alla coppia e` quasi costante. Tipicamente bastano sei stati di commutazione per giro elettrico.
+
+\slidefig{images13/part2-14.png}{Nel BLDC trapezoidale si alimentano due fasi alla volta e si lascia la terza non alimentata, ottenendo una coppia idealmente quasi piatta.}
+
+In un settore della sequenza, per esempio, le back-EMF delle fasi \(A\) e \(B\) possono essere sui plateau, mentre la fase \(C\) attraversa il tratto variabile. Una scelta tipica e`:
+\[
+i_A=I,
+\qquad
+i_B=-I,
+\qquad
+i_C=0.
+\]
+La fase \(C\) viene lasciata flottante o comunque non usata per produrre coppia in quel settore. Passando al settore successivo, cambia la coppia di fasi attive. Dopo sei settori la sequenza si ripete.
+
+Questa tecnica viene chiamata spesso \emph{six-step commutation}. E` semplice, robusta e adatta a molti azionamenti, ma produce piu` ripple di coppia rispetto a un controllo sinusoidale ben realizzato. Il suo grande vantaggio e` che richiede una misura di posizione relativamente grossolana: basta sapere in quale dei sei settori elettrici si trova il rotore.
+
+\subsection{Sensori Hall e decodifica dei sei settori}
+
+\slidepair{images13/part2-15.png}{images13/part2-16.png}{Sensori Hall a \(120^\circ\) elettrici e decodifica delle combinazioni logiche per la commutazione a sei passi.}
+
+Per conoscere il settore elettrico del rotore si possono usare tre sensori a effetto Hall, disposti tipicamente a \(120^\circ\) elettrici. Ogni sensore produce un livello logico alto o basso a seconda del polo magnetico che gli passa davanti. La terna di segnali Hall identifica una delle sei zone utili del ciclo elettrico.
+
+Il driver decodifica quindi la combinazione dei tre segnali e sceglie quali fasi alimentare:
+\[
+(H_A,H_B,H_C)
+\longrightarrow
+\text{settore elettrico}
+\longrightarrow
+\text{coppia di fasi attive}.
+\]
+Nella tabella grafica della slide compaiono anche stati ad alta impedenza, indicati con \(Z\): sono i momenti in cui una fase non viene pilotata direttamente.
+
+Questa architettura rende il BLDC molto diverso dallo stepper. Nello stepper si invia una sequenza e si spera che il rotore rimanga agganciato al campo; nel BLDC, invece, la sequenza di commutazione viene sincronizzata con la posizione effettiva del rotore. Il motore resta sincrono per costruzione: se il rotore accelera o rallenta, l'elettronica deve adattare il momento in cui cambia settore.
+
+\subsection*{Sintesi finale della Lezione 14}
+
+La prima parte della lezione completa gli stepper. Nel VR stepper la coppia nasce dalla minimizzazione della riluttanza, e il passo dipende dalla differenza tra denti statorici e rotorici:
+\[
+\alpha_s
+=360^\circ
+\left|
+\frac{N_s-N_r}{N_sN_r}
+\right|.
+\]
+Nello stepper ibrido, invece, magnete permanente e riluttanza lavorano insieme; la dentatura permette passi piccoli, con:
+\[
+\alpha_s=\frac{360^\circ}{2mN_r}.
+\]
+La trattazione pratica chiarisce poi che lo stepper non e` ideale: holding torque, detent torque, pull-in, pull-out, frequenza di passo, induttanza degli avvolgimenti e profili di accelerazione determinano se il motore resta sincronizzato o perde passi.
+
+La seconda parte apre i BLDC. Il modello trifase parte da:
+\[
+\mathbf v_{abc}
+=R_s\mathbf i_{abc}
++\frac{d\boldsymbol\lambda_{abc}}{dt},
+\qquad
+\boldsymbol\lambda_{abc}
+=\mathbf L_{abc}\mathbf i_{abc}
++\boldsymbol\lambda_m(\theta_e).
+\]
+La coppia si legge dal bilancio di potenza:
+\[
+T_e=
+\frac{e_a i_a+e_b i_b+e_c i_c}{\omega_m},
+\]
+mentre la dinamica meccanica e`:
+\[
+J\dot\omega_m=T_e-T_L-B\omega_m.
+\]
+
+Il punto concettuale piu` importante e` che il BLDC elimina il commutatore meccanico, ma non elimina il problema della commutazione: lo sposta nell'elettronica. Per produrre coppia in modo efficiente, il driver deve conoscere la posizione elettrica del rotore e alimentare le fasi coerentemente con le back-EMF. Nel BLDC trapezoidale questa idea diventa una commutazione a sei passi, spesso basata su tre sensori Hall.
+
+% =========================================================
 % APPENDICE
 % =========================================================
 
@@ -3787,6 +4288,14 @@ Potenza ed efficienza motore DC & $P_{\text{out}}=\tau\omega$, \quad $\eta=\dfra
 Termica motore DC & $P_J=Ri^2$, \quad $\Delta T=P_J(R_{\text{th1}}+R_{\text{th2}})$, \quad $R_{\text{warm}}=R(1+\alpha_{\text{cu}}\Delta T)$ \\
 Funzione di trasferimento motore DC & $\dfrac{\Omega(s)}{V(s)}=\dfrac{k_t}{(Ls+R)(Js+b)+k_tk_e}$, \quad se $\tau_e\ll\tau_m$: $\dfrac{\Omega(s)}{V(s)}\simeq\dfrac{k_t}{RJs+Rb+k_tk_e}$ \\
 Motore PM stepper & $p_r=\dfrac{N_r}{2}$, \quad $\alpha_s=\dfrac{360^\circ}{mN_r}$ \\
+Motore VR stepper & $\alpha_s=360^\circ\left|\dfrac{N_s-N_r}{N_sN_r}\right|$ \\
+Motore hybrid stepper & $\alpha_R=\dfrac{360^\circ}{N_r}$, \quad $\alpha_s=\dfrac{360^\circ}{2mN_r}$ \\
+Coppia statica stepper & $T=T_{\max}\sin\delta$, \quad $T_{\text{pull-out}}>T_{\text{pull-in}}$ a pari frequenza di passo \\
+Microstepping & $\alpha_{\text{full}}=\alpha_s$, \quad $\alpha_{\text{half}}=\dfrac{\alpha_s}{2}$, \quad $\alpha_{\mu\text{step}}\approx\dfrac{\alpha_s}{N_\mu}$ \\
+Vincolo trifase a stella BLDC & $i_a+i_b+i_c=0$, \quad $\dot i_a+\dot i_b+\dot i_c=0$ \\
+Modello elettrico BLDC & $\mathbf v_{abc}=R_s\mathbf i_{abc}+\dfrac{d\boldsymbol\lambda_{abc}}{dt}$, \quad $\boldsymbol\lambda_{abc}=\mathbf L_{abc}\mathbf i_{abc}+\boldsymbol\lambda_m(\theta_e)$ \\
+Modello di fase BLDC ridotto & $v_k=R_s i_k+L_{eq}\dot i_k+e_k$, \quad $L_{eq}=L_s-M$, \quad $k\in\{a,b,c\}$ \\
+Coppia e dinamica BLDC & $T_e=\dfrac{e_ai_a+e_bi_b+e_ci_c}{\omega_m}$, \quad $J\dot\omega_m=T_e-T_L-B\omega_m$, \quad $\theta_e=p\theta_m$ \\
 Metodo M & $\omega_m=\dfrac{2\pi}{T_c}\dfrac{m}{PPR}$, \quad $N=\dfrac{60}{T_c}\dfrac{m}{PPR}$ \\
 Metodo T & $T_c=m_cT_{\text{clock}}$, \quad $\omega_m=\dfrac{2\pi}{PPR\,m_cT_{\text{clock}}}$ \\
 Metodo M/T & $T=T_c+m_2T_2$, \quad $\omega_m=\dfrac{2\pi}{PPR}\dfrac{m_1}{T_c+m_2T_2}$ \\
