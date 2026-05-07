@@ -359,49 +359,45 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {219}{\ignorespaces Sensori Hall a \(120^\circ \) elettrici e decodifica delle combinazioni logiche per la commutazione a sei passi.}}{179}{figure.caption.219}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {14}Lezione 15}{181}{section.14}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {14.1}Visione generale della lezione}{181}{subsection.14.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {14.2}Limite pratico della commutazione trapezoidale}{181}{subsection.14.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {220}{\ignorespaces Nel BLDC trapezoidale reale le correnti di fase non commutano istantaneamente e la coppia mantiene un ripple alla frequenza di commutazione.}}{181}{figure.caption.220}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {14.3}Controllo sinusoidale del BLDC}{182}{subsection.14.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {221}{\ignorespaces Nel controllo sinusoidale le tre correnti di fase vengono mantenute sinusoidali e sfasate di \(120^\circ \), cosi` da generare un campo statorico rotante piu` regolare.}}{182}{figure.caption.221}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {14.4}Trasformata di Clarke: da \(abc\) ad \(\alpha \beta \)}{183}{subsection.14.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {222}{\ignorespaces Trasformata di Clarke: un sistema trifase bilanciato viene rappresentato come un vettore nel piano stazionario \(\alpha \beta \).}}{183}{figure.caption.222}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {14.5}Trasformata di Park: da \(\alpha \beta \) a \(dq\)}{184}{subsection.14.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {223}{\ignorespaces Trasformata di Park e riscrittura delle equazioni di tensione nel riferimento \(dq\) solidale con il campo rotorico.}}{184}{figure.caption.223}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {224}{\ignorespaces Interpretazione delle equazioni nel riferimento \(dq\): il termine di flusso magnetico diventa costante e gli assi possono essere letti come avvolgimenti virtuali.}}{185}{figure.caption.224}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {14.6}Coppia elettromagnetica nel riferimento \(dq\)}{185}{subsection.14.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {225}{\ignorespaces Coppia elettromagnetica nel riferimento \(dq\) e idea di Field Oriented Control: controllare \(i_d\) e \(i_q\) invece delle correnti di fase.}}{185}{figure.caption.225}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {14.7}Catena del Field Oriented Control}{186}{subsection.14.7}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {226}{\ignorespaces Le correnti sinusoidali in \(abc\) diventano grandezze rotanti in \(\alpha \beta \) e grandezze costanti nel riferimento \(dq\); poi le tensioni desiderate vengono riportate indietro verso le fasi.}}{186}{figure.caption.226}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {227}{\ignorespaces Schema a blocchi di un controllo FOC: regolatori PI in \(dq\), trasformate inverse, modulazione vettoriale e ponte MOSFET.}}{187}{figure.caption.227}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {14.8}Misura dell'angolo elettrico e famiglie costruttive}{188}{subsection.14.8}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {228}{\ignorespaces Misura dell'angolo elettrico e esempi costruttivi di motori brushless: industriali, con encoder integrato, cavi, alberi cavi, outrunner e inrunner.}}{188}{figure.caption.228}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {14.9}Driver per motori elettrici}{189}{subsection.14.9}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {229}{\ignorespaces Driver per motori elettrici: in tutti i casi il compito e` generare tensioni controllate per ottenere correnti, coppia e velocita` desiderate.}}{189}{figure.caption.229}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {14.10}Pilotaggio del motore DC brushed}{190}{subsection.14.10}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {230}{\ignorespaces Pilotaggio del motore DC brushed: la tensione ai terminali controlla corrente, coppia e velocita`, mentre la back-EMF cresce con la velocita`.}}{190}{figure.caption.230}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {14.11}Ponte H: segno della tensione, frenatura e ruota libera}{191}{subsection.14.11}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {231}{\ignorespaces Ponte H per motore DC: quattro interruttori permettono tensione positiva, tensione negativa, frenatura e coasting.}}{191}{figure.caption.231}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {14.12}PWM: tensione media tramite commutazione rapida}{192}{subsection.14.12}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {232}{\ignorespaces Pulse Width Modulation: il duty cycle determina la tensione media applicata al motore; frequenze tipiche sono nell'ordine di \(10\text  {--}40\,\text  {kHz}\).}}{192}{figure.caption.232}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {233}{\ignorespaces Il motore filtra il PWM: la frequenza di switching deve essere abbastanza maggiore delle dinamiche elettriche e meccaniche rilevanti.}}{193}{figure.caption.233}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.2}Dal BLDC trapezoidale al controllo sinusoidale}{181}{subsection.14.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {220}{\ignorespaces Slide 414: nel BLDC trapezoidale reale la commutazione delle fasi non e` istantanea, quindi la coppia non resta perfettamente piatta.}}{181}{figure.caption.220}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {221}{\ignorespaces Slide 420--421: motivazione del controllo sinusoidale e prima trasformazione, da \(abc\) al piano statorico \(\alpha \beta \).}}{182}{figure.caption.221}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.3}Trasformata di Clarke: dalle tre fasi al vettore statorico}{183}{subsection.14.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {222}{\ignorespaces Slide 422: la Clarke rappresenta le tre fasi con un unico vettore equivalente nel piano statorico \(\alpha \beta \).}}{183}{figure.caption.222}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.4}Trasformata di Park e modello nel riferimento dq}{184}{subsection.14.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {223}{\ignorespaces Slide 423--424: la Park ruota il riferimento dell'angolo elettrico \(\theta _e\) e permette di riscrivere le equazioni nel riferimento \(dq\).}}{184}{figure.caption.223}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {224}{\ignorespaces Slide 425--426: nel riferimento \(dq\) il flusso rotorico diventa fisso e le sinusoidi a regime diventano grandezze costanti.}}{185}{figure.caption.224}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.5}Coppia nel riferimento dq e idea del FOC}{186}{subsection.14.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {225}{\ignorespaces Slide 427--428: la coppia nel riferimento \(dq\) porta direttamente alla struttura del Field Oriented Control.}}{186}{figure.caption.225}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.6}Schema completo del FOC}{187}{subsection.14.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {226}{\ignorespaces Slide 429--431: confronto tra riferimenti, trasformate inverse e schema a blocchi completo del FOC con SVPWM.}}{187}{figure.caption.226}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.7}Misura dell'angolo elettrico ed esempi di brushless}{188}{subsection.14.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {227}{\ignorespaces Slide 432--433: misura dell'angolo elettrico e tipologie costruttive di motori brushless.}}{188}{figure.caption.227}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.8}Driver: dal segnale di controllo alla potenza}{189}{subsection.14.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {228}{\ignorespaces Slide 434--436: tutti i motori richiedono tensioni controllate; nel brushed DC il driver regola tensione, corrente, coppia e verso.}}{189}{figure.caption.228}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.9}Ponte H: segno della tensione, frenatura e coasting}{190}{subsection.14.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {229}{\ignorespaces Slide 437: il ponte H permette di applicare al motore tensione positiva, tensione negativa, frenatura elettrica o coasting.}}{190}{figure.caption.229}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.10}PWM: tensione media e scelta della frequenza}{191}{subsection.14.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {230}{\ignorespaces Slide 438--439: il PWM regola la tensione media tramite il duty cycle; le frequenze tipiche sono dell'ordine di \(10\text  {--}40\,\text  {kHz}\).}}{191}{figure.caption.230}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {231}{\ignorespaces Slide 440--441: il motore filtra il PWM; la frequenza va scelta confrontandola con le costanti di tempo elettrica e meccanica.}}{192}{figure.caption.231}\protected@file@percent }
 \gdef \LT@iii {\LT@entry 
     {1}{125.35841pt}\LT@entry 
     {1}{295.39244pt}}
-\@writefile{toc}{\contentsline {section}{Appendice}{195}{section*.234}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{Formulario sintetico}{195}{section*.235}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{Appendice}{194}{section*.232}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Formulario sintetico}{194}{section*.233}\protected@file@percent }
 \gdef \LT@iv {\LT@entry 
     {1}{76.8445pt}\LT@entry 
     {1}{78.12393pt}\LT@entry 
     {1}{78.12393pt}\LT@entry 
     {1}{111.18951pt}\LT@entry 
     {1}{109.91008pt}}
-\@writefile{toc}{\contentsline {subsection}{Confronto rapido dei sensori di posizione}{198}{section*.236}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Confronto rapido dei sensori di posizione}{197}{section*.234}\protected@file@percent }
 \gdef \LT@v {\LT@entry 
     {1}{86.29283pt}\LT@entry 
     {1}{73.40337pt}\LT@entry 
     {1}{97.0134pt}\LT@entry 
     {1}{106.46175pt}\LT@entry 
     {1}{91.0134pt}}
-\@writefile{toc}{\contentsline {subsection}{Confronto rapido di sensori e metodi per velocita`, distanza e accelerazione}{200}{section*.237}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{Riferimento al materiale originale}{202}{section*.238}\protected@file@percent }
-\gdef \@abspage@last{203}
+\@writefile{toc}{\contentsline {subsection}{Confronto rapido di sensori e metodi per velocita`, distanza e accelerazione}{199}{section*.235}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Riferimento al materiale originale}{201}{section*.236}\protected@file@percent }
+\gdef \@abspage@last{202}

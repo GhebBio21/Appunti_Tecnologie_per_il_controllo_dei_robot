@@ -386,7 +386,6 @@ INPUT /usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 OUTPUT main.toc
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT ./images/page-01.png
 INPUT ./images/page-01.png
@@ -430,6 +429,7 @@ INPUT ./images/page-08.png
 INPUT ./images/page-08.png
 INPUT ./images/page-08.png
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT /usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT ./images/page-09.png
 INPUT ./images/page-09.png
@@ -2424,12 +2424,6 @@ INPUT ./images14/page-02.png
 INPUT ./images14/page-02.png
 INPUT ./images14/page-02.png
 INPUT ./images14/page-02.png
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT ./images14/page-03.png
 INPUT ./images14/page-03.png
 INPUT ./images14/page-03.png
@@ -2544,7 +2538,6 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi7.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb

@@ -124,19 +124,17 @@
 \contentsline {subsection}{\numberline {13.14}Sensori Hall e decodifica dei sei settori}{179}{subsection.13.14}%
 \contentsline {section}{\numberline {14}Lezione 15}{181}{section.14}%
 \contentsline {subsection}{\numberline {14.1}Visione generale della lezione}{181}{subsection.14.1}%
-\contentsline {subsection}{\numberline {14.2}Limite pratico della commutazione trapezoidale}{181}{subsection.14.2}%
-\contentsline {subsection}{\numberline {14.3}Controllo sinusoidale del BLDC}{182}{subsection.14.3}%
-\contentsline {subsection}{\numberline {14.4}Trasformata di Clarke: da \(abc\) ad \(\alpha \beta \)}{183}{subsection.14.4}%
-\contentsline {subsection}{\numberline {14.5}Trasformata di Park: da \(\alpha \beta \) a \(dq\)}{184}{subsection.14.5}%
-\contentsline {subsection}{\numberline {14.6}Coppia elettromagnetica nel riferimento \(dq\)}{185}{subsection.14.6}%
-\contentsline {subsection}{\numberline {14.7}Catena del Field Oriented Control}{186}{subsection.14.7}%
-\contentsline {subsection}{\numberline {14.8}Misura dell'angolo elettrico e famiglie costruttive}{188}{subsection.14.8}%
-\contentsline {subsection}{\numberline {14.9}Driver per motori elettrici}{189}{subsection.14.9}%
-\contentsline {subsection}{\numberline {14.10}Pilotaggio del motore DC brushed}{190}{subsection.14.10}%
-\contentsline {subsection}{\numberline {14.11}Ponte H: segno della tensione, frenatura e ruota libera}{191}{subsection.14.11}%
-\contentsline {subsection}{\numberline {14.12}PWM: tensione media tramite commutazione rapida}{192}{subsection.14.12}%
-\contentsline {section}{Appendice}{195}{section*.234}%
-\contentsline {subsection}{Formulario sintetico}{195}{section*.235}%
-\contentsline {subsection}{Confronto rapido dei sensori di posizione}{198}{section*.236}%
-\contentsline {subsection}{Confronto rapido di sensori e metodi per velocita`, distanza e accelerazione}{200}{section*.237}%
-\contentsline {subsection}{Riferimento al materiale originale}{202}{section*.238}%
+\contentsline {subsection}{\numberline {14.2}Dal BLDC trapezoidale al controllo sinusoidale}{181}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}Trasformata di Clarke: dalle tre fasi al vettore statorico}{183}{subsection.14.3}%
+\contentsline {subsection}{\numberline {14.4}Trasformata di Park e modello nel riferimento dq}{184}{subsection.14.4}%
+\contentsline {subsection}{\numberline {14.5}Coppia nel riferimento dq e idea del FOC}{186}{subsection.14.5}%
+\contentsline {subsection}{\numberline {14.6}Schema completo del FOC}{187}{subsection.14.6}%
+\contentsline {subsection}{\numberline {14.7}Misura dell'angolo elettrico ed esempi di brushless}{188}{subsection.14.7}%
+\contentsline {subsection}{\numberline {14.8}Driver: dal segnale di controllo alla potenza}{189}{subsection.14.8}%
+\contentsline {subsection}{\numberline {14.9}Ponte H: segno della tensione, frenatura e coasting}{190}{subsection.14.9}%
+\contentsline {subsection}{\numberline {14.10}PWM: tensione media e scelta della frequenza}{191}{subsection.14.10}%
+\contentsline {section}{Appendice}{194}{section*.232}%
+\contentsline {subsection}{Formulario sintetico}{194}{section*.233}%
+\contentsline {subsection}{Confronto rapido dei sensori di posizione}{197}{section*.234}%
+\contentsline {subsection}{Confronto rapido di sensori e metodi per velocita`, distanza e accelerazione}{199}{section*.235}%
+\contentsline {subsection}{Riferimento al materiale originale}{201}{section*.236}%
