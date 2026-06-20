@@ -1,140 +1,151 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {section}{\numberline {1}Lezione 1-2}{4}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Introduzione, struttura del corso e ruolo dei sensori}{4}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Sensori attivi, passivi e distinzione tra sensore e trasduttore}{6}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Sensori assoluti e relativi. Natura dell’informazione}{7}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Campionamento}{9}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Quantizzazione e conversione A/D}{10}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Caratteristica statica ideale e non linearità}{12}{subsection.1.6}%
-\contentsline {subsection}{\numberline {1.7}Isteresi}{14}{subsection.1.7}%
-\contentsline {subsection}{\numberline {1.8}Dead-band e saturazione}{15}{subsection.1.8}%
-\contentsline {subsection}{\numberline {1.9}Schema sintetico delle non idealit\`a di misura}{15}{subsection.1.9}%
-\contentsline {subsection}{\numberline {1.10}Rumore e sorgenti fisiche}{16}{subsection.1.10}%
-\contentsline {subsection}{\numberline {1.11}Rumore di quantizzazione, bianco, gaussiano e colorato}{17}{subsection.1.11}%
-\contentsline {subsection}{\numberline {1.12}Istogramma e spettro del rumore}{18}{subsection.1.12}%
-\contentsline {subsection}{\numberline {1.13}Calibrazione affine di base}{19}{subsection.1.13}%
-\contentsline {subsection}{\numberline {1.14}Calibrazione di IMU e lettura della noise density}{21}{subsection.1.14}%
-\contentsline {section}{\numberline {2}Lezione 3}{23}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Visione generale della lezione}{23}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Modelli polinomiali di calibrazione}{23}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Scelta dell’ordine del modello}{24}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Incertezza dei parametri stimati}{25}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Bias e rumore di misura}{26}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Stima del rumore residuo}{27}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Modello finale di calibrazione}{28}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Esempio implementativo}{29}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}Procedura pratica di calibrazione}{30}{subsection.2.9}%
-\contentsline {section}{\numberline {3}Lezione 4}{32}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Visione generale della lezione}{32}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Caratteristiche dinamiche dei sensori}{32}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Dinamica del sensore dentro il loop di controllo}{33}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Identificazione sperimentale della dinamica}{34}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Accuratezza e precisione}{37}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Sensori di posizione}{39}{subsection.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}Potenziometri}{40}{subsubsection.3.6.1}%
-\contentsline {subsubsection}{\numberline {3.6.2}Encoder incrementali}{41}{subsubsection.3.6.2}%
-\contentsline {section}{\numberline {4}Lezione 5}{44}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Visione generale della lezione}{44}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Encoder incrementali: struttura, decodifica e risoluzione}{44}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Codifiche X1, X2 e X4 degli encoder incrementali}{46}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Encoder ottici incrementali e encoder assoluti}{49}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Encoder ottici lineari con interpolazione}{51}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Frange di Moir\'e e aumento della rilevabilit\`a}{54}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}LVDT: Linear Variable Differential Transformer}{56}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}RVDT: Rotary Variable Differential Transformer}{59}{subsection.4.8}%
-\contentsline {subsection}{\numberline {4.9}Resolver}{60}{subsection.4.9}%
-\contentsline {subsection}{\numberline {4.10}Resolver-to-Digital Converter}{62}{subsection.4.10}%
-\contentsline {section}{\numberline {5}Lezione 6}{66}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Visione generale della lezione}{66}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Resolver con e senza slip rings}{66}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Resolver brushless e accoppiamento magnetico}{68}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Synchro}{70}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Encoder magnetici}{73}{subsection.5.5}%
-\contentsline {section}{\numberline {6}Lezione 7}{76}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Visione generale della lezione}{76}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Encoder magnetici relativi e sensori lineari magnetici}{76}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Sensori di distanza}{78}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Sensori di velocita`: classificazione e principio elettromagnetico di base}{80}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Tachogeneratore DC}{82}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Tachogeneratore AC}{84}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Stima di velocita` da encoder: metodo M}{85}{subsection.6.7}%
-\contentsline {subsection}{\numberline {6.8}Metodo T e metodo M/T}{87}{subsection.6.8}%
-\contentsline {subsection}{\numberline {6.9}Stima filtrata di posizione e velocita`}{89}{subsection.6.9}%
-\contentsline {section}{\numberline {7}Lezione 8}{92}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Visione generale della lezione}{92}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Misura della velocita` propria}{92}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Origine e ruolo dei giroscopi}{93}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Inerzia giroscopica}{95}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Precessione: ruota appesa e trottola}{95}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Applicazioni alla navigazione aerea}{97}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Girobussola e ricerca del nord}{98}{subsection.7.7}%
-\contentsline {subsection}{\numberline {7.8}Modello matematico del giroscopio}{99}{subsection.7.8}%
-\contentsline {subsection}{\numberline {7.9}Rate gyro: giroscopio per misurare velocita` angolare}{101}{subsection.7.9}%
-\contentsline {section}{\numberline {8}Lezione 9}{103}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Visione generale della lezione}{103}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Dinamica linearizzata: poli e coning}{103}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Rate gyro con controllo elettronico}{105}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Esempi di girobussola e tecnologie meccaniche}{106}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Effetto Sagnac: base dei giroscopi ottici}{107}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}Fiber-Optic Gyro: misura di fase}{109}{subsection.8.6}%
-\contentsline {subsection}{\numberline {8.7}Ring Laser Gyro: misura di frequenza}{111}{subsection.8.7}%
-\contentsline {section}{\numberline {9}Lezione 10}{114}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Visione generale della lezione}{114}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Giroscopi a elemento vibrante}{114}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Attuazione e lettura capacitiva nei MEMS}{115}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Confronto tra tecnologie di giroscopi}{119}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Velocita` lineare propria: veicoli terrestri}{121}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}Velocita` lineare in aeronautica: aria, Bernoulli e Pitot}{122}{subsection.9.6}%
-\contentsline {section}{\numberline {10}Lezione 11}{126}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Visione generale della lezione}{126}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Velocita` da effetto Doppler}{126}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Accelerometri: principio fisico}{128}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Tecnologie di accelerometri}{131}{subsection.10.4}%
-\contentsline {section}{\numberline {11}Lezione 12}{137}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Visione generale della lezione}{137}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Ingresso nel blocco sugli attuatori}{137}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Non linearita` statiche: saturazione, zona morta, isteresi}{140}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}Vincoli dinamici degli attuatori}{141}{subsection.11.4}%
-\contentsline {subsection}{\numberline {11.5}Energia, rendimento e limiti termici}{143}{subsection.11.5}%
-\contentsline {subsection}{\numberline {11.6}Motore DC brushed: principio fisico e coppia elementare}{144}{subsection.11.6}%
-\contentsline {section}{\numberline {12}Lezione 13}{148}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Visione generale della lezione}{148}{subsection.12.1}%
-\contentsline {subsection}{\numberline {12.2}Ripple di coppia e ruolo di piu` avvolgimenti}{148}{subsection.12.2}%
-\contentsline {subsection}{\numberline {12.3}Back-EMF: la tensione generata dalla rotazione}{150}{subsection.12.3}%
-\contentsline {subsection}{\numberline {12.4}Modello elettromeccanico del motore DC}{151}{subsection.12.4}%
-\contentsline {subsection}{\numberline {12.5}Comportamento a regime e caratteristica coppia-velocita`}{153}{subsection.12.5}%
-\contentsline {subsection}{\numberline {12.6}Aspetti termici del motore DC}{156}{subsection.12.6}%
-\contentsline {subsection}{\numberline {12.7}Funzione di trasferimento del motore DC}{157}{subsection.12.7}%
-\contentsline {subsection}{\numberline {12.8}Introduzione agli stepper motor}{160}{subsection.12.8}%
-\contentsline {section}{\numberline {13}Lezione 14}{164}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Visione generale della lezione}{164}{subsection.13.1}%
-\contentsline {subsection}{\numberline {13.2}Stepper a riluttanza variabile}{164}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Regole geometriche per il passo del VR stepper}{165}{subsection.13.3}%
-\contentsline {subsection}{\numberline {13.4}Stepper ibrido: costruzione e motivo della sua diffusione}{166}{subsection.13.4}%
-\contentsline {subsection}{\numberline {13.5}Principio di funzionamento dello stepper ibrido}{167}{subsection.13.5}%
-\contentsline {subsection}{\numberline {13.6}Problemi pratici degli stepper: perdita di passo e coppia disponibile}{169}{subsection.13.6}%
-\contentsline {subsection}{\numberline {13.7}Pull-in, pull-out e limiti dinamici di coppia}{170}{subsection.13.7}%
-\contentsline {subsection}{\numberline {13.8}Full-step, half-step, microstepping e confronto tra famiglie}{171}{subsection.13.8}%
-\contentsline {subsection}{\numberline {13.9}Motore BLDC: motivazione e componenti principali}{172}{subsection.13.9}%
-\contentsline {subsection}{\numberline {13.10}Equazioni elettriche trifase e flussi concatenati}{173}{subsection.13.10}%
-\contentsline {subsection}{\numberline {13.11}Back-EMF di fase e modello ridotto}{174}{subsection.13.11}%
-\contentsline {subsection}{\numberline {13.12}Coppia elettromagnetica e dinamica meccanica del BLDC}{175}{subsection.13.12}%
-\contentsline {subsection}{\numberline {13.13}Controllo BLDC e commutazione trapezoidale}{177}{subsection.13.13}%
-\contentsline {subsection}{\numberline {13.14}Sensori Hall e decodifica dei sei settori}{179}{subsection.13.14}%
-\contentsline {section}{\numberline {14}Lezione 15}{181}{section.14}%
-\contentsline {subsection}{\numberline {14.1}Visione generale della lezione}{181}{subsection.14.1}%
-\contentsline {subsection}{\numberline {14.2}Dal BLDC trapezoidale al controllo sinusoidale}{181}{subsection.14.2}%
-\contentsline {subsection}{\numberline {14.3}Trasformata di Clarke: dalle tre fasi al vettore statorico}{183}{subsection.14.3}%
-\contentsline {subsection}{\numberline {14.4}Trasformata di Park e modello nel riferimento dq}{184}{subsection.14.4}%
-\contentsline {subsection}{\numberline {14.5}Coppia nel riferimento dq e idea del FOC}{186}{subsection.14.5}%
-\contentsline {subsection}{\numberline {14.6}Schema completo del FOC}{187}{subsection.14.6}%
-\contentsline {subsection}{\numberline {14.7}Misura dell'angolo elettrico ed esempi di brushless}{188}{subsection.14.7}%
-\contentsline {subsection}{\numberline {14.8}Driver: dal segnale di controllo alla potenza}{189}{subsection.14.8}%
-\contentsline {subsection}{\numberline {14.9}Ponte H: segno della tensione, frenatura e coasting}{190}{subsection.14.9}%
-\contentsline {subsection}{\numberline {14.10}PWM: tensione media e scelta della frequenza}{191}{subsection.14.10}%
-\contentsline {section}{Appendice}{194}{section*.232}%
-\contentsline {subsection}{Formulario sintetico}{194}{section*.233}%
-\contentsline {subsection}{Confronto rapido dei sensori di posizione}{197}{section*.234}%
-\contentsline {subsection}{Confronto rapido di sensori e metodi per velocita`, distanza e accelerazione}{199}{section*.235}%
-\contentsline {subsection}{Riferimento al materiale originale}{201}{section*.236}%
+\contentsline {section}{\numberline {1}Lezione 1-2}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Introduzione, struttura del corso e ruolo dei sensori}{5}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Sensori attivi, passivi e distinzione tra sensore e trasduttore}{7}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Sensori assoluti e relativi. Natura dell’informazione}{8}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Campionamento}{10}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Quantizzazione e conversione A/D}{11}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Caratteristica statica ideale e non linearità}{13}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Isteresi}{15}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Dead-band e saturazione}{16}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Schema sintetico delle non idealit\`a di misura}{16}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}Rumore e sorgenti fisiche}{17}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.11}Rumore di quantizzazione, bianco, gaussiano e colorato}{18}{subsection.1.11}%
+\contentsline {subsection}{\numberline {1.12}Istogramma e spettro del rumore}{19}{subsection.1.12}%
+\contentsline {subsection}{\numberline {1.13}Calibrazione affine di base}{20}{subsection.1.13}%
+\contentsline {subsection}{\numberline {1.14}Calibrazione di IMU e lettura della noise density}{22}{subsection.1.14}%
+\contentsline {section}{\numberline {2}Lezione 3}{24}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Visione generale della lezione}{24}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Modelli polinomiali di calibrazione}{24}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Scelta dell’ordine del modello}{25}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Incertezza dei parametri stimati}{26}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Bias e rumore di misura}{27}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Stima del rumore residuo}{28}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Modello finale di calibrazione}{29}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Esempio implementativo}{30}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Procedura pratica di calibrazione}{31}{subsection.2.9}%
+\contentsline {section}{\numberline {3}Lezione 4}{33}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Visione generale della lezione}{33}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Caratteristiche dinamiche dei sensori}{33}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Dinamica del sensore dentro il loop di controllo}{34}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Identificazione sperimentale della dinamica}{35}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Accuratezza e precisione}{38}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Sensori di posizione}{40}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Potenziometri}{41}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}Encoder incrementali}{42}{subsubsection.3.6.2}%
+\contentsline {section}{\numberline {4}Lezione 5}{45}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Visione generale della lezione}{45}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Encoder incrementali: struttura, decodifica e risoluzione}{45}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Codifiche X1, X2 e X4 degli encoder incrementali}{47}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Encoder ottici incrementali e encoder assoluti}{50}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Encoder ottici lineari con interpolazione}{52}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Frange di Moir\'e e aumento della rilevabilit\`a}{55}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}LVDT: Linear Variable Differential Transformer}{57}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}RVDT: Rotary Variable Differential Transformer}{60}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Resolver}{61}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Resolver-to-Digital Converter}{63}{subsection.4.10}%
+\contentsline {section}{\numberline {5}Lezione 6}{67}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Visione generale della lezione}{67}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Resolver con e senza slip rings}{67}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Resolver brushless e accoppiamento magnetico}{69}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Synchro}{71}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Encoder magnetici}{74}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Lezione 7}{77}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Visione generale della lezione}{77}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Encoder magnetici relativi e sensori lineari magnetici}{77}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Sensori di distanza}{79}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Sensori di velocita`: classificazione e principio elettromagnetico di base}{81}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Tachogeneratore DC}{83}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Tachogeneratore AC}{85}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Stima di velocita` da encoder: metodo M}{86}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Metodo T e metodo M/T}{88}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}Stima filtrata di posizione e velocita`}{90}{subsection.6.9}%
+\contentsline {section}{\numberline {7}Lezione 8}{93}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Visione generale della lezione}{93}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Misura della velocita` propria}{93}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Origine e ruolo dei giroscopi}{94}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Inerzia giroscopica}{96}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Precessione: ruota appesa e trottola}{96}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Applicazioni alla navigazione aerea}{98}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Girobussola e ricerca del nord}{99}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8}Modello matematico del giroscopio}{100}{subsection.7.8}%
+\contentsline {subsection}{\numberline {7.9}Rate gyro: giroscopio per misurare velocita` angolare}{102}{subsection.7.9}%
+\contentsline {section}{\numberline {8}Lezione 9}{104}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Visione generale della lezione}{104}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Dinamica linearizzata: poli e coning}{104}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Rate gyro con controllo elettronico}{106}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Esempi di girobussola e tecnologie meccaniche}{107}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Effetto Sagnac: base dei giroscopi ottici}{108}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Fiber-Optic Gyro: misura di fase}{110}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Ring Laser Gyro: misura di frequenza}{112}{subsection.8.7}%
+\contentsline {section}{\numberline {9}Lezione 10}{115}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Visione generale della lezione}{115}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Giroscopi a elemento vibrante}{115}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Attuazione e lettura capacitiva nei MEMS}{116}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Confronto tra tecnologie di giroscopi}{120}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Velocita` lineare propria: veicoli terrestri}{122}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Velocita` lineare in aeronautica: aria, Bernoulli e Pitot}{123}{subsection.9.6}%
+\contentsline {section}{\numberline {10}Lezione 11}{127}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Visione generale della lezione}{127}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Velocita` da effetto Doppler}{127}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Accelerometri: principio fisico}{129}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Tecnologie di accelerometri}{132}{subsection.10.4}%
+\contentsline {section}{\numberline {11}Lezione 12}{138}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Visione generale della lezione}{138}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Ingresso nel blocco sugli attuatori}{138}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Non linearita` statiche: saturazione, zona morta, isteresi}{141}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Vincoli dinamici degli attuatori}{142}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}Energia, rendimento e limiti termici}{144}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Motore DC brushed: principio fisico e coppia elementare}{145}{subsection.11.6}%
+\contentsline {section}{\numberline {12}Lezione 13}{149}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Visione generale della lezione}{149}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Ripple di coppia e ruolo di piu` avvolgimenti}{149}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Back-EMF: la tensione generata dalla rotazione}{151}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Modello elettromeccanico del motore DC}{152}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}Comportamento a regime e caratteristica coppia-velocita`}{154}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6}Aspetti termici del motore DC}{157}{subsection.12.6}%
+\contentsline {subsection}{\numberline {12.7}Funzione di trasferimento del motore DC}{158}{subsection.12.7}%
+\contentsline {subsection}{\numberline {12.8}Introduzione agli stepper motor}{161}{subsection.12.8}%
+\contentsline {section}{\numberline {13}Lezione 14}{165}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Visione generale della lezione}{165}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Stepper a riluttanza variabile}{165}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Regole geometriche per il passo del VR stepper}{166}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}Stepper ibrido: costruzione e motivo della sua diffusione}{167}{subsection.13.4}%
+\contentsline {subsection}{\numberline {13.5}Principio di funzionamento dello stepper ibrido}{168}{subsection.13.5}%
+\contentsline {subsection}{\numberline {13.6}Problemi pratici degli stepper: perdita di passo e coppia disponibile}{170}{subsection.13.6}%
+\contentsline {subsection}{\numberline {13.7}Pull-in, pull-out e limiti dinamici di coppia}{171}{subsection.13.7}%
+\contentsline {subsection}{\numberline {13.8}Full-step, half-step, microstepping e confronto tra famiglie}{172}{subsection.13.8}%
+\contentsline {subsection}{\numberline {13.9}Motore BLDC: motivazione e componenti principali}{173}{subsection.13.9}%
+\contentsline {subsection}{\numberline {13.10}Equazioni elettriche trifase e flussi concatenati}{174}{subsection.13.10}%
+\contentsline {subsection}{\numberline {13.11}Back-EMF di fase e modello ridotto}{175}{subsection.13.11}%
+\contentsline {subsection}{\numberline {13.12}Coppia elettromagnetica e dinamica meccanica del BLDC}{176}{subsection.13.12}%
+\contentsline {subsection}{\numberline {13.13}Controllo BLDC e commutazione trapezoidale}{178}{subsection.13.13}%
+\contentsline {subsection}{\numberline {13.14}Sensori Hall e decodifica dei sei settori}{180}{subsection.13.14}%
+\contentsline {section}{\numberline {14}Lezione 15}{182}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Visione generale della lezione}{182}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}Dal BLDC trapezoidale al controllo sinusoidale}{182}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}Trasformata di Clarke: dalle tre fasi al vettore statorico}{184}{subsection.14.3}%
+\contentsline {subsection}{\numberline {14.4}Trasformata di Park e modello nel riferimento dq}{185}{subsection.14.4}%
+\contentsline {subsection}{\numberline {14.5}Coppia nel riferimento dq e idea del FOC}{187}{subsection.14.5}%
+\contentsline {subsection}{\numberline {14.6}Schema completo del FOC}{188}{subsection.14.6}%
+\contentsline {subsection}{\numberline {14.7}Misura dell'angolo elettrico ed esempi di brushless}{189}{subsection.14.7}%
+\contentsline {subsection}{\numberline {14.8}Driver: dal segnale di controllo alla potenza}{190}{subsection.14.8}%
+\contentsline {subsection}{\numberline {14.9}Ponte H: segno della tensione, frenatura e coasting}{191}{subsection.14.9}%
+\contentsline {subsection}{\numberline {14.10}PWM: tensione media e scelta della frequenza}{192}{subsection.14.10}%
+\contentsline {section}{\numberline {15}Lezione 16}{195}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Visione generale della lezione}{195}{subsection.15.1}%
+\contentsline {subsection}{\numberline {15.2}Ponti H integrati per motori DC brushed}{195}{subsection.15.2}%
+\contentsline {subsection}{\numberline {15.3}Architettura del pilotaggio stepper}{196}{subsection.15.3}%
+\contentsline {subsection}{\numberline {15.4}Dinamica della corrente negli avvolgimenti}{198}{subsection.15.4}%
+\contentsline {subsection}{\numberline {15.5}Regolazione chopper della corrente}{198}{subsection.15.5}%
+\contentsline {subsection}{\numberline {15.6}Stadio di potenza, interfaccia STEP/DIR e rampe}{199}{subsection.15.6}%
+\contentsline {subsection}{\numberline {15.7}Esempio di driver stepper: DRV8825}{200}{subsection.15.7}%
+\contentsline {subsection}{\numberline {15.8}Stadio di potenza per un brushless trifase}{201}{subsection.15.8}%
+\contentsline {subsection}{\numberline {15.9}PWM simmetrico rispetto al centro e deadtime}{202}{subsection.15.9}%
+\contentsline {subsection}{\numberline {15.10}Space Vector Modulation}{203}{subsection.15.10}%
+\contentsline {section}{Appendice}{205}{section*.240}%
+\contentsline {subsection}{Formulario sintetico}{205}{section*.241}%
+\contentsline {subsection}{Confronto rapido dei sensori di posizione}{208}{section*.242}%
+\contentsline {subsection}{Confronto rapido di sensori e metodi per velocita`, distanza e accelerazione}{210}{section*.243}%
+\contentsline {subsection}{Riferimento al materiale originale}{212}{section*.244}%

@@ -4658,6 +4658,391 @@ v_m\simeq D V_{dc}.
 La frequenza PWM deve essere abbastanza alta rispetto alle dinamiche del motore da ridurre ripple e rumore, ma non cosi` alta da rendere dominanti perdite e stress di commutazione.
 
 % =========================================================
+% LEZIONE 16
+% =========================================================
+
+\clearpage
+\section{Lezione 16}
+
+\subsection{Visione generale della lezione}
+
+L'ultima lezione completa il passaggio dal modello dei motori alla loro realizzazione elettronica. Nella Lezione 15 il ponte H e il PWM erano stati introdotti come strumenti per applicare al motore DC brushed una tensione media di modulo e segno controllabili. Qui si vede come questa idea viene incorporata nei driver reali e poi estesa prima agli stepper e infine ai brushless trifase.
+
+Il filo conduttore e` la separazione dei compiti tra controllore e stadio di potenza. Il microcontrollore decide il moto desiderato, ma non deve gestire direttamente le correnti degli avvolgimenti o le commutazioni dei MOSFET. Il driver riceve comandi logici semplici e si occupa di:
+\begin{itemize}
+\item generare le sequenze di commutazione;
+\item regolare le correnti;
+\item fornire percorsi di ricircolo all'energia induttiva;
+\item proteggere lo stadio da sovracorrente, surriscaldamento e cortocircuito.
+\end{itemize}
+
+La prima parte conclude il pilotaggio del motore DC brushed con i ponti H integrati. La parte centrale tratta gli stepper: full-step, half-step, microstepping, regolazione chopper e profili di accelerazione. L'ultima parte costruisce lo stadio di potenza del brushless, introduce il PWM simmetrico rispetto al centro, il deadtime e la Space Vector Modulation.
+
+\subsection{Ponti H integrati per motori DC brushed}
+
+\slidepair{images15/page-01.png}{images15/page-02.png}{Pagine 425--426 del PDF, slide 443--444: ponte H integrato e collegamento del driver VNH5019 a controllore, alimentazione e motore.}
+
+Un ponte H puo` essere costruito con quattro transistor discreti, ma nella maggior parte delle applicazioni si usa un circuito integrato dedicato. Il vantaggio non e` soltanto avere quattro interruttori nello stesso contenitore. Il driver integra anche la logica che impedisce combinazioni pericolose, il pilotaggio dei transistor high-side e low-side e le protezioni necessarie per lavorare con un carico induttivo.
+
+Quando un interruttore viene spento, la corrente nell'avvolgimento non puo` annullarsi istantaneamente. L'energia magnetica immagazzinata e`:
+\[
+E_L=\frac{1}{2}Li^2.
+\]
+Se non esistesse un percorso alternativo, l'induttanza genererebbe una tensione elevata pur di mantenere la corrente, con il rischio di danneggiare i transistor. I diodi di \emph{free-wheeling}, detti anche di ricircolo o flyback, forniscono questo percorso. L'energia puo` essere dissipata nelle resistenze del circuito oppure in parte restituita al bus, a seconda della configurazione del ponte.
+
+I ponti H integrati aggiungono tipicamente:
+\begin{itemize}
+\item limitazione o misura della corrente;
+\item spegnimento termico;
+\item protezione da sovracorrente e cortocircuito;
+\item protezione da sottotensione;
+\item gestione interna delle commutazioni e dei tempi morti.
+\end{itemize}
+Le slide citano VNH5019, L298 e DRV8833. Sono esempi di generazioni e prestazioni diverse: il principio funzionale resta lo stesso, ma cambiano tecnologia dei transistor, caduta di tensione, corrente gestibile, rendimento e protezioni.
+
+Il VNH5019 mostra bene la separazione tra logica e potenza. Il microcontrollore genera:
+\begin{itemize}
+\item un segnale PWM, il cui duty cycle imposta il modulo medio della tensione;
+\item due ingressi logici, \(INA\) e \(INB\), che selezionano marcia avanti, marcia indietro, frenatura o ricircolo libero.
+\end{itemize}
+L'alimentazione logica e quella del motore sono distinte per livello di tensione e funzione. Questo non implica necessariamente isolamento galvanico: normalmente le masse devono avere un riferimento comune, salvo che il circuito includa isolatori dedicati.
+
+\begin{keybox}
+\textbf{Ruolo del ponte H integrato.} Il controllore sceglie direzione e duty cycle; il driver trasforma questi comandi in correnti di potenza, garantendo al tempo stesso ricircolo dell'energia induttiva e protezione dei transistor.
+\end{keybox}
+
+\subsection{Architettura del pilotaggio stepper}
+
+\slidepair{images15/page-03.png}{images15/page-04.png}{Pagine 427--428 del PDF, slide 445--446: divisione dei compiti tra controllore e driver e confronto tra full-step, half-step e microstepping.}
+
+Nel pilotaggio di uno stepper il controllore non dovrebbe occuparsi direttamente della sequenza dei singoli transistor. Il suo compito e` definire:
+\begin{itemize}
+\item il verso del passo;
+\item il numero di passi da eseguire;
+\item la frequenza degli impulsi, quindi la velocita` richiesta;
+\item il profilo di accelerazione e decelerazione.
+\end{itemize}
+Il driver traduce questi comandi nelle correnti di fase effettive. Deve conoscere la sequenza corretta, invertire la polarita` degli avvolgimenti, regolare il valore della corrente e implementare la modalita` di passo scelta.
+
+Nella sequenza full-step mostrata dalla slide viene alimentata una fase alla volta e il passo meccanico e`:
+\[
+\alpha_{\text{full}}=\alpha_s.
+\]
+Esistono anche sequenze full-step con due fasi alimentate contemporaneamente, che aumentano la coppia ma richiedono piu` corrente. Nell'half-step si alternano stati con una sola fase e stati con due fasi. Le posizioni di equilibrio intermedie dimezzano il passo:
+\[
+\alpha_{\text{half}}=\frac{\alpha_s}{2}.
+\]
+
+Il microstepping non si limita ad accendere o spegnere gli avvolgimenti. Il driver regola due correnti approssimativamente sinusoidali:
+\[
+i_A=I_{\max}\sin\theta,
+\qquad
+i_B=I_{\max}\cos\theta.
+\]
+Il vettore equivalente mantiene modulo costante:
+\[
+\sqrt{i_A^2+i_B^2}=I_{\max},
+\]
+mentre il suo angolo \(\theta\) cambia gradualmente. In questo modo anche la posizione di equilibrio magnetico ruota in piccoli incrementi. Se un passo intero viene diviso in \(n_\mu\) microstep:
+\[
+\Delta\theta_e=\frac{2\pi}{n_\mu},
+\qquad
+\alpha_\mu\simeq\frac{\alpha_s}{n_\mu}.
+\]
+
+Il simbolo \(\theta\) nelle correnti non rappresenta direttamente l'angolo meccanico del rotore: e` la fase elettrica del vettore di corrente. Incrementando questa fase, il driver sposta progressivamente l'equilibrio meccanico.
+
+\begin{infobox}
+\textbf{Risoluzione e accuratezza non coincidono.} Un driver configurato a \(1/32\) di passo genera 32 riferimenti intermedi, ma il rotore non raggiunge necessariamente ogni microposizione con accuratezza ideale. Carico, attrito, detent torque, non linearita` magnetiche e tolleranze di corrente influenzano la posizione reale. Il microstepping migliora soprattutto fluidita`, rumore e vibrazioni.
+\end{infobox}
+
+\subsection{Dinamica della corrente negli avvolgimenti}
+
+\slidepair{images15/page-05.png}{images15/page-06.png}{Pagine 429--430 del PDF, slide 447--448: dinamica resistivo-induttiva della fase e principio della regolazione chopper.}
+
+La coppia dello stepper dipende dalle correnti di fase, ma gli avvolgimenti sono carichi resistivo-induttivi. Per una fase:
+\[
+v=Ri+L\frac{di}{dt}+e,
+\]
+dove \(e\) e` la back-EMF prodotta dal movimento del rotore. La pendenza istantanea della corrente e`:
+\[
+\frac{di}{dt}=\frac{v-Ri-e}{L}.
+\]
+All'avvio, con \(i\simeq 0\) ed \(e\simeq 0\), una tensione maggiore produce una salita piu` rapida. Aumentando la velocita`, invece, cresce la back-EMF e diminuisce la tensione effettivamente disponibile per modificare la corrente.
+
+Se durante un intervallo \(v\) ed \(e\) possono essere considerati costanti, la risposta della corrente e`:
+\[
+i(t)=I_\infty+\left[i(0)-I_\infty\right]e^{-t/\tau_e},
+\]
+con:
+\[
+\tau_e=\frac{L}{R},
+\qquad
+I_\infty=\frac{v-e}{R}.
+\]
+Al crescere della frequenza dei passi, ogni fase resta eccitata per meno tempo. Se la tensione di alimentazione fosse pari alla sola tensione nominale DC dell'avvolgimento, la corrente potrebbe non raggiungere il riferimento prima della commutazione successiva. Il risultato sarebbe una diminuzione del flusso e quindi della coppia disponibile alle alte velocita`.
+
+La soluzione usata nei driver moderni sembra inizialmente controintuitiva:
+\begin{itemize}
+\item si alimenta il motore con una tensione molto maggiore della tensione nominale resistiva dell'avvolgimento;
+\item si limita attivamente la corrente al valore ammesso.
+\end{itemize}
+La tensione elevata aumenta \(di/dt\), quindi la corrente raggiunge rapidamente il riferimento; il regolatore impedisce poi che continui a crescere fino a un valore termicamente pericoloso.
+
+\subsection{Regolazione chopper della corrente}
+
+La regolazione \emph{chopper} e` un controllo PWM della corrente. Il driver applica la tensione del bus alla fase e misura la corrente tramite una resistenza di shunt:
+\[
+v_{\text{sense}}=R_{\text{sense}}\,i.
+\]
+Il valore misurato viene confrontato con un riferimento interno o con una tensione \(V_{\text{ref}}\). Quando la corrente raggiunge la soglia superiore, il ponte smette di applicare tensione positiva e passa a uno stato di ricircolo o decadimento. Quando la corrente scende sotto la soglia inferiore, il ponte viene riattivato.
+
+In una descrizione a isteresi:
+\[
+I_{\text{low}}
+=I^\star-\frac{\Delta I}{2},
+\qquad
+I_{\text{high}}
+=I^\star+\frac{\Delta I}{2}.
+\]
+La corrente oscilla quindi intorno a \(I^\star\), con un ripple \(\Delta I\). La frequenza effettiva delle commutazioni dipende dalla tensione del bus, dall'induttanza, dalla back-EMF e dalla strategia di decadimento.
+
+I principali modi di decadimento sono:
+\begin{itemize}
+\item \textbf{slow decay}: la corrente ricircola con una tensione piccola e diminuisce lentamente; il ripple e` contenuto, ma il riferimento puo` essere seguito male quando deve calare rapidamente;
+\item \textbf{fast decay}: il ponte applica una tensione opposta alla corrente, che scende rapidamente; l'inseguimento migliora, ma aumentano ripple e rumore;
+\item \textbf{mixed decay}: combina una prima fase di decadimento rapido con una successiva fase lenta.
+\end{itemize}
+
+La scelta del decay mode e` importante nel microstepping, soprattutto vicino agli attraversamenti per zero delle sinusoidi di corrente. Una corrente che non riesce a diminuire abbastanza rapidamente deforma il vettore statorico, peggiorando uniformita` dei microstep e ripple di coppia.
+
+\begin{keybox}
+\textbf{Perche' il chopper e` essenziale.} Permette di usare un bus ad alta tensione per ottenere transitori di corrente rapidi, mantenendo pero` il valore medio entro i limiti termici dell'avvolgimento. Senza una regolazione di corrente accurata, il microstepping resterebbe soltanto un riferimento teorico.
+\end{keybox}
+
+\subsection{Stadio di potenza, interfaccia STEP/DIR e rampe}
+
+\slidepair{images15/page-07.png}{images15/page-08.png}{Pagine 431--432 del PDF, slide 449--450: struttura di un driver stepper e necessita` di rampe nella frequenza degli impulsi STEP.}
+
+Uno stepper bipolare a due fasi richiede un ponte H per ciascuna fase. Lo stadio di potenza completo comprende quindi:
+\begin{itemize}
+\item due ponti H;
+\item misura delle correnti;
+\item regolatori PWM/chopper;
+\item logica di sequenza o \emph{indexer};
+\item protezioni elettriche e termiche.
+\end{itemize}
+
+Questa complessita` viene nascosta dietro un'interfaccia molto semplice. L'ingresso \(DIR\) seleziona il verso; ogni fronte utile su \(STEP\) incrementa o decrementa l'indice della tabella di corrente; gli ingressi di configurazione scelgono la suddivisione del passo. Il driver genera quindi autonomamente \(i_A^\star\) e \(i_B^\star\).
+
+Se \(\alpha_\mu\) e` l'incremento meccanico associato a un impulso STEP, dopo \(N_{\text{STEP}}\) impulsi la posizione comandata e`:
+\[
+\theta_m^\star=N_{\text{STEP}}\alpha_\mu.
+\]
+Con una frequenza di impulsi \(f_{\text{STEP}}\), la velocita` comandata vale approssimativamente:
+\[
+\omega_m^\star=\alpha_\mu f_{\text{STEP}},
+\]
+dove \(\alpha_\mu\) deve essere espressa in radianti. La frequenza degli impulsi controlla dunque la velocita`, mentre il loro numero controlla lo spostamento.
+
+Il rotore, pero`, ha inerzia e coppia di carico. Se si applica da fermo una frequenza troppo alta, il campo magnetico si sposta piu` rapidamente di quanto il rotore possa accelerare. Si supera la zona di pull-in, il rotore perde sincronismo e vengono persi passi.
+
+Per questo il controllore genera un profilo di frequenza:
+\begin{enumerate}
+\item partenza con frequenza bassa;
+\item incremento graduale durante l'accelerazione;
+\item tratto a frequenza costante;
+\item riduzione graduale prima dell'arresto.
+\end{enumerate}
+Il profilo trapezoidale della slide e` il caso piu` semplice. Nei sistemi con vincoli dinamici piu` severi si usano profili a S, che rendono continua anche l'accelerazione e limitano il jerk.
+
+\subsection{Esempio di driver stepper: DRV8825}
+
+\slidepair{images15/page-09.png}{images15/page-10.png}{Pagine 433--434 del PDF, slide 451--452: caratteristiche del DRV8825, schema interno della regolazione e corrente di fase nel microstepping.}
+
+Il DRV8825 e` un esempio di driver che integra indexer, due ponti H, DAC per i riferimenti di corrente, comparatori, chopper PWM e protezioni. Il microcontrollore non calcola i duty cycle dei quattro transistor di ogni fase: invia STEP, DIR e la configurazione del microstep.
+
+Lo schema interno chiarisce il percorso del segnale:
+\[
+\text{indice del microstep}
+\longrightarrow
+\text{DAC}
+\longrightarrow
+I_A^\star,I_B^\star
+\longrightarrow
+\text{comparatore di corrente}
+\longrightarrow
+\text{PWM dei ponti H}.
+\]
+Le resistenze di sense convertono le correnti in tensioni misurabili. I DAC generano riferimenti discreti che approssimano seno e coseno. Il risultato mostrato all'oscilloscopio e` una corrente a gradini con ripple di switching: non e` una sinusoide analogica perfetta, ma una buona approssimazione filtrata dall'induttanza del motore.
+
+Le modalita` slow, fast e mixed decay permettono di adattare la discesa della corrente alle caratteristiche dell'avvolgimento. La corrente massima dichiarata dal componente deve sempre essere letta insieme alle condizioni termiche, alla tensione di alimentazione, alla resistenza dei MOSFET e alla capacita` di dissipazione della scheda.
+
+\subsection{Stadio di potenza per un brushless trifase}
+
+\slidefig{images15/page-11.png}{Pagina 435 del PDF, slide 453: inverter trifase formato da tre mezzi ponti e sei MOSFET di potenza.}
+
+Un brushless trifase ha tre terminali statorici \(a,b,c\), indicati anche come \(u,v,w\). Ogni terminale viene collegato al punto centrale di un mezzo ponte. Lo stadio di potenza contiene quindi tre gambe, ciascuna con un transistor high-side e uno low-side, per un totale di sei MOSFET.
+
+Indichiamo con:
+\[
+S_a,S_b,S_c\in\{0,1\}
+\]
+gli stati delle tre gambe, dove \(S_k=1\) collega il terminale al polo positivo del bus e \(S_k=0\) al polo negativo. Esistono:
+\[
+2^3=8
+\]
+configurazioni di commutazione. Sei producono vettori di tensione attivi; \(000\) e \(111\) producono vettori nulli sul motore, perche' tutti i terminali vengono portati allo stesso potenziale.
+
+Per una stella con neutro non collegato, la tensione di fase rispetto al centro stella e`:
+\[
+v_{an}
+=V_{dc}\left(
+S_a-\frac{S_a+S_b+S_c}{3}
+\right),
+\]
+con espressioni analoghe per \(v_{bn}\) e \(v_{cn}\). Questa formula mostra che non conta il potenziale assoluto di una gamba, ma la differenza rispetto al potenziale medio delle tre fasi.
+
+In ogni gamba high-side e low-side non devono mai essere accesi contemporaneamente. In quel caso il bus DC verrebbe cortocircuitato direttamente attraverso i transistor, fenomeno chiamato \emph{shoot-through}.
+
+\subsection{PWM simmetrico rispetto al centro e deadtime}
+
+\slidetriple{images15/page-12.png}{images15/page-13.png}{images15/page-14.png}{Pagine 436--438 del PDF, slide 454--456: generazione PWM con portante triangolare, simmetria temporale dei tre canali e inserimento del deadtime.}
+
+Nel controllo sinusoidale o FOC, i regolatori producono \(v_d^\star,v_q^\star\). La catena corretta e`:
+\[
+(v_d^\star,v_q^\star)
+\xrightarrow{\text{Park inversa}}
+(v_\alpha^\star,v_\beta^\star)
+\xrightarrow{\text{Clarke inversa}}
+(v_a^\star,v_b^\star,v_c^\star).
+\]
+La frase della slide secondo cui la Park produce tre tensioni va quindi letta come abbreviazione dell'intera catena di trasformazioni inverse.
+
+Nel PWM classico, ogni riferimento di fase viene confrontato con una portante triangolare ad alta frequenza. Quando il riferimento e` maggiore della portante, il comando della gamba assume uno stato; quando e` minore, assume lo stato opposto. Usando un contatore up-down si ottengono impulsi centrati: il fronte di salita e quello di discesa sono simmetrici rispetto al vertice della portante.
+
+Il PWM center-aligned offre diversi vantaggi:
+\begin{itemize}
+\item distribuisce simmetricamente gli eventi di commutazione nel periodo;
+\item rende piu` regolare lo spettro armonico;
+\item facilita il campionamento sincronizzato delle correnti lontano dai fronti;
+\item rende piu` semplice coordinare le tre fasi.
+\end{itemize}
+La portante deve avere frequenza molto maggiore della sinusoide modulante; nel disegno e` rallentata soltanto per rendere visibili i confronti.
+
+Tra lo spegnimento di un transistor e l'accensione di quello complementare viene inserito un tempo morto \(t_d\), durante il quale entrambi sono OFF:
+\[
+Q_H=0,
+\qquad
+Q_L=0
+\qquad
+\text{per un intervallo }t_d.
+\]
+Il deadtime impedisce lo shoot-through, tenendo conto dei tempi non nulli di spegnimento dei MOSFET e dei driver di gate. Se e` troppo piccolo, la protezione e` insufficiente; se e` troppo grande, introduce un errore medio di tensione dipendente dal verso della corrente e quindi distorsione, soprattutto a bassa velocita`.
+
+\begin{keybox}
+\textbf{Compromesso del deadtime.} E` indispensabile per la sicurezza dello stadio di potenza, ma non e` elettricamente neutro. Nei servoazionamenti precisi il suo effetto viene ridotto con una taratura accurata o compensato nel controllo.
+\end{keybox}
+
+\subsection{Space Vector Modulation}
+
+\slidepair{images15/page-15.png}{images15/page-16.png}{Pagine 439--440 del PDF, slide 457--458: principio della Space Vector Modulation e sintesi temporale del vettore di tensione tramite stati dell'inverter.}
+
+La Space Vector Modulation lavora direttamente nel piano \(\alpha\beta\). Per questo, dopo la Park inversa, non e` necessario calcolare esplicitamente tre riferimenti con la Clarke inversa: il vettore
+\[
+\mathbf v^\star=
+\begin{bmatrix}
+v_\alpha^\star\\
+v_\beta^\star
+\end{bmatrix}
+\]
+viene tradotto direttamente in una sequenza di stati dell'inverter.
+
+Con la convenzione di Clarke usata nelle lezioni, le sei configurazioni attive producono sei vettori di modulo:
+\[
+|\mathbf V_k|=\frac{2}{3}V_{dc},
+\]
+separati di \(60^\circ\). Essi dividono il piano in sei settori. Le configurazioni \(000\) e \(111\) corrispondono ai due vettori nulli.
+
+Se il riferimento si trova tra i vettori adiacenti \(\mathbf V_k\) e \(\mathbf V_{k+1}\), durante un periodo PWM \(T_s\) si scelgono tre intervalli:
+\[
+\mathbf v^\star T_s
+=\mathbf V_k T_1
++\mathbf V_{k+1}T_2
++\mathbf 0\,T_0,
+\]
+con:
+\[
+T_0=T_s-T_1-T_2.
+\]
+La tensione media nel periodo risulta quindi uguale al vettore richiesto. Per il primo settore, indicando con \(\phi\in[0,\pi/3]\) l'angolo interno al settore:
+\[
+T_1
+=\sqrt{3}\,T_s\frac{|\mathbf v^\star|}{V_{dc}}
+\sin\left(\frac{\pi}{3}-\phi\right),
+\]
+\[
+T_2
+=\sqrt{3}\,T_s\frac{|\mathbf v^\star|}{V_{dc}}
+\sin\phi.
+\]
+
+Il tempo nullo \(T_0\) viene normalmente diviso tra inizio e fine del periodo per ottenere una sequenza simmetrica. Nel primo settore, una possibile sequenza e`:
+\[
+000\rightarrow100\rightarrow110\rightarrow111
+\rightarrow110\rightarrow100\rightarrow000.
+\]
+Tra due stati consecutivi cambia una sola gamba, riducendo il numero di commutazioni e le relative perdite.
+
+La SVM offre anche un migliore sfruttamento del bus DC. Nella regione lineare il massimo modulo del vettore sinusoidale e`:
+\[
+|\mathbf v^\star|_{\max}
+=\frac{V_{dc}}{\sqrt{3}},
+\]
+circa il \(15.5\%\) in piu` rispetto alla modulazione sinusoidale semplice, il cui limite e` \(V_{dc}/2\).
+
+La figura finale mostra simultaneamente il settore del vettore, gli stati base, i confronti con la portante e gli impulsi delle tre gambe. Il punto da cogliere non e` ogni singolo fronte, ma il principio di media: l'inverter possiede soltanto otto stati discreti, e la SVM ne combina la durata per produrre, su ogni periodo PWM, una tensione media che puo` muoversi quasi continuamente nel piano \(\alpha\beta\).
+
+\begin{keybox}
+\textbf{Idea chiave della SVM.} Non si genera una tensione analogica istantanea. Si alternano rapidamente due vettori attivi adiacenti e un vettore nullo, scegliendo i tempi \(T_1,T_2,T_0\) in modo che la loro media coincida con il vettore richiesto dal controllo.
+\end{keybox}
+
+\subsection*{Sintesi finale della Lezione 16}
+
+Nel motore DC brushed, il ponte H integrato riceve comandi logici e PWM e gestisce internamente transistor, ricircolo della corrente e protezioni. L'energia induttiva
+\[
+E_L=\frac{1}{2}Li^2
+\]
+spiega perche' non sia possibile interrompere bruscamente la corrente e perche' servano diodi o percorsi di free-wheeling.
+
+Nel pilotaggio stepper, il controllore invia STEP, DIR e la configurazione del microstep, mentre il driver genera le correnti:
+\[
+i_A=I_{\max}\sin\theta,
+\qquad
+i_B=I_{\max}\cos\theta.
+\]
+La tensione elevata rende rapido il transitorio:
+\[
+\frac{di}{dt}=\frac{v-Ri-e}{L},
+\]
+mentre il chopper mantiene la corrente vicina al riferimento. La cinematica comandata si riassume in:
+\[
+\theta_m^\star=N_{\text{STEP}}\alpha_\mu,
+\qquad
+\omega_m^\star=\alpha_\mu f_{\text{STEP}}.
+\]
+Le rampe di frequenza sono indispensabili per non superare la capacita` di pull-in e perdere sincronismo.
+
+Nel brushless, tre mezzi ponti formano un inverter a sei MOSFET. Il PWM center-aligned rende simmetriche le commutazioni, mentre il deadtime evita il cortocircuito del bus. La SVM usa i sei vettori attivi e i due vettori nulli dell'inverter:
+\[
+\mathbf v^\star T_s
+=\mathbf V_k T_1
++\mathbf V_{k+1}T_2
++\mathbf 0\,T_0.
+\]
+L'intera lezione chiude quindi il percorso del corso: dal riferimento di coppia e dalle variabili del controllo si arriva alle commutazioni fisiche che producono correnti, campo magnetico e moto.
+
+% =========================================================
 % APPENDICE
 % =========================================================
 
@@ -4743,7 +5128,7 @@ Motore PM stepper & $p_r=\dfrac{N_r}{2}$, \quad $\alpha_s=\dfrac{360^\circ}{mN_r
 Motore VR stepper & $\alpha_s=360^\circ\left|\dfrac{N_s-N_r}{N_sN_r}\right|$ \\
 Motore hybrid stepper & $\alpha_R=\dfrac{360^\circ}{N_r}$, \quad $\alpha_s=\dfrac{360^\circ}{2mN_r}$ \\
 Coppia statica stepper & $T=T_{\max}\sin\delta$, \quad $T_{\text{pull-out}}>T_{\text{pull-in}}$ a pari frequenza di passo \\
-Microstepping & $\alpha_{\text{full}}=\alpha_s$, \quad $\alpha_{\text{half}}=\dfrac{\alpha_s}{2}$, \quad $\alpha_{\mu\text{step}}\approx\dfrac{\alpha_s}{N_\mu}$ \\
+Microstepping & $i_A=I_{\max}\sin\theta$, \quad $i_B=I_{\max}\cos\theta$, \quad $\sqrt{i_A^2+i_B^2}=I_{\max}$, \quad $\alpha_\mu\simeq\dfrac{\alpha_s}{n_\mu}$ \\
 Vincolo trifase a stella BLDC & $i_a+i_b+i_c=0$, \quad $\dot i_a+\dot i_b+\dot i_c=0$ \\
 Modello elettrico BLDC & $\mathbf v_{abc}=R_s\mathbf i_{abc}+\dfrac{d\boldsymbol\lambda_{abc}}{dt}$, \quad $\boldsymbol\lambda_{abc}=\mathbf L_{abc}\mathbf i_{abc}+\boldsymbol\lambda_m(\theta_e)$ \\
 Modello di fase BLDC ridotto & $v_k=R_s i_k+L_{eq}\dot i_k+e_k$, \quad $L_{eq}=L_s-M$, \quad $k\in\{a,b,c\}$ \\
@@ -4755,6 +5140,13 @@ Modello brushless in $dq$ & $v_d=R_s i_d+L_d\dot i_d-\omega_eL_qi_q$, \quad $v_q
 Coppia e FOC brushless & $T_e=\dfrac{3}{2}p\left(\lambda_m i_q+(L_d-L_q)i_di_q\right)$, \quad se $L_d\simeq L_q$: $T_e=\dfrac{3}{2}p\lambda_m i_q$, \quad $i_d^\star=0$ \\
 PWM per driver DC & $D=\dfrac{T_{on}}{T_s}$, \quad $f_s=\dfrac{1}{T_s}$, \quad $v_m\simeq D V_{dc}$, \quad $T_{on}=T_s\dfrac{v_m^\star}{V_{dc}}$ \\
 Costanti di tempo motore DC & $\tau_e=\dfrac{L}{R}$, \quad $\tau_m=\dfrac{RJ}{k_tk_e}$, \quad scegliere $f_{\text{PWM}}$ abbastanza maggiore della dinamica piu` lenta \\
+Energia e ricircolo induttivo & $E_L=\dfrac{1}{2}Li^2$, \quad allo spegnimento la corrente richiede un percorso di free-wheeling \\
+Dinamica fase stepper & $v=Ri+L\dot i+e$, \quad $\dot i=\dfrac{v-Ri-e}{L}$, \quad $\tau_e=\dfrac{L}{R}$, \quad $I_\infty=\dfrac{v-e}{R}$ \\
+Chopper di corrente stepper & $v_{\text{sense}}=R_{\text{sense}}i$, \quad $I_{\text{low}}=I^\star-\dfrac{\Delta I}{2}$, \quad $I_{\text{high}}=I^\star+\dfrac{\Delta I}{2}$ \\
+Comandi STEP/DIR & $\theta_m^\star=N_{\text{STEP}}\alpha_\mu$, \quad $\omega_m^\star=\alpha_\mu f_{\text{STEP}}$ con $\alpha_\mu$ in radianti \\
+Inverter trifase & $S_a,S_b,S_c\in\{0,1\}$, \quad $2^3=8$ stati, \quad $v_{an}=V_{dc}\left(S_a-\dfrac{S_a+S_b+S_c}{3}\right)$ \\
+Sintesi SVM & $\mathbf v^\star T_s=\mathbf V_kT_1+\mathbf V_{k+1}T_2+\mathbf 0T_0$, \quad $T_0=T_s-T_1-T_2$, \quad $|\mathbf V_k|=\dfrac{2}{3}V_{dc}$ \\
+Tempi SVM nel settore & $T_1=\sqrt3T_s\dfrac{|\mathbf v^\star|}{V_{dc}}\sin\left(\dfrac{\pi}{3}-\phi\right)$, \quad $T_2=\sqrt3T_s\dfrac{|\mathbf v^\star|}{V_{dc}}\sin\phi$, \quad $|\mathbf v^\star|_{\max}=\dfrac{V_{dc}}{\sqrt3}$ \\
 Metodo M & $\omega_m=\dfrac{2\pi}{T_c}\dfrac{m}{PPR}$, \quad $N=\dfrac{60}{T_c}\dfrac{m}{PPR}$ \\
 Metodo T & $T_c=m_cT_{\text{clock}}$, \quad $\omega_m=\dfrac{2\pi}{PPR\,m_cT_{\text{clock}}}$ \\
 Metodo M/T & $T=T_c+m_2T_2$, \quad $\omega_m=\dfrac{2\pi}{PPR}\dfrac{m_1}{T_c+m_2T_2}$ \\
